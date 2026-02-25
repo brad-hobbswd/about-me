@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const topicVal = String(document.getElementById("topic").value || "").trim();
       const messageVal = String(document.getElementById("message").value || "").trim();
 
-      const toAddress = "brad@yourdomain.com";
+      const toAddress = "brad.hobbs13@icloud.com";
 
       const subjectLine = `Website contact: ${topicVal} from ${nameVal}`;
       const bodyLines = [
