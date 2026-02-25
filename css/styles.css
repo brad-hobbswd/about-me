@@ -540,9 +540,17 @@ body.prayer-mode .callout-title{
 }
 
 .worship-quiet .video-grid{
-  grid-template-columns:1.35fr .95fr;
+  grid-template-columns:repeat(3, 1fr);
   gap:12px;
   align-items:start;
+}
+
+.worship-quiet .featured{
+  grid-row:auto;
+}
+
+@media (max-width: 920px){
+  .worship-quiet .video-grid{grid-template-columns:1fr}
 }
 
 .worship-quiet .video-card{
