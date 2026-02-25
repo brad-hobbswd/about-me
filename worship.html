@@ -1,4 +1,3 @@
-<!-- worship.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,7 +11,7 @@
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="worship-quiet">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
@@ -51,45 +50,84 @@
       <section class="card section reveal non-scripture">
         <div class="section-head">
           <h2>Worship</h2>
-          <p class="section-note">Audio clips for worship and encouragement</p>
+          <p class="section-note">Quiet room worship, simple focus, steady presence</p>
         </div>
 
         <div class="section-body center">
-          <p class="muted">
-            Place audio files in assets/audio and match names below.
-            Formats supported include MP3 and WAV.
+          <p class="quiet-intro">
+            Space for calm worship and focused listening. Each selection points hearts toward Jesus and builds faith through song.
           </p>
 
-          <div class="audio-grid">
-            <article class="panel">
-              <h3>Worship clip 1</h3>
-              <p class="audio-note">Praise and worship</p>
-              <audio controls preload="none">
-                <source src="assets/audio/worship-clip-1.mp3" type="audio/mpeg" />
-                <source src="assets/audio/worship-clip-1.wav" type="audio/wav" />
-                Audio playback unavailable.
-              </audio>
+          <div class="quiet-chip-row" aria-label="Worship tone">
+            <div class="quiet-chip">Quiet</div>
+            <div class="quiet-chip">Reverent</div>
+            <div class="quiet-chip">Scripture centered</div>
+          </div>
+
+          <div class="video-grid" aria-label="Worship videos">
+
+            <article class="panel video-card featured">
+              <h3>Goodness of God</h3>
+              <p class="video-note">Single Release</p>
+
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/uOJtu17nSyA"
+                  title="Goodness of God - Brad Hobbs"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <a class="btn full" href="https://youtu.be/uOJtu17nSyA" target="_blank" rel="noreferrer">Watch on YouTube</a>
             </article>
 
-            <article class="panel">
-              <h3>Worship clip 2</h3>
-              <p class="audio-note">Encouragement</p>
-              <audio controls preload="none">
-                <source src="assets/audio/worship-clip-2.mp3" type="audio/mpeg" />
-                <source src="assets/audio/worship-clip-2.wav" type="audio/wav" />
-                Audio playback unavailable.
-              </audio>
+            <article class="panel video-card small">
+              <h3>Sweet Beulah Land</h3>
+              <p class="video-note">Album Recording</p>
+
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/ODnZ29qFGW4"
+                  title="Sweet Beulah Land - Brad Hobbs"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <a class="btn full" href="https://youtu.be/ODnZ29qFGW4" target="_blank" rel="noreferrer">Watch on YouTube</a>
             </article>
 
-            <article class="panel">
-              <h3>Worship clip 3</h3>
-              <p class="audio-note">Prayerful worship</p>
-              <audio controls preload="none">
-                <source src="assets/audio/worship-clip-3.mp3" type="audio/mpeg" />
-                <source src="assets/audio/worship-clip-3.wav" type="audio/wav" />
-                Audio playback unavailable.
-              </audio>
+            <article class="panel video-card small">
+              <h3>Another Valley Left Behind</h3>
+              <p class="video-note">Album Recording</p>
+
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/o1j2PaPRPHU"
+                  title="Another Valley Left Behind - Brad Hobbs"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <a class="btn full" href="https://youtu.be/o1j2PaPRPHU" target="_blank" rel="noreferrer">Watch on YouTube</a>
             </article>
+
+          </div>
+
+          <div class="quiet-prayer focus-scripture" aria-label="Prayer prompt">
+            <h3>Prayer</h3>
+            <p>
+              Jesus, draw hearts near. Let worship strengthen faith, restore peace, and renew courage for every step ahead.
+            </p>
+            <div class="prayer-actions non-scripture">
+              <a class="btn primary" href="scripture.html">Read scripture</a>
+              <a class="btn" href="contact.html">Connect</a>
+            </div>
           </div>
 
           <div class="scripture-strip focus-scripture">
@@ -97,14 +135,10 @@
             <div class="scripture-ref">Psalm 150:6</div>
           </div>
 
-          <div class="cta-row center-row">
-            <a class="btn primary" href="scripture.html">Go to scripture</a>
-            <a class="btn" href="contact.html">Connect</a>
-          </div>
         </div>
       </section>
 
-      <footer class="site-footer reveal">
+      <footer class="site-footer reveal" aria-label="Footer">
         <div class="footer-row">
           <div>© <span id="year"></span> Brad Hobbs</div>
           <div>Built for worship, clarity, and service</div>
