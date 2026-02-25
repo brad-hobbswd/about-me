@@ -1,1 +1,104 @@
+<!-- contact.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brad Hobbs | Contact</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand" aria-label="Site brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Brad Hobbs</strong>
+          <span>Teacher • Singer • Preacher • Prophetic Ministry • Family</span>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <ul id="navMenu" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="scripture.html">Scripture</a></li>
+          <li><a href="worship.html">Worship</a></li>
+          <li><a href="prophecy.html">Prophecy</a></li>
+          <li><a href="family.html">Family</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="toolbar container" aria-label="Tools">
+      <button id="prayerModeBtn" class="tool-btn" type="button" aria-pressed="false">Prayer mode</button>
+      <div class="tool-hint" aria-hidden="true">Gentle focus for scripture</div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <div class="container content">
+
+      <section class="card section reveal non-scripture">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-note">Reach out for teaching, worship, ministry, or collaboration</p>
+        </div>
+
+        <div class="section-body center">
+          <div class="grid">
+            <div class="panel">
+              <h3>Direct</h3>
+              <p><strong>Phone:</strong> <a href="tel:+18595511146">859 551 1146</a></p>
+              <p><strong>Email:</strong> <a href="mailto:brad@yourdomain.com">brad@yourdomain.com</a></p>
+              <p><strong>Location:</strong> Kentucky</p>
+              <p class="audio-note">Email shown serves as a placeholder.</p>
+            </div>
+
+            <div class="panel">
+              <h3>Message</h3>
+              <form class="contact-form" action="#" method="post">
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" type="text" />
+
+                <label for="email">Email</label>
+                <input id="email" name="email" autocomplete="email" type="email" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6"></textarea>
+
+                <button class="btn primary full" type="submit">Send message</button>
+                <p class="audio-note">Form action uses a placeholder.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="scripture-strip focus-scripture">
+            <div class="scripture-text">“Men ought always to pray, and not to faint.”</div>
+            <div class="scripture-ref">Luke 18:1</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer reveal">
+        <div class="footer-row">
+          <div>© <span id="year"></span> Brad Hobbs</div>
+          <div>Built for worship, clarity, and service</div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
