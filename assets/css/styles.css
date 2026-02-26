@@ -650,3 +650,30 @@ body.focus .scripture{
 }
 
 input::placeholder, textarea::placeholder{color: rgba(242,238,231,.55)}
+
+/* Discography album grid */
+.album-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 980px){
+  .album-grid{grid-template-columns: 1fr}
+}
+
+.album-card{
+  background: rgba(28,23,20,.90);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 16px 44px rgba(0,0,0,.36);
+  padding: 18px;
+}
+
+.steps{
+  margin: 12px 0 0;
+  padding-left: 22px;
+}
+
+.steps li{margin: 10px 0}
