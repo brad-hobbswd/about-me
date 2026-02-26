@@ -19,3 +19,6 @@ Prayer Mode has a floating exit button and Escape key support
 
 Theme
 Darker prayer closet rustic farmhouse theme with SVG textures under assets/img
+
+Reliability
+HTML uses absolute /about-me/ asset paths plus a dark fallback background
