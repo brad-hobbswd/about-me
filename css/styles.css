@@ -1061,3 +1061,43 @@ body.prayer-mode .callout-title{
   color:rgba(242,242,238,.78);
   line-height:1.55;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const show = params.get("debug") === "1";
+  if (!show) return;
+
+  const box = document.createElement("div");
+  box.style.position = "fixed";
+  box.style.left = "12px";
+  box.style.right = "12px";
+  box.style.bottom = "12px";
+  box.style.zIndex = "9999";
+  box.style.padding = "12px";
+  box.style.borderRadius = "14px";
+  box.style.border = "1px solid rgba(242,242,238,.16)";
+  box.style.background = "rgba(0,0,0,.72)";
+  box.style.color = "rgba(242,242,238,.92)";
+  box.style.fontFamily = "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif";
+  box.style.fontSize = "13px";
+  box.style.lineHeight = "1.45";
+  box.innerHTML = "<strong>Debug</strong><div id='dbgLines' style='margin-top:8px;max-height:160px;overflow:auto;'></div>";
+  document.body.appendChild(box);
+
+  const lines = box.querySelector("#dbgLines");
+
+  const addLine = (txt) => {
+    const div = document.createElement("div");
+    div.textContent = txt;
+    lines.appendChild(div);
+  };
+
+  window.addEventListener("error", (e) => {
+    const src = e?.target?.src || e?.target?.href;
+    if (src) addLine("Resource failed: " + src);
+    if (!src && e.message) addLine("Script error: " + e.message);
+  }, true);
+
+  window.addEventListener("unhandledrejection", (e) => {
+    addLine("Promise rejected: " + String(e.reason || "unknown"));
+  });
+});
