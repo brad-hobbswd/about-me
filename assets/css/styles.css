@@ -577,6 +577,8 @@ body.prayer .scripture{
   filter:none;
 }
 
+
+
 /* Focus mode */
 body.focus::before{
   content:"";
@@ -600,11 +602,11 @@ body.focus .scripture{
   box-shadow: 0 18px 40px rgba(0,0,0,.22);
 }
 
-/* Floating exit button */
-.focus-exit{
+/* Floating exit buttons */
+.focus-exit,
+.prayer-exit{
   position: fixed;
   bottom: 24px;
-  right: 24px;
   padding: 14px 18px;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -615,6 +617,15 @@ body.focus .scripture{
   box-shadow: 0 10px 26px rgba(0,0,0,.16);
 }
 
-.focus-exit:hover{
+.focus-exit{
+  right: 24px;
+}
+
+.prayer-exit{
+  left: 24px;
+}
+
+.focus-exit:hover,
+.prayer-exit:hover{
   border-color: rgba(162,135,86,.55);
 }

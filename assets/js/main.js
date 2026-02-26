@@ -63,55 +63,78 @@
   }
 
   function initModes(){
-  setPrayer(safeGet(K_PRAYER) === "on");
-  setFocus(safeGet(K_FOCUS) === "on");
+    setPrayer(safeGet(K_PRAYER) === "on");
+    setFocus(safeGet(K_FOCUS) === "on");
 
-  document.querySelectorAll("[data-prayer], [data-prayer-cta]").forEach(b => {
-    b.addEventListener("click", function(){
-      const next = !document.body.classList.contains("prayer");
-      setPrayer(next);
+    const prayerButtons = document.querySelectorAll("[data-prayer], [data-prayer-cta]");
+    const focusButtons = document.querySelectorAll("[data-focus]");
+
+    let focusExit = document.querySelector(".focus-exit");
+    if(!focusExit){
+      focusExit = document.createElement("button");
+      focusExit.className = "focus-exit";
+      focusExit.type = "button";
+      focusExit.textContent = "Exit Scripture Focus";
+      focusExit.style.display = "none";
+      document.body.appendChild(focusExit);
+    }
+
+    let prayerExit = document.querySelector(".prayer-exit");
+    if(!prayerExit){
+      prayerExit = document.createElement("button");
+      prayerExit.className = "prayer-exit";
+      prayerExit.type = "button";
+      prayerExit.textContent = "Exit Prayer Mode";
+      prayerExit.style.display = "none";
+      document.body.appendChild(prayerExit);
+    }
+
+    function updateExitVisibility(){
+      const focusOn = document.body.classList.contains("focus");
+      const prayerOn = document.body.classList.contains("prayer");
+      focusExit.style.display = focusOn ? "block" : "none";
+      prayerExit.style.display = prayerOn ? "block" : "none";
+    }
+
+    prayerButtons.forEach(b => {
+      b.addEventListener("click", function(){
+        const next = !document.body.classList.contains("prayer");
+        setPrayer(next);
+        updateExitVisibility();
+      });
     });
-  });
 
-  document.querySelectorAll("[data-focus]").forEach(b => {
-    b.addEventListener("click", function(){
-      const next = !document.body.classList.contains("focus");
-      setFocus(next);
-      updateExitVisibility();
+    focusButtons.forEach(b => {
+      b.addEventListener("click", function(){
+        const next = !document.body.classList.contains("focus");
+        setFocus(next);
+        updateExitVisibility();
+      });
     });
-  });
 
-  /* === ADD THIS SECTION BELOW === */
-
-  let exitBtn = document.querySelector(".focus-exit");
-
-  if(!exitBtn){
-    exitBtn = document.createElement("button");
-    exitBtn.className = "focus-exit";
-    exitBtn.textContent = "Exit Scripture Focus";
-    exitBtn.style.display = "none";
-    document.body.appendChild(exitBtn);
-  }
-
-  function updateExitVisibility(){
-    const on = document.body.classList.contains("focus");
-    exitBtn.style.display = on ? "block" : "none";
-  }
-
-  exitBtn.addEventListener("click", function(){
-    setFocus(false);
-    updateExitVisibility();
-  });
-
-  document.addEventListener("keydown", function(e){
-    if(e.key === "Escape" && document.body.classList.contains("focus")){
+    focusExit.addEventListener("click", function(){
       setFocus(false);
       updateExitVisibility();
-    }
-  });
+    });
 
-  updateExitVisibility();
-}
+    prayerExit.addEventListener("click", function(){
+      setPrayer(false);
+      updateExitVisibility();
+    });
+
+    document.addEventListener("keydown", function(e){
+      const key = e.key;
+      if(key === "Escape"){
+        const focusOn = document.body.classList.contains("focus");
+        const prayerOn = document.body.classList.contains("prayer");
+        if(focusOn) setFocus(false);
+        if(prayerOn) setPrayer(false);
+        if(focusOn || prayerOn) updateExitVisibility();
+      }
+    });
+
+    updateExitVisibility();
+  }
 
   function initMailtoForm(){
     const form = document.querySelector("[data-mailto]");

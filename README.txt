@@ -12,3 +12,7 @@ Replace YOUR_PLAYLIST_ID inside discography.html
 
 Contact form
 Form submission opens a prepared email draft through the default mail app
+
+Modes
+Scripture Focus has a floating exit button and Escape key support
+Prayer Mode has a floating exit button and Escape key support
