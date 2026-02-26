@@ -151,6 +151,36 @@ On mobile devices, selecting the phone number will automatically open a text mes
       </footer>
 
     </div>
+    <section id="siteHealth" class="panel health-panel non-scripture" hidden aria-label="Site health">
+  <h3>Site Health</h3>
+  <p class="muted">Resource checks for common failures.</p>
+
+  <div class="health-grid" role="list">
+    <div class="health-item" role="listitem">
+      <div class="health-k">CSS</div>
+      <div class="health-v" data-check="css">Checking</div>
+    </div>
+
+    <div class="health-item" role="listitem">
+      <div class="health-k">JavaScript</div>
+      <div class="health-v" data-check="js">Checking</div>
+    </div>
+
+    <div class="health-item" role="listitem">
+      <div class="health-k">Logo folder</div>
+      <div class="health-v" data-check="logos">Checking</div>
+    </div>
+
+    <div class="health-item" role="listitem">
+      <div class="health-k">Data folder</div>
+      <div class="health-v" data-check="data">Checking</div>
+    </div>
+  </div>
+
+  <div class="micro-note">
+    Add <strong>?health=1</strong> to the page URL to show this panel.
+  </div>
+</section>
   </main>
 
   <script src="js/script.js"></script>
