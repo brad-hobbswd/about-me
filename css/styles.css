@@ -1101,3 +1101,28 @@ document.addEventListener("DOMContentLoaded", () => {
     addLine("Promise rejected: " + String(e.reason || "unknown"));
   });
 });
+/* Prayer Mode */
+.prayer-mode{
+  filter:saturate(.92);
+}
+
+.prayer-mode .non-scripture{
+  opacity:.35;
+  filter:blur(.25px);
+  transition:opacity 220ms var(--ease), filter 220ms var(--ease);
+}
+
+.prayer-mode .focus-scripture{
+  outline:2px solid rgba(214,179,92,.28);
+  outline-offset:4px;
+  border-color:rgba(214,179,92,.22);
+  background:rgba(255,255,255,.05);
+}
+
+.prayer-mode .tool-hint{
+  opacity:1;
+}
+
+.tool-hint{
+  opacity:.65;
+}
