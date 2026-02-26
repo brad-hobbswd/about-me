@@ -1126,3 +1126,14 @@ document.addEventListener("DOMContentLoaded", () => {
 .tool-hint{
   opacity:.65;
 }
+.prayer-mode .non-scripture{
+  opacity:.32;
+  transition:opacity 220ms ease;
+}
+
+.prayer-mode .focus-scripture{
+  outline:2px solid rgba(214,179,92,.35);
+  outline-offset:4px;
+  border-color:rgba(214,179,92,.25);
+  background:rgba(255,255,255,.06);
+}
