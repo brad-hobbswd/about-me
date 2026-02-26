@@ -122,9 +122,3 @@ setStatus("logos", logoOk ? "OK" : "Missing file", logoOk ? "health-ok" : "healt
 
 const dataOk = await probe("data/discography.json");
 setStatus("data", dataOk ? "OK" : "Missing file", dataOk ? "health-ok" : "health-bad");
-})();
-const logoOk = await probe("assets/logos/brad-hobbs.png");
-setStatus("logos", logoOk ? "OK" : "Missing file", logoOk ? "health-ok" : "health-bad");
-
-const dataOk = await probe("data/discography.json");
-setStatus("data", dataOk ? "OK" : "Missing file", dataOk ? "health-ok" : "health-bad");
