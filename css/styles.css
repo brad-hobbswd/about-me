@@ -344,8 +344,8 @@ audio{width:100%}
 
 /* Prayer mode */
 body.prayer-mode .non-scripture{
-  opacity:.32;
-  filter:saturate(.90);
+  opacity:.22;
+  filter:grayscale(.15) brightness(.85);
   transition:opacity 320ms var(--ease), filter 320ms var(--ease);
 }
 body.prayer-mode .focus-scripture{
