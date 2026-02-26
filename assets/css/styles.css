@@ -583,20 +583,38 @@ body.focus::before{
   position: fixed;
   inset: 0;
   background: var(--focusdim);
-  z-index: 999;
+  z-index: 900;
 }
 
-body.focus main,
-body.focus header,
-body.focus footer{
-  visibility: hidden;
+/* Hide non scripture content */
+body.focus main > *:not(.scripture){
+  display: none;
 }
 
+/* Keep scripture visible and elevated */
 body.focus .scripture{
-  visibility: visible;
   position: relative;
   z-index: 1000;
   background: rgba(244,239,230,.96);
   border-color: rgba(162,135,86,.76);
   box-shadow: 0 18px 40px rgba(0,0,0,.22);
+}
+
+/* Floating exit button */
+.focus-exit{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(244,239,230,.96);
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0 10px 26px rgba(0,0,0,.16);
+}
+
+.focus-exit:hover{
+  border-color: rgba(162,135,86,.55);
 }
