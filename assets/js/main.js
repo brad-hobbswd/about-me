@@ -63,23 +63,55 @@
   }
 
   function initModes(){
-    setPrayer(safeGet(K_PRAYER) === "on");
-    setFocus(safeGet(K_FOCUS) === "on");
+  setPrayer(safeGet(K_PRAYER) === "on");
+  setFocus(safeGet(K_FOCUS) === "on");
 
-    document.querySelectorAll("[data-prayer], [data-prayer-cta]").forEach(b => {
-      b.addEventListener("click", function(){
-        const next = !document.body.classList.contains("prayer");
-        setPrayer(next);
-      });
+  document.querySelectorAll("[data-prayer], [data-prayer-cta]").forEach(b => {
+    b.addEventListener("click", function(){
+      const next = !document.body.classList.contains("prayer");
+      setPrayer(next);
     });
+  });
 
-    document.querySelectorAll("[data-focus]").forEach(b => {
-      b.addEventListener("click", function(){
-        const next = !document.body.classList.contains("focus");
-        setFocus(next);
-      });
+  document.querySelectorAll("[data-focus]").forEach(b => {
+    b.addEventListener("click", function(){
+      const next = !document.body.classList.contains("focus");
+      setFocus(next);
+      updateExitVisibility();
     });
+  });
+
+  /* === ADD THIS SECTION BELOW === */
+
+  let exitBtn = document.querySelector(".focus-exit");
+
+  if(!exitBtn){
+    exitBtn = document.createElement("button");
+    exitBtn.className = "focus-exit";
+    exitBtn.textContent = "Exit Scripture Focus";
+    exitBtn.style.display = "none";
+    document.body.appendChild(exitBtn);
   }
+
+  function updateExitVisibility(){
+    const on = document.body.classList.contains("focus");
+    exitBtn.style.display = on ? "block" : "none";
+  }
+
+  exitBtn.addEventListener("click", function(){
+    setFocus(false);
+    updateExitVisibility();
+  });
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && document.body.classList.contains("focus")){
+      setFocus(false);
+      updateExitVisibility();
+    }
+  });
+
+  updateExitVisibility();
+}
 
   function initMailtoForm(){
     const form = document.querySelector("[data-mailto]");
