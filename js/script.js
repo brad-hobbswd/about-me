@@ -117,9 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const jsOk = await probe("js/script.js");
   setStatus("js", jsOk ? "OK" : "Missing", jsOk ? "health-ok" : "health-bad");
 
-  const logosOk = await probe("assets/logos/");
-  setStatus("logos", logosOk ? "OK" : "Check path", logosOk ? "health-ok" : "health-warn");
+  const logoOk = await probe("assets/logos/brad-hobbs-web-design.png");
+setStatus("logos", logoOk ? "OK" : "Missing file", logoOk ? "health-ok" : "health-bad");
 
-  const dataOk = await probe("data/");
-  setStatus("data", dataOk ? "OK" : "Check path", dataOk ? "health-ok" : "health-warn");
+const dataOk = await probe("data/discography.json");
+setStatus("data", dataOk ? "OK" : "Missing file", dataOk ? "health-ok" : "health-bad");
 })();
