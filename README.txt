@@ -16,3 +16,6 @@ Form submission opens a prepared email draft through the default mail app
 Modes
 Scripture Focus has a floating exit button and Escape key support
 Prayer Mode has a floating exit button and Escape key support
+
+Theme
+Darker prayer closet rustic farmhouse theme with SVG textures under assets/img

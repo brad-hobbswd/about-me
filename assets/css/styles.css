@@ -1,15 +1,16 @@
 :root{
-  --paper:#f4efe6;
-  --oak:#d7cfc2;
-  --ink:#2e2a27;
-  --brown:#4b3f36;
-  --brass:#a28756;
-  --muted:rgba(46,42,39,.74);
-  --line:rgba(46,42,39,.16);
-  --shadow:0 18px 40px rgba(0,0,0,.14);
+  --paper:#14110f;
+  --oak:#2a231e;
+  --ink:#f2eee7;
+  --brown:#e7dbc9;
+  --brass:#c7a76a;
+  --muted:rgba(242,238,231,.74);
+  --line:rgba(242,238,231,.14);
+  --shadow:0 22px 56px rgba(0,0,0,.48);
   --radius:18px;
-  --dim:rgba(10,10,10,.66);
-  --focusdim:rgba(10,10,10,.82);
+  --dim:rgba(0,0,0,.72);
+  --focusdim:rgba(0,0,0,.84);
+  --glow:rgba(199,167,106,.22);
 }
 
 *{box-sizing:border-box}
@@ -18,11 +19,16 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  color:rgba(46,42,39,.92);
+  color:rgba(242,238,231,.92);
   background:
-    radial-gradient(900px 520px at 10% 10%, rgba(162,135,86,.14), transparent 60%),
-    radial-gradient(820px 480px at 90% 12%, rgba(75,63,54,.12), transparent 60%),
-    linear-gradient(180deg, rgba(215,207,194,.35), rgba(244,239,230,.96));
+    radial-gradient(900px 520px at 10% 10%, var(--glow), transparent 60%),
+    radial-gradient(820px 480px at 90% 12%, rgba(231,219,201,.10), transparent 60%),
+    url("assets/img/woodgrain.svg"),
+    url("assets/img/paper-fibers.svg"),
+    linear-gradient(180deg, rgba(20,17,15,.96), rgba(12,10,9,.98));
+  background-attachment: fixed, fixed, fixed, fixed, fixed;
+  background-size: auto, auto, 980px 980px, 1100px 1100px, auto;
+  background-repeat: no-repeat, no-repeat, repeat, repeat, no-repeat;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height:1.65;
   font-size: 18px;
@@ -66,7 +72,7 @@ a{color:inherit}
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(244,239,230,.92);
+  background: rgba(20,17,15,.84);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -88,7 +94,7 @@ a{color:inherit}
   font-weight: 800;
   letter-spacing:.02em;
   text-decoration:none;
-  color: var(--brown);
+  color: rgba(231,219,201,.96);
   font-size: 1.15rem;
 }
 
@@ -106,12 +112,12 @@ a{color:inherit}
 
 .chip{
   border: 1px solid var(--line);
-  background: rgba(215,207,194,.24);
+  background: rgba(42,35,30,.46);
   border-radius: 999px;
   padding: 10px 12px;
   font-weight: 850;
   cursor:pointer;
-  color: var(--ink);
+  color: rgba(242,238,231,.92);
 }
 
 .menu-btn{
@@ -119,7 +125,7 @@ a{color:inherit}
   height: 46px;
   border-radius: 14px;
   border: 1px solid var(--line);
-  background: rgba(215,207,194,.24);
+  background: rgba(42,35,30,.46);
   cursor:pointer;
   display:grid;
   place-items:center;
@@ -182,9 +188,10 @@ a{color:inherit}
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid var(--line);
-  background: rgba(215,207,194,.18);
+  background: rgba(42,35,30,.46);
   font-weight: 850;
   cursor:pointer;
+  color: rgba(242,238,231,.92);
 }
 
 .menu a:hover,
@@ -235,7 +242,7 @@ a{color:inherit}
   margin:0 0 12px;
   font-family: Georgia, serif;
   font-weight: 900;
-  color: var(--brown);
+  color: rgba(231,219,201,.98);
   letter-spacing: .01em;
   line-height:1.12;
   font-size: clamp(2.1rem, 3.6vw, 3.2rem);
@@ -245,7 +252,7 @@ a{color:inherit}
   margin:0 0 12px;
   font-family: Georgia, serif;
   font-weight: 900;
-  color: var(--brown);
+  color: rgba(231,219,201,.96);
   line-height:1.18;
   font-size: 1.55rem;
 }
@@ -254,7 +261,7 @@ a{color:inherit}
   margin:0 0 8px;
   font-family: Georgia, serif;
   font-weight: 900;
-  color: var(--brown);
+  color: rgba(231,219,201,.94);
   font-size: 1.12rem;
 }
 
@@ -282,10 +289,11 @@ a{color:inherit}
   padding: 12px 16px;
   border-radius: 14px;
   border: 1px solid var(--line);
-  background: rgba(215,207,194,.18);
+  background: rgba(42,35,30,.42);
   text-decoration:none;
   font-weight: 900;
   cursor:pointer;
+  color: rgba(242,238,231,.92);
 }
 
 .btn:hover{
@@ -294,8 +302,8 @@ a{color:inherit}
 }
 
 .btn.primary{
-  background: rgba(162,135,86,.20);
-  border-color: rgba(162,135,86,.45);
+  background: rgba(199,167,106,.20);
+  border-color: rgba(199,167,106,.44);
 }
 
 .btn.ghost{
@@ -309,7 +317,7 @@ a{color:inherit}
 }
 
 .hero-card{
-  background: rgba(244,239,230,.94);
+  background: rgba(28,23,20,.90);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -330,9 +338,13 @@ a{color:inherit}
 .section{padding: 34px 0}
 
 .alt{
-  background: rgba(215,207,194,.14);
+  background:
+    url("assets/img/linen.svg"),
+    rgba(22,18,16,.58);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  background-size: 900px 900px, auto;
+  background-repeat: repeat, no-repeat;
 }
 
 .split{
@@ -364,10 +376,10 @@ a{color:inherit}
 }
 
 .card{
-  background: rgba(244,239,230,.94);
+  background: rgba(28,23,20,.88);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+  box-shadow: 0 16px 44px rgba(0,0,0,.36);
   padding: 18px;
 }
 
@@ -385,11 +397,13 @@ a{color:inherit}
 
 /* Scripture */
 .scripture{
-  border: 1px solid rgba(162,135,86,.38);
+  border: 1px solid rgba(199,167,106,.36);
   border-radius: 16px;
   padding: 16px;
-  background: rgba(215,207,194,.18);
-  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+  background:
+    radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
+    rgba(22,18,16,.92);
+  box-shadow: 0 14px 34px rgba(0,0,0,.44);
   margin: 14px 0;
 }
 
@@ -447,7 +461,7 @@ a{color:inherit}
   padding: 16px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: rgba(244,239,230,.94);
+  background: rgba(28,23,20,.88);
   text-decoration:none;
 }
 
@@ -515,7 +529,11 @@ input:focus, textarea:focus{
 .page-hero{
   padding: 40px 0 20px;
   border-bottom: 1px solid var(--line);
-  background: rgba(215,207,194,.14);
+  background:
+    url("assets/img/linen.svg"),
+    rgba(28,23,20,.58);
+  background-size: 900px 900px, auto;
+  background-repeat: repeat, no-repeat;
 }
 
 /* Bullets */
@@ -525,7 +543,7 @@ input:focus, textarea:focus{
 /* Footer */
 .site-footer{
   border-top: 1px solid var(--line);
-  background: rgba(215,207,194,.10);
+  background: rgba(12,10,9,.84);
   padding: 18px 0;
 }
 
