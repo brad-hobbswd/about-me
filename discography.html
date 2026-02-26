@@ -11,20 +11,21 @@
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body class="worship-quiet">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container nav">
-      <div class="brand">
-        <div class="mark"></div>
+      <div class="brand" aria-label="Site brand">
+        <div class="mark" aria-hidden="true"></div>
         <div class="brand-text">
           <strong>Brad Hobbs</strong>
           <span>Teacher • Singer • Preacher • Prophetic Ministry • Family</span>
         </div>
       </div>
 
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Primary">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">Menu</button>
         <ul id="navMenu" class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -39,9 +40,9 @@
       </nav>
     </div>
 
-    <div class="toolbar container">
+    <div class="toolbar container" aria-label="Tools">
       <button id="prayerModeBtn" class="tool-btn" type="button" aria-pressed="false">Prayer mode</button>
-      <div class="tool-hint">Gentle focus for scripture</div>
+      <div class="tool-hint" aria-hidden="true">Gentle focus for scripture</div>
     </div>
   </header>
 
@@ -51,55 +52,15 @@
       <section class="card section reveal non-scripture">
         <div class="section-head">
           <h2>Discography</h2>
-          <p class="section-note">Albums and collections from YouTube</p>
+          <p class="section-note">Album playlists and collections</p>
         </div>
 
         <div class="section-body center">
           <p class="quiet-intro">
-            This playlist contains all worship recordings currently available.
+            Playlist titles below can be renamed inside data/discography.json.
           </p>
 
-          <div class="video-grid" aria-label="Album playlists">
-
-            <!-- Your playlist -->
-            <article class="panel video-card">
-              <h3>Brad Hobbs Worship Playlist</h3>
-              <p class="video-note">All Worship Recordings</p>
-
-              <div class="video-frame">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/videoseries?list=PLd8_iqz-1-nJKrN3qwKuSv3I0hAGg1tLv"
-                  title="Brad Hobbs Worship Playlist"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-                </iframe>
-              </div>
-
-              <a class="btn full"
-                 href="https://www.youtube.com/playlist?list=PLd8_iqz-1-nJKrN3qwKuSv3I0hAGg1tLv"
-                 target="_blank"
-                 rel="noreferrer">
-                Open playlist
-              </a>
-            </article>
-
-            <!-- placeholders for future playlists -->
-            <article class="panel video-card">
-              <h3>Future Album 2</h3>
-              <p class="video-note">Playlist (Coming soon)</p>
-              <div class="video-frame"></div>
-              <a class="btn full" href="#">Not yet available</a>
-            </article>
-
-            <article class="panel video-card">
-              <h3>Future Album 3</h3>
-              <p class="video-note">Playlist (Coming soon)</p>
-              <div class="video-frame"></div>
-              <a class="btn full" href="#">Not yet available</a>
-            </article>
-
-          </div>
+          <div id="albumsGrid" class="video-grid" aria-label="Album playlists"></div>
 
           <div class="scripture-strip focus-scripture">
             <div class="scripture-text">“With God all things are possible.”</div>
@@ -113,7 +74,7 @@
         </div>
       </section>
 
-      <footer class="site-footer reveal">
+      <footer class="site-footer reveal" aria-label="Footer">
         <div class="footer-row">
           <div>© <span id="year"></span> Brad Hobbs</div>
           <div>Built for worship, clarity, and service</div>
@@ -124,5 +85,6 @@
   </main>
 
   <script src="js/script.js"></script>
+  <script src="js/discography.js"></script>
 </body>
 </html>
