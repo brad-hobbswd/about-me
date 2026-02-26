@@ -1012,3 +1012,52 @@ body.prayer-mode .callout-title{
     grid-column:1 / -1;
   }
 }
+/* Scripture page grid */
+.grid{
+  display:grid;
+  gap:18px;
+  align-items:start;
+}
+
+@media (min-width:1200px){
+  .grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width:768px) and (max-width:1199px){
+  .grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width:767px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.grid .panel{
+  min-width:0;
+}
+
+/* Scripture callout */
+.callout{
+  margin-top:18px;
+  padding:16px;
+  border-radius:18px;
+  border:1px solid rgba(242,242,238,.12);
+  background:rgba(255,255,255,.04);
+  text-align:left;
+}
+
+.callout-title{
+  font-weight:900;
+  letter-spacing:.4px;
+  margin-bottom:8px;
+}
+
+.callout-body{
+  color:rgba(242,242,238,.78);
+  line-height:1.55;
+}
