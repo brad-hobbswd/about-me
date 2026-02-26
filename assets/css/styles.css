@@ -23,8 +23,8 @@ body{
   background:
     radial-gradient(900px 520px at 10% 10%, var(--glow), transparent 60%),
     radial-gradient(820px 480px at 90% 12%, rgba(231,219,201,.10), transparent 60%),
-    url("assets/img/woodgrain.svg"),
-    url("assets/img/paper-fibers.svg"),
+    url("../img/woodgrain.svg"),
+    url("../img/paper-fibers.svg"),
     linear-gradient(180deg, rgba(20,17,15,.96), rgba(12,10,9,.98));
   background-attachment: fixed, fixed, fixed, fixed, fixed;
   background-size: auto, auto, 980px 980px, 1100px 1100px, auto;
@@ -339,7 +339,7 @@ a{color:inherit}
 
 .alt{
   background:
-    url("assets/img/linen.svg"),
+    url("../img/linen.svg"),
     rgba(22,18,16,.58);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -530,7 +530,7 @@ input:focus, textarea:focus{
   padding: 40px 0 20px;
   border-bottom: 1px solid var(--line);
   background:
-    url("assets/img/linen.svg"),
+    url("../img/linen.svg"),
     rgba(28,23,20,.58);
   background-size: 900px 900px, auto;
   background-repeat: repeat, no-repeat;
