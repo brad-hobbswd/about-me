@@ -1,1 +1,16 @@
-
+{
+  "albums": [
+    { "title": "Album Playlist 01", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nJKrN3qwKuSv3I0hAGg1tLv" },
+    { "title": "Album Playlist 02", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nLrGL5ruI8mv2ypyMV3BGDs" },
+    { "title": "Album Playlist 03", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nKqdHElriaFTQTuCzPyIIv-" },
+    { "title": "Album Playlist 04", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nLRFXIlitLrN_f4NyVHWGPE" },
+    { "title": "Album Playlist 05", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nI7ZNrl6uNltohV-9qgESDk" },
+    { "title": "Album Playlist 06", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nJf1C-tJjOGMclk0J7T65pS" },
+    { "title": "Album Playlist 07", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nL-Kuhqh1mqDoJCXk7q3dj-" },
+    { "title": "Album Playlist 08", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nJjWvkDMVmrF3RlU3OYA3uA" },
+    { "title": "Album Playlist 09", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nInxhkMWfQ0fIMKpK_q2Zec" },
+    { "title": "Album Playlist 10", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nJNMunHYQ78II8Pb8VXvkZC" },
+    { "title": "Album Playlist 11", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nLoB9EOCMNKrqZ1xe6u-cki" },
+    { "title": "Album Playlist 12", "note": "YouTube Playlist", "playlistId": "PLd8_iqz-1-nIMHNu_rf4qzIDKfeHjRleJ" }
+  ]
+}
