@@ -34,10 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const iframe = document.createElement("iframe");
     iframe.loading = "lazy";
     iframe.allowFullscreen = true;
-    iframe.setAttribute(
-      "allow",
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    );
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
     iframe.src = `https://www.youtube-nocookie.com/embed/videoseries?list=${encodeURIComponent(album.playlistId)}`;
     iframe.title = `${album.title} playlist`;
 
@@ -57,7 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
     return card;
   };
 
-  albums.forEach((album) => {
-    gridNode.appendChild(buildCard(album));
-  });
+  albums.forEach((album) => gridNode.appendChild(buildCard(album)));
 });
