@@ -890,3 +890,43 @@ body.prayer-mode .callout-title{
   text-transform:uppercase;
   font-weight:800;
 }
+
+.health-panel{
+  margin-top:18px;
+  text-align:left;
+}
+
+.health-grid{
+  display:grid;
+  gap:10px;
+  margin-top:12px;
+}
+
+@media (min-width:900px){
+  .health-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+}
+
+.health-item{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid rgba(242,242,238,.12);
+  background:rgba(255,255,255,.03);
+}
+
+.health-k{
+  font-weight:800;
+  letter-spacing:.4px;
+}
+
+.health-v{
+  font-weight:800;
+}
+
+.health-ok{ color:rgba(126,160,138,.95); }
+.health-bad{ color:rgba(214,120,120,.95); }
+.health-warn{ color:rgba(214,179,92,.95); }
