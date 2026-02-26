@@ -84,3 +84,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+(async function siteHealthCheck(){
+  const params = new URLSearchParams(window.location.search);
+  const showHealth = params.get("health") === "1";
+  const panel = document.getElementById("siteHealth");
+
+  if (!panel) return;
+  if (!showHealth) return;
+
+  panel.hidden = false;
+
+  const setStatus = (key, text, cls) => {
+    const node = panel.querySelector(`[data-check="${key}"]`);
+    if (!node) return;
+    node.textContent = text;
+    node.classList.remove("health-ok", "health-bad", "health-warn");
+    node.classList.add(cls);
+  };
+
+  const probe = async (path) => {
+    try{
+      const res = await fetch(path, { cache: "no-store" });
+      return res.ok;
+    }catch(e){
+      return false;
+    }
+  };
+
+  const cssOk = await probe("css/styles.css");
+  setStatus("css", cssOk ? "OK" : "Missing", cssOk ? "health-ok" : "health-bad");
+
+  const jsOk = await probe("js/script.js");
+  setStatus("js", jsOk ? "OK" : "Missing", jsOk ? "health-ok" : "health-bad");
+
+  const logosOk = await probe("assets/logos/");
+  setStatus("logos", logosOk ? "OK" : "Check path", logosOk ? "health-ok" : "health-warn");
+
+  const dataOk = await probe("data/");
+  setStatus("data", dataOk ? "OK" : "Check path", dataOk ? "health-ok" : "health-warn");
+})();
