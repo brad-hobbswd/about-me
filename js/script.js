@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prayerBtn.addEventListener("click", () => {
       const enabled = !document.body.classList.contains("prayer-mode");
       setMode(enabled);
+      console.log("Prayer mode:", document.body.classList.contains("prayer-mode"));
     });
   }
 
