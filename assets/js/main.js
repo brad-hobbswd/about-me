@@ -12,12 +12,14 @@
   }
 
   function setPrayer(on){
+    if(on) document.body.classList.remove("focus");
     document.body.classList.toggle("prayer", on);
     safeSet(K_PRAYER, on ? "on" : "off");
     document.querySelectorAll("[data-prayer]").forEach(b => b.setAttribute("aria-pressed", on ? "true" : "false"));
   }
 
   function setFocus(on){
+    if(on) document.body.classList.remove("prayer");
     document.body.classList.toggle("focus", on);
     safeSet(K_FOCUS, on ? "on" : "off");
     document.querySelectorAll("[data-focus]").forEach(b => b.setAttribute("aria-pressed", on ? "true" : "false"));

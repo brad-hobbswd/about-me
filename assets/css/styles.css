@@ -598,56 +598,6 @@ body.prayer .scripture{
 
 
 
-/* Focus mode */
-body.focus::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  background: var(--focusdim);
-  z-index: 900;
-}
-
-/* Hide non scripture content */
-body.focus main > *:not(.scripture){
-  display: none;
-}
-
-/* Keep scripture visible and elevated */
-body.focus .scripture{
-  position: relative;
-  z-index: 1000;
-  background: rgba(244,239,230,.96);
-  border-color: rgba(162,135,86,.76);
-  box-shadow: 0 18px 40px rgba(0,0,0,.22);
-}
-
-/* Floating exit buttons */
-.focus-exit,
-.prayer-exit{
-  position: fixed;
-  bottom: 24px;
-  padding: 14px 18px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(244,239,230,.96);
-  font-weight: 900;
-  cursor: pointer;
-  z-index: 1100;
-  box-shadow: 0 10px 26px rgba(0,0,0,.16);
-}
-
-.focus-exit{
-  right: 24px;
-}
-
-.prayer-exit{
-  left: 24px;
-}
-
-.focus-exit:hover,
-.prayer-exit:hover{
-  border-color: rgba(162,135,86,.55);
-}
 
 input::placeholder, textarea::placeholder{color: rgba(242,238,231,.55)}
 
@@ -677,3 +627,87 @@ input::placeholder, textarea::placeholder{color: rgba(242,238,231,.55)}
 }
 
 .steps li{margin: 10px 0}
+
+/* Focus mode */
+body.focus::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: var(--focusdim);
+  z-index: 900;
+}
+
+/* Hide everything */
+body.focus *{
+  visibility: hidden;
+}
+
+/* Keep scripture visible anywhere on the page */
+body.focus [data-scripture],
+body.focus [data-scripture] *{
+  visibility: visible;
+}
+
+body.focus [data-scripture]{
+  position: relative;
+  z-index: 1000;
+  background:
+    radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
+    rgba(22,18,16,.92);
+  border: 1px solid rgba(199,167,106,.42);
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.44);
+}
+
+/* Keep exit buttons visible */
+body.focus .focus-exit,
+body.focus .prayer-exit{
+  visibility: visible;
+}
+
+/* Floating exit buttons */
+.focus-exit,
+.prayer-exit{
+  position: fixed;
+  bottom: 24px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(242,238,231,.18);
+  background: rgba(28,23,20,.92);
+  color: rgba(242,238,231,.92);
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0 10px 26px rgba(0,0,0,.32);
+}
+
+.focus-exit{
+  right: 24px;
+}
+
+.prayer-exit{
+  left: 24px;
+}
+
+.focus-exit:hover,
+.prayer-exit:hover{
+  border-color: rgba(199,167,106,.55);
+}
+/* Prayer mode scripture highlight */
+body.prayer [data-scripture]{
+  position: relative;
+  z-index: 1000;
+  background:
+    radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
+    rgba(22,18,16,.92);
+  border-color: rgba(199,167,106,.62);
+  box-shadow: 0 18px 40px rgba(0,0,0,.46);
+  filter: none;
+}
+
+body.prayer .focus-exit,
+body.prayer .prayer-exit{
+  background: rgba(28,23,20,.92);
+  color: rgba(242,238,231,.92);
+  border-color: rgba(242,238,231,.18);
+}
