@@ -215,7 +215,7 @@ a{color:inherit}
 
 /* Hero */
 .hero{
-  padding:64px 0 46px;
+  padding:32px 0 24px;
   border-bottom:1px solid var(--line);
 }
 
