@@ -714,3 +714,13 @@ body.prayer .prayer-exit{
   color: rgba(242,238,231,.92);
   border-color: rgba(242,238,231,.18);
 }
+.banner-map{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.banner-img{
+  width:100%;
+  height:auto;
+  display:block;
+}
