@@ -724,3 +724,9 @@ body.prayer .prayer-exit{
   height:auto;
   display:block;
 }
+.banner-img{
+width:100%;
+height:auto;
+display:block;
+margin:auto;
+}
