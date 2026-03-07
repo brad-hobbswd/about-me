@@ -730,3 +730,7 @@ height:auto;
 display:block;
 margin:auto;
 }
+.banner-img{
+position:relative;
+z-index:5;
+}
