@@ -215,16 +215,8 @@ a{color:inherit}
 
 /* Hero */
 .hero{
-  padding: 120px 0 90px;
-  border-bottom: 1px solid var(--line);
-
-  background:
-    linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.70)),
-    url("../img/banner.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding:64px 0 46px;
+  border-bottom:1px solid var(--line);
 }
 
 .hero-grid{
