@@ -721,11 +721,12 @@ body.prayer .prayer-exit{
 
 .banner-img{
   width:1536px;
-  max-width:100%;
+  max-width:1536px;
   height:auto;
   display:block;
   margin:auto;
 }
+
 area{
   outline:3px solid red;
 }
