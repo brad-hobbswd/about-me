@@ -720,17 +720,12 @@ body.prayer .prayer-exit{
 }
 
 .banner-img{
-  width:100%;
+  width:1536px;
+  max-width:100%;
   height:auto;
   display:block;
+  margin:auto;
 }
-.banner-img{
-width:100%;
-height:auto;
-display:block;
-margin:auto;
-}
-.banner-img{
-position:relative;
-z-index:5;
+area{
+  outline:3px solid red;
 }
