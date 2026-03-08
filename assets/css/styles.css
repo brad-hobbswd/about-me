@@ -71,6 +71,25 @@ a{color:inherit}
   background:var(--oak);
   border-bottom:2px solid var(--brass);
 }
+.header-actions{
+  display:flex;
+  gap:10px;
+}
+
+.action-btn{
+  font-size:13px;
+  padding:4px 10px;
+  border-radius:12px;
+  border:1px solid var(--brass);
+  background:transparent;
+  color:var(--paper);
+  cursor:pointer;
+}
+
+.action-btn:hover{
+  background:var(--brass);
+  color:#2b1c12;
+}
 
 /* header layout */
 .topbar{
