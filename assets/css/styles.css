@@ -747,3 +747,37 @@ box-shadow:
 .soft p{
   color:#3b2a1c;
 }
+
+.menu-toggle{
+display:none;
+font-size:22px;
+background:none;
+border:none;
+color:#f3e6cf;
+cursor:pointer;
+}
+
+/* Mobile layout */
+@media (max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#5a3f2a;
+padding:20px;
+gap:14px;
+}
+
+.menu.show{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
