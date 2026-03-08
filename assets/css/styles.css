@@ -545,34 +545,40 @@ input:focus, textarea:focus{
 
 /* Footer */
 .site-footer{
-  border-top: 1px solid var(--line);
-  background: rgba(12,10,9,.84);
-  padding: 18px 0;
+border-top:2px solid #d6a85b;
+background:#5a3f2a;
+padding:18px 0;
 }
 
 .footer-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 12px;
-  flex-wrap: wrap;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:12px;
+flex-wrap:wrap;
 }
 
 .footer-line{
-  margin:0;
-  color: var(--muted);
-  font-weight: 900;
+margin:0;
+color:#f3e6cf;
+font-weight:700;
 }
 
-.footer-links{display:flex; gap: 14px}
+.footer-links{
+display:flex;
+gap:14px;
+}
 
 .footer-links a{
-  text-decoration:none;
-  font-weight: 900;
-  color: var(--brown);
+text-decoration:none;
+font-weight:700;
+color:#f3e6cf;
 }
 
-.footer-links a:hover{text-decoration:underline}
+.footer-links a:hover{
+color:#b89563;
+text-decoration:none;
+}
 
 /* Prayer mode */
 body.prayer::before{
