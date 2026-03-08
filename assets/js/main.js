@@ -167,16 +167,17 @@
   }
 document.addEventListener("DOMContentLoaded", function(){
 
-  /* load shared header */
-  fetch("partials/header.html")
-  .then(res => res.text())
-  .then(html => {
+const header = document.getElementById("site-header");
 
-    const container = document.getElementById("site-header");
+if(header){
+fetch("partials/header.html")
+.then(res => res.text())
+.then(html => {
+header.innerHTML = html;
+});
+}
 
-    if(container){
-      container.innerHTML = html;
-    }
+});
 
     /* connect prayer and focus buttons */
     initModes();
