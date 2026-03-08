@@ -405,6 +405,7 @@ a{color:inherit}
   padding:16px;
   box-shadow:0 6px 18px rgba(0,0,0,.12);
   margin:14px 0;
+  color:#2b1a0f;
 }
 
 .verse{
@@ -511,12 +512,13 @@ a{color:inherit}
   color: rgba(75,63,54,.86);
 }
 
-input, textarea{
+input,
+textarea{
   font:inherit;
   padding:12px 14px;
-  border-radius:14px;
+  border-radius:12px;
   border:1px solid #caa87a;
-  background:#fff7e6;
+  background:#fffaf0;
   color:#2b1a0f;
 }
 
@@ -720,4 +722,18 @@ body.prayer .prayer-exit{
   height:auto;
   display:block;
   margin:auto;
+}
+.card,
+.album-card,
+.hero-card,
+.soft{
+  background:#fffaf0;
+  border:1px solid #d8b787;
+  color:#24160d;
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+.card p,
+.album-card p,
+.soft p{
+  color:#3b2a1c;
 }
