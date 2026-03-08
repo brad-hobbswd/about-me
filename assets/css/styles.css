@@ -1,16 +1,16 @@
 :root{
-  --paper:#1b1511;
-  --oak:#3a2a20;
-  --ink:#f7f1e6;
-  --brown:#eadcc6;
-  --brass:#d4a85c;
-  --muted:rgba(247,241,230,.75);
-  --line:rgba(247,241,230,.18);
-  --shadow:0 24px 60px rgba(0,0,0,.55);
+  --paper:#f3e6cf;
+  --oak:#5a3f2a;
+  --ink:#2d1c12;
+  --brown:#c6a57a;
+  --brass:#d6a85b;
+  --muted:rgba(45,28,18,.7);
+  --line:rgba(90,63,42,.2);
+  --shadow:0 20px 50px rgba(0,0,0,.25);
   --radius:18px;
-  --dim:rgba(0,0,0,.72);
-  --focusdim:rgba(0,0,0,.86);
-  --glow:rgba(212,168,92,.30);
+  --dim:rgba(0,0,0,.6);
+  --focusdim:rgba(0,0,0,.75);
+  --glow:rgba(214,168,91,.35);
 }
 
 *{box-sizing:border-box}
@@ -18,21 +18,15 @@
 html{scroll-behavior:smooth}
 
 body{
-  min-height: 100vh;
+  min-height:100vh;
   margin:0;
   color:var(--ink);
   background:
-    radial-gradient(900px 520px at 10% 10%, var(--glow), transparent 60%),
-    radial-gradient(820px 480px at 90% 12%, rgba(231,219,201,.10), transparent 60%),
-    url("../img/woodgrain.svg"),
-    url("../img/paper-fibers.svg"),
-    linear-gradient(180deg, rgba(20,17,15,.96), rgba(12,10,9,.98));
-  background-attachment: scroll, scroll, scroll, scroll, scroll;
-  background-size: auto, auto, 980px 980px, 1100px 1100px, auto;
-  background-repeat: no-repeat, no-repeat, repeat, repeat, no-repeat;
+    radial-gradient(900px 520px at 50% -10%, var(--glow), transparent 60%),
+    linear-gradient(180deg,#f6ecd8,#e9d5b2);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height:1.65;
-  font-size: 18px;
+  font-size:18px;
 }
 
 a{color:inherit}
@@ -70,12 +64,11 @@ a{color:inherit}
 
 /* Header */
 .site-header{
-  position: sticky;
-  top: 0;
-  z-index: 60;
-  background: var(--paper);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:#5a3f2a;
+  border-bottom:1px solid var(--line);
 }
 
 .topbar{
@@ -290,20 +283,19 @@ a{color:inherit}
 
 .btn{
   display:inline-block;
-  padding: 12px 16px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: var(--oak);
-  border-color: var(--brass);
+  padding:12px 16px;
+  border-radius:14px;
+  border:1px solid #b4833b;
+  background:#7a4e2a;
+  color:#fff3df;
   text-decoration:none;
-  font-weight: 900;
+  font-weight:900;
   cursor:pointer;
-  color: rgba(242,238,231,.92);
 }
 
 .btn:hover{
-  border-color: rgba(162,135,86,.55);
-  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+  background:#8b5a32;
+  border-color:#d6a85b;
 }
 
 .btn.primary{
@@ -381,11 +373,11 @@ a{color:inherit}
 }
 
 .card{
-  background: var(--oak);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: 0 16px 44px rgba(0,0,0,.36);
-  padding: 18px;
+  background:#fff7e6;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
 }
 
 .soft{
