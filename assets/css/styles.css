@@ -73,7 +73,7 @@ a{color:inherit}
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(27,21,17,.90);
+  background: var(--paper);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -293,7 +293,8 @@ a{color:inherit}
   padding: 12px 16px;
   border-radius: 14px;
   border: 1px solid var(--line);
-  background: rgba(42,35,30,.42);
+  background: var(--oak);
+  border-color: var(--brass);
   text-decoration:none;
   font-weight: 900;
   cursor:pointer;
@@ -306,8 +307,8 @@ a{color:inherit}
 }
 
 .btn.primary{
-  background: rgba(212,168,92,.28);
-  border-color: rgba(212,168,92,.60);
+  background: var(--brass);
+  color:#2b1c12;
 }
 
 .btn.ghost{
@@ -380,7 +381,7 @@ a{color:inherit}
 }
 
 .card{
-  background: rgba(28,23,20,.88);
+  background: var(--oak);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 16px 44px rgba(0,0,0,.36);
@@ -406,7 +407,7 @@ a{color:inherit}
   padding: 16px;
   background:
     radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
-    rgba(22,18,16,.92);
+    rgba(212,168,92,.22)
   box-shadow: 0 14px 34px rgba(0,0,0,.44);
   margin: 14px 0;
 }
