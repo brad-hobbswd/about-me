@@ -21,7 +21,7 @@ body{
 min-height:100vh;
 margin:0;
 color:var(--ink);
-background:#ffffff;
+background:#f3ead7
 font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 line-height:1.65;
 font-size:18px;
@@ -184,8 +184,25 @@ border:1px solid #d6a85b;
 
 /* Hero */
 .hero{
-  padding:32px 0 24px;
-  border-bottom:1px solid var(--line);
+padding:20px 0 0;
+background:transparent;
+border:none;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+bottom:-1px;
+height:120px;
+background:linear-gradient(
+to bottom,
+rgba(243,234,215,0),
+rgba(243,234,215,1)
+);
+pointer-events:none;
 }
 
 .hero-grid{
@@ -710,6 +727,9 @@ border:3px solid #d6a85b;
 box-shadow:
 0 20px 45px rgba(0,0,0,.22),
 0 6px 12px rgba(0,0,0,.18);
+border-radius:10px;
+border:3px solid #d6a85b;
+box-shadow:0 18px 40px rgba(0,0,0,.18);
 }
 
 .card,
