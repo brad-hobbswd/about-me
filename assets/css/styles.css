@@ -711,11 +711,14 @@ body.prayer .prayer-exit{
 }
 
 .banner-img{
-  width:100%;
-  height:auto;
-  display:block;
-  margin:auto;
+width:100%;
+height:auto;
+display:block;
+margin:auto;
+border-radius:10px;
+box-shadow:0 18px 40px rgba(0,0,0,.18);
 }
+
 .card,
 .album-card,
 .hero-card,
