@@ -167,23 +167,34 @@
   }
 document.addEventListener("DOMContentLoaded", function(){
 
-const header = document.getElementById("site-header");
+  const headerContainer = document.getElementById("site-header");
 
-if(header){
-fetch("partials/header.html")
-.then(res => res.text())
-.then(html => {
-header.innerHTML = html;
-});
-}
+  if(headerContainer){
 
-});
+    fetch("partials/header.html")
+    .then(response => response.text())
+    .then(html => {
 
-    /* connect prayer and focus buttons */
-    initModes();
-  });
+      headerContainer.innerHTML = html;
 
-  initMenu();
-  initMailtoForm();
+      /* reconnect prayer + focus buttons */
+      const prayerButtons = document.querySelectorAll("[data-prayer]");
+      const focusButtons = document.querySelectorAll("[data-focus]");
+
+      prayerButtons.forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+          document.body.classList.toggle("prayer");
+        });
+      });
+
+      focusButtons.forEach(btn=>{
+        btn.addEventListener("click", ()=>{
+          document.body.classList.toggle("focus");
+        });
+      });
+
+    });
+
+  }
 
 });
