@@ -166,14 +166,18 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function(){
-    initMenu();
-    initModes();
-    initMailtoForm();
-  });
-})();
+ document.addEventListener("DOMContentLoaded", function(){
+
 fetch("/about-me/partials/header.html")
 .then(response => response.text())
 .then(data => {
 document.getElementById("site-header").innerHTML = data;
+
+/* initialize buttons AFTER header exists */
+initModes();
+});
+
+initMenu();
+initMailtoForm();
+
 });
