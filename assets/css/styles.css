@@ -62,15 +62,51 @@ a{color:inherit}
   z-index:2000;
 }
 
+/* Header */
 
-/* Menu */
-.menu{
-  display:flex;
-  align-items:center;
-  gap:18px;
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:var(--oak);
+  border-bottom:2px solid var(--brass);
 }
 
-.menu.open{display:flex}
+/* header layout */
+.topbar{
+  max-width:1100px;
+  margin:0 auto;
+  padding:8px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* brand */
+.brandline{
+  display:flex;
+  flex-direction:column;
+}
+
+.brand{
+  font-family:Georgia, serif;
+  font-weight:800;
+  font-size:1.2rem;
+  text-decoration:none;
+  color:var(--paper);
+}
+
+.brand-sub{
+  font-size:.8rem;
+  color:#e6d5b5;
+}
+
+/* navigation */
+.menu{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
 
 .menu a{
   text-decoration:none;
@@ -78,21 +114,10 @@ a{color:inherit}
   font-size:14px;
   color:var(--paper);
   padding:4px 6px;
-  transition:color .2s ease;
 }
 
 .menu a:hover{
   color:var(--brass);
-}
-
-
-@media (max-width: 720px){
-  .chip{display:none}
-  .brand-sub{display:none}
-  .menu-actions{grid-template-columns:1fr}
-}
-.menu-btn{
-  display:none;
 }
 
 /* Hero */
