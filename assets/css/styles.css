@@ -22,8 +22,11 @@ body{
   margin:0;
   color:var(--ink);
   background:
-    radial-gradient(900px 520px at 50% -10%, var(--glow), transparent 60%),
-    linear-gradient(180deg,#f6ecd8,#e9d5b2);
+    radial-gradient(900px 520px at 50% -10%, rgba(214,168,91,.25), transparent 60%),
+    linear-gradient(180deg,#f6ecd8,#e9d5b2),
+    url("../img/paper-fibers.svg");
+  background-size:auto,auto,900px;
+  background-repeat:no-repeat,no-repeat,repeat;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height:1.65;
   font-size:18px;
@@ -203,7 +206,7 @@ position:absolute;
 left:0;
 right:0;
 bottom:-1px;
-height:120px;
+height:100px;
 background:linear-gradient(
 to bottom,
 rgba(243,230,207,0),
@@ -362,12 +365,12 @@ pointer-events:none;
 }
 
 .card{
-  background:#fffaf0;
-  border:1px solid #d8b787;
-  border-radius:var(--radius);
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
-  padding:20px;
-  color:#24160d;
+background:#fff7e8;
+border:1px solid #d8b787;
+border-radius:var(--radius);
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+padding:20px;
+color:#24160d;
 }
 .card .h3{
   color:#1f120a;
@@ -392,13 +395,13 @@ pointer-events:none;
 
 /* Scripture */
 .scripture{
-  background:#fff5e3;
-  border:1px solid #d6a85b;
-  border-radius:16px;
-  padding:16px;
-  box-shadow:0 6px 18px rgba(0,0,0,.12);
-  margin:14px 0;
-  color:#2b1a0f;
+background:#fff3dc;
+border:1px solid #d6a85b;
+border-radius:16px;
+padding:16px;
+box-shadow:0 6px 20px rgba(214,168,91,.25);
+margin:14px 0;
+color:#2b1a0f;
 }
 
 .verse{
