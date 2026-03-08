@@ -165,36 +165,24 @@
       window.location.href = href;
     });
   }
+document.addEventListener("DOMContentLoaded", function(){
 
- document.addEventListener("DOMContentLoaded", function(){
+  /* load shared header */
+  fetch("partials/header.html")
+  .then(res => res.text())
+  .then(html => {
 
-fetch("/about-me/partials/header.html")
-.then(response => response.text())
-.then(data => {
-  const headerContainer = document.getElementById("site-header");
-  if(headerContainer){
-    headerContainer.innerHTML = data;
+    const container = document.getElementById("site-header");
 
-    /* reconnect buttons that were just added */
-    document.querySelectorAll("[data-prayer]").forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        document.body.classList.toggle("prayer");
-      });
-    });
+    if(container){
+      container.innerHTML = html;
+    }
 
-    document.querySelectorAll("[data-focus]").forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        document.body.classList.toggle("focus");
-      });
-    });
-  }
-});
+    /* connect prayer and focus buttons */
+    initModes();
+  });
 
-/* initialize buttons AFTER header exists */
-initModes();
-});
-
-initMenu();
-initMailtoForm();
+  initMenu();
+  initMailtoForm();
 
 });
