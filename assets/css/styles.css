@@ -22,13 +22,15 @@ min-height:100vh;
 margin:0;
 color:var(--ink);
 background:
-linear-gradient(180deg,#f7edd9,#ead6b5),
+radial-gradient(
+800px 400px at 50% -5%,
+rgba(214,168,91,.08),
+transparent 60%
+),
+linear-gradient(180deg,#f6ecd8,#ead6b5),
 url("../img/paper-fibers.svg");
-background-size:auto,900px;
-background-repeat:no-repeat,repeat;
-font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-line-height:1.65;
-font-size:18px;
+background-size:auto,auto,900px;
+background-repeat:no-repeat,no-repeat,repeat;
 }
 
 a{color:inherit}
