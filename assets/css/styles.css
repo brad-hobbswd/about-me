@@ -62,116 +62,12 @@ a{color:inherit}
   z-index:2000;
 }
 
-/* Header */
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:60;
-  background:#5a3f2a;
-  border-bottom:1px solid var(--line);
-}
-
-.topbar{
-  max-width:1100px;
-  margin:0 auto;
-  padding:8px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.brandline{display:flex; flex-direction:column; gap:4px}
-
-.brand{
-  font-family: Georgia, serif;
-  font-weight: 800;
-  letter-spacing:.02em;
-  text-decoration:none;
-  color: rgba(231,219,201,.96);
-  font-size: 1.15rem;
-}
-
-.brand-sub{
-  margin:0;
-  color: var(--muted);
-  font-size: .92rem;
-}
-
-.top-actions{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-}
-
-.chip{
-  border: 1px solid var(--line);
-  background: rgba(42,35,30,.46);
-  border-radius: 999px;
-  padding: 10px 12px;
-  font-weight: 850;
-  cursor:pointer;
-  color: rgba(242,238,231,.92);
-}
-
-.menu-btn{
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(42,35,30,.46);
-  cursor:pointer;
-  display:grid;
-  place-items:center;
-}
-
-.chip:hover,
-.menu-btn:hover{
-  border-color: rgba(162,135,86,.55);
-  box-shadow: 0 10px 22px rgba(0,0,0,.10);
-}
-
-.burger{
-  width: 18px;
-  height: 2px;
-  background: var(--ink);
-  position: relative;
-  display: inline-block;
-}
-
-.burger::before,
-.burger::after{
-  content:"";
-  position:absolute;
-  left:0;
-  width:18px;
-  height:2px;
-  background: var(--ink);
-}
-
-.burger::before{top:-6px}
-.burger::after{top:6px}
-
-.sr-only{
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
-}
-.h1,.h2,.h3{
-  color:#2b1a0f;
-}
 
 /* Menu */
 .menu{
   display:flex;
-  justify-content:center;
-  gap:22px;
-  padding:8px 0;
+  align-items:center;
+  gap:18px;
 }
 
 .menu.open{display:flex}
@@ -179,20 +75,16 @@ a{color:inherit}
 .menu a{
   text-decoration:none;
   font-weight:700;
-  font-size:15px;
-  color:#f5e6cf;
-  padding:6px 10px;
+  font-size:14px;
+  color:var(--paper);
+  padding:4px 6px;
+  transition:color .2s ease;
 }
 
 .menu a:hover{
-  color:#d6a85b;
+  color:var(--brass);
 }
 
-.menu-actions{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
 
 @media (max-width: 720px){
   .chip{display:none}
@@ -236,7 +128,7 @@ a{color:inherit}
   margin:0 0 12px;
   font-family: Georgia, serif;
   font-weight: 900;
-  color: rgba(231,219,201,.98);
+  color:var(--ink);
   letter-spacing: .01em;
   line-height:1.12;
   font-size: clamp(2.1rem, 3.6vw, 3.2rem);
@@ -246,7 +138,7 @@ a{color:inherit}
   margin:0 0 12px;
   font-family: Georgia, serif;
   font-weight: 900;
-  color: rgba(231,219,201,.96);
+  color:var(--ink);
   line-height:1.18;
   font-size: 1.55rem;
 }
@@ -255,7 +147,7 @@ a{color:inherit}
   margin:0 0 8px;
   font-family: Georgia, serif;
   font-weight: 900;
-  color: rgba(231,219,201,.94);
+  color:var(--ink);
   font-size: 1.12rem;
 }
 
@@ -310,7 +202,7 @@ a{color:inherit}
 }
 
 .hero-card{
-  background: rgba(28,23,20,.90);
+  background:#fffaf0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -426,7 +318,7 @@ a{color:inherit}
 .frame{
   border: 1px solid rgba(199,167,106,.30);
   border-radius: var(--radius);
-  background: rgba(22,18,16,.70);
+  background:#fff5e3;
   padding: 14px;
   box-shadow: 0 14px 34px rgba(0,0,0,.34);
 }
@@ -462,7 +354,7 @@ a{color:inherit}
   padding: 16px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: rgba(28,23,20,.88);
+  background:#fffaf0;
   text-decoration:none;
 }
 
@@ -597,9 +489,6 @@ body.prayer .scripture{
   filter:none;
 }
 
-
-
-
 input::placeholder, textarea::placeholder{color: rgba(242,238,231,.55)}
 
 /* Discography album grid */
@@ -615,7 +504,7 @@ input::placeholder, textarea::placeholder{color: rgba(242,238,231,.55)}
 }
 
 .album-card{
-  background: rgba(28,23,20,.90);
+  background:#fffaf0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 16px 44px rgba(0,0,0,.36);
