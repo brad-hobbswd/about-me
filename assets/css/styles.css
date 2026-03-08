@@ -21,7 +21,7 @@ body{
 min-height:100vh;
 margin:0;
 color:var(--ink);
-background:#efe6d3
+background:#efe6d3;
 font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 line-height:1.65;
 font-size:18px;
@@ -184,9 +184,8 @@ border:1px solid #d6a85b;
 
 /* Hero */
 .hero{
-padding:20px 0 0;
-position:relative;
 background:transparent;
+padding:20px 0;
 }
 
 .hero-grid{
