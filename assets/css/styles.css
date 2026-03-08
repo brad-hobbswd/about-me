@@ -211,7 +211,7 @@ position:absolute;
 left:0;
 right:0;
 bottom:-1px;
-height:70px;
+height:55px;
 background:linear-gradient(
 to bottom,
 rgba(239,230,211,0),
@@ -720,14 +720,9 @@ width:100%;
 height:auto;
 display:block;
 margin:auto;
-border-radius:10px;
-border:3px solid #d6a85b;
-box-shadow:
-0 20px 45px rgba(0,0,0,.22),
-0 6px 12px rgba(0,0,0,.18);
-border-radius:10px;
-border:3px solid #d6a85b;
-box-shadow:0 18px 40px rgba(0,0,0,.18);
+border-radius:8px;
+border:none;
+box-shadow:0 14px 30px rgba(0,0,0,.18);
 }
 
 .card,
