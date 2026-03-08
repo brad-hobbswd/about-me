@@ -1,4 +1,4 @@
-(function(){
+i'm(function(){
   const K_PRAYER = "prayerMode";
   const K_FOCUS = "focusMode";
   const K_MENU = "menuOpen";
@@ -184,3 +184,12 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 })();
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+if(toggle){
+toggle.addEventListener("click", () => {
+menu.classList.toggle("show");
+});
+}
