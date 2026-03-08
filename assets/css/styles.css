@@ -110,22 +110,30 @@ a{color:inherit}
 
 /* navigation */
 .menu{
-  display:flex;
-  justify-content:center;
-  gap:26px;
-  flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
 }
 
 .menu a{
-  text-decoration:none;
-  font-size:14px;
-  font-weight:700;
-  color:#f3e6cf;
-  padding:6px 4px;
+text-decoration:none;
+font-size:14px;
+font-weight:700;
+color:#f3e6cf;
+padding:4px 6px;
+border-radius:6px;
+transition:all .2s ease;
 }
 
 .menu a:hover{
-  color:#d6a85b;
+color:#2d1c12;
+background:#d6a85b;
+}
+.menu a + a{
+border-left:1px solid rgba(243,230,207,.25);
+padding-left:12px;
+margin-left:6px;
 }
 
 /* prayer tools */
