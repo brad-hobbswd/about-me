@@ -171,7 +171,24 @@
 fetch("/about-me/partials/header.html")
 .then(response => response.text())
 .then(data => {
-document.getElementById("site-header").innerHTML = data;
+  const headerContainer = document.getElementById("site-header");
+  if(headerContainer){
+    headerContainer.innerHTML = data;
+
+    /* reconnect buttons that were just added */
+    document.querySelectorAll("[data-prayer]").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        document.body.classList.toggle("prayer");
+      });
+    });
+
+    document.querySelectorAll("[data-focus]").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        document.body.classList.toggle("focus");
+      });
+    });
+  }
+});
 
 /* initialize buttons AFTER header exists */
 initModes();
