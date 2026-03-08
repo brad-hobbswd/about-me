@@ -121,15 +121,17 @@ text-decoration:none;
 font-size:14px;
 font-weight:700;
 color:#f3e6cf;
-padding:4px 6px;
+padding:4px 8px;
 border-radius:6px;
 transition:all .2s ease;
 }
 
+/* hover state */
 .menu a:hover{
-color:#2d1c12;
-background:#d6a85b;
+background:rgba(214,168,91,.35);
+color:#f3e6cf;
 }
+
 .menu a + a{
 border-left:1px solid rgba(243,230,207,.25);
 padding-left:12px;
