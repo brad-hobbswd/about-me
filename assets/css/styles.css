@@ -1,16 +1,16 @@
 :root{
-  --paper:#14110f;
-  --oak:#2a231e;
-  --ink:#f2eee7;
-  --brown:#e7dbc9;
-  --brass:#c7a76a;
-  --muted:rgba(242,238,231,.74);
-  --line:rgba(242,238,231,.14);
-  --shadow:0 22px 56px rgba(0,0,0,.48);
+  --paper:#1b1511;
+  --oak:#3a2a20;
+  --ink:#f7f1e6;
+  --brown:#eadcc6;
+  --brass:#d4a85c;
+  --muted:rgba(247,241,230,.75);
+  --line:rgba(247,241,230,.18);
+  --shadow:0 24px 60px rgba(0,0,0,.55);
   --radius:18px;
   --dim:rgba(0,0,0,.72);
-  --focusdim:rgba(0,0,0,.84);
-  --glow:rgba(199,167,106,.22);
+  --focusdim:rgba(0,0,0,.86);
+  --glow:rgba(212,168,92,.30);
 }
 
 *{box-sizing:border-box}
@@ -73,7 +73,7 @@ a{color:inherit}
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(20,17,15,.84);
+  background: rgba(27,21,17,.90);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -306,8 +306,8 @@ a{color:inherit}
 }
 
 .btn.primary{
-  background: rgba(199,167,106,.20);
-  border-color: rgba(199,167,106,.44);
+  background: rgba(212,168,92,.28);
+  border-color: rgba(212,168,92,.60);
 }
 
 .btn.ghost{
