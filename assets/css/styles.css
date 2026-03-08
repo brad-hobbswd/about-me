@@ -22,11 +22,6 @@ min-height:100vh;
 margin:0;
 color:var(--ink);
 background:
-radial-gradient(
-800px 400px at 50% -5%,
-rgba(214,168,91,.08),
-transparent 60%
-),
 linear-gradient(180deg,#f6ecd8,#ead6b5),
 url("../img/paper-fibers.svg");
 background-size:auto,auto,900px;
