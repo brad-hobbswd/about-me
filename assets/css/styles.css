@@ -206,11 +206,11 @@ position:absolute;
 left:0;
 right:0;
 bottom:-1px;
-height:100px;
+height:140px;
 background:linear-gradient(
 to bottom,
 rgba(243,230,207,0),
-rgba(243,230,207,1)
+rgba(243,230,207,.95)
 );
 pointer-events:none;
 }
