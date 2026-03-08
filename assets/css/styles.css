@@ -200,9 +200,24 @@ padding:20px 0;
 /* banner fade into page */
 
 .hero{
+position:relative;
 padding:20px 0 0;
 background:transparent;
-border:none;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+bottom:-1px;
+height:70px;
+background:linear-gradient(
+to bottom,
+rgba(239,230,211,0),
+rgba(239,230,211,1)
+);
+pointer-events:none;
 }
 
 @media (max-width: 920px){
