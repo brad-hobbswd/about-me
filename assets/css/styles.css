@@ -72,6 +72,18 @@ a{color:inherit}
   border-bottom:2px solid #d6a85b;
 }
 
+/* soft blend into page */
+.site-header::after{
+  content:"";
+  display:block;
+  height:6px;
+  background:linear-gradient(
+    to bottom,
+    rgba(214,168,91,.45),
+    rgba(243,230,207,0)
+  );
+}
+
 /* top row layout */
 .topbar{
   max-width:1100px;
