@@ -170,31 +170,15 @@ document.addEventListener("DOMContentLoaded", function(){
   const headerContainer = document.getElementById("site-header");
 
   if(headerContainer){
-
     fetch("partials/header.html")
-    .then(response => response.text())
+    .then(res => res.text())
     .then(html => {
-
       headerContainer.innerHTML = html;
-
-      /* reconnect prayer + focus buttons */
-      const prayerButtons = document.querySelectorAll("[data-prayer]");
-      const focusButtons = document.querySelectorAll("[data-focus]");
-
-      prayerButtons.forEach(btn=>{
-        btn.addEventListener("click", ()=>{
-          document.body.classList.toggle("prayer");
-        });
-      });
-
-      focusButtons.forEach(btn=>{
-        btn.addEventListener("click", ()=>{
-          document.body.classList.toggle("focus");
-        });
-      });
-
+      initModes();
     });
-
   }
+
+  initMenu();
+  initMailtoForm();
 
 });
