@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const headerContainer = document.getElementById("site-header");
 
   if(headerContainer){
-    fetch("partials/header.html")
+    fetch("/about-me/partials/header.html")
     .then(res => res.text())
     .then(html => {
       headerContainer.innerHTML = html;
