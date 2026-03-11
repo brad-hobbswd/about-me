@@ -1,4 +1,4 @@
-function(){
+(function(){
   const K_PRAYER = "prayerMode";
   const K_FOCUS = "focusMode";
   const K_MENU = "menuOpen";
