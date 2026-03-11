@@ -1,14 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-fetch("partials/header.html")
-.then(response => response.text())
-.then(data => {
-  document.getElementById("site-header").innerHTML = data;
-});
-
-});
-
-(function(){
+function(){
   const K_PRAYER = "prayerMode";
   const K_FOCUS = "focusMode";
   const K_MENU = "menuOpen";
