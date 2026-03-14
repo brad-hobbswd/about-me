@@ -45,19 +45,24 @@ if(!btn||!menu)return;
 
 function openMenu(){
 menu.classList.add("open");
+btn.classList.add("open");
 btn.setAttribute("aria-expanded","true");
 safeSet(K_MENU,"on");
 }
 
 function closeMenu(){
 menu.classList.remove("open");
+btn.classList.remove("open");
 btn.setAttribute("aria-expanded","false");
 safeSet(K_MENU,"off");
 }
 
 btn.addEventListener("click",function(){
+
 const open=menu.classList.contains("open");
+
 open?closeMenu():openMenu();
+
 });
 
 document.addEventListener("keydown",function(e){
