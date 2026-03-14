@@ -156,11 +156,6 @@ margin-left:6px;
 
 /* header color correction */
 
-.site-header{
-background:#5a3f2a;
-border-bottom:2px solid #d6a85b;
-}
-
 .brand{
 color:#f3e6cf;
 }
@@ -748,14 +743,6 @@ box-shadow:
   color:#3b2a1c;
 }
 
-.menu-toggle{
-display:none;
-font-size:22px;
-background:none;
-border:none;
-color:#f3e6cf;
-cursor:pointer;
-}
 
 /* ===== Header Layer Fix ===== */
 
