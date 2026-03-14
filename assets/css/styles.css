@@ -757,6 +757,15 @@ color:#f3e6cf;
 cursor:pointer;
 }
 
+/* ===== Header Layer Fix ===== */
+
+.site-header{
+background:#5a3f2a;
+border-bottom:2px solid #d6a85b;
+position:relative;
+z-index:1000;
+}
+
 /* ===== Hamburger Toggle ===== */
 
 .menu-toggle{
@@ -773,6 +782,21 @@ width:26px;
 height:3px;
 background:#f3e6cf;
 display:block;
+transition:all .3s ease;
+}
+
+/* hamburger animation */
+
+.menu-toggle.open span:nth-child(1){
+transform:translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2){
+opacity:0;
+}
+
+.menu-toggle.open span:nth-child(3){
+transform:translateY(-8px) rotate(-45deg);
 }
 
 /* ===== Mobile / Tablet Navigation ===== */
@@ -806,6 +830,16 @@ padding:22px 0;
 gap:16px;
 border-top:1px solid rgba(243,230,207,.15);
 box-shadow:0 10px 30px rgba(0,0,0,.25);
+z-index:1100;
+transform:translateY(-10px);
+opacity:0;
+transition:all .28s ease;
+}
+
+.menu.open{
+display:flex;
+transform:translateY(0);
+opacity:1;
 }
 
 .menu a{
@@ -817,10 +851,6 @@ padding:6px 12px;
 border-left:none;
 margin-left:0;
 padding-left:0;
-}
-
-.menu.open{
-display:flex;
 }
 
 }
