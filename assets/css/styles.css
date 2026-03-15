@@ -628,19 +628,36 @@ input::placeholder, textarea::placeholder{color: rgba(242,238,231,.55)}
 
 .steps li{margin: 10px 0}
 
-/* Focus mode */
+/* ===== Focus Mode ===== */
+
 body.focus::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  background: var(--focusdim);
-  z-index: 900;
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+z-index:900;
 }
 
-/* Hide everything */
-body.focus *{
-  visibility: hidden;
+body.focus main,
+body.focus header,
+body.focus footer{
+filter:brightness(.35) saturate(.7);
 }
+
+/* highlight scripture */
+
+body.focus [data-scripture]{
+position:relative;
+z-index:1000;
+background:
+radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
+rgba(22,18,16,.92);
+border:1px solid rgba(199,167,106,.45);
+border-radius:16px;
+box-shadow:0 18px 40px rgba(0,0,0,.45);
+filter:none;
+}
+
 
 /* Keep scripture visible anywhere on the page */
 body.focus [data-scripture],
@@ -648,16 +665,6 @@ body.focus [data-scripture] *{
   visibility: visible;
 }
 
-body.focus [data-scripture]{
-  position: relative;
-  z-index: 1000;
-  background:
-    radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
-    rgba(22,18,16,.92);
-  border: 1px solid rgba(199,167,106,.42);
-  border-radius: 16px;
-  box-shadow: 0 14px 34px rgba(0,0,0,.44);
-}
 
 /* Keep exit buttons visible */
 body.focus .focus-exit,
@@ -666,20 +673,6 @@ body.focus .prayer-exit{
 }
 
 /* Floating exit buttons */
-.focus-exit,
-.prayer-exit{
-  position: fixed;
-  bottom: 24px;
-  padding: 14px 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(242,238,231,.18);
-  background: rgba(28,23,20,.92);
-  color: rgba(242,238,231,.92);
-  font-weight: 900;
-  cursor: pointer;
-  z-index: 1100;
-  box-shadow: 0 10px 26px rgba(0,0,0,.32);
-}
 
 .focus-exit{
   right: 24px;
@@ -840,4 +833,43 @@ margin-left:0;
 padding-left:0;
 }
 
+}
+
+/* ensure exit buttons stay visible in focus/prayer modes */
+
+.focus-exit,
+.prayer-exit{
+position:fixed;
+bottom:20px;
+padding:14px 18px;
+border-radius:999px;
+border:1px solid rgba(242,238,231,.18);
+background:rgba(28,23,20,.92);
+color:#f2eee7;
+font-weight:900;
+cursor:pointer;
+z-index:9999;
+}
+
+.focus-exit{
+right:20px;
+}
+
+.prayer-exit{
+left:20px;
+}
+
+/* keep them visible even when focus mode hides elements */
+
+body.focus .focus-exit,
+body.focus .focus-exit *,
+body.prayer .prayer-exit,
+body.prayer .prayer-exit *{
+visibility:visible !important;
+}
+
+.focus-exit,
+.prayer-exit{
+min-width:140px;
+text-align:center;
 }
