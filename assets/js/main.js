@@ -12,29 +12,64 @@ function safeSet(k,v){
 try{localStorage.setItem(k,v);}catch(e){}
 }
 
-/* Prayer Mode */
+/* ================= EXIT BUTTONS ================= */
+
+function initExitButtons(){
+
+const focusExit=document.createElement("button");
+focusExit.className="focus-exit";
+focusExit.textContent="Exit Focus";
+
+focusExit.addEventListener("click",function(){
+setFocus(false);
+});
+
+const prayerExit=document.createElement("button");
+prayerExit.className="prayer-exit";
+prayerExit.textContent="Exit Prayer";
+
+prayerExit.addEventListener("click",function(){
+setPrayer(false);
+});
+
+document.body.appendChild(focusExit);
+document.body.appendChild(prayerExit);
+
+}
+
+/* ================= PRAYER MODE ================= */
 
 function setPrayer(on){
+
 if(on)document.body.classList.remove("focus");
+
 document.body.classList.toggle("prayer",on);
+
 safeSet(K_PRAYER,on?"on":"off");
+
 document.querySelectorAll("[data-prayer]").forEach(b=>{
 b.setAttribute("aria-pressed",on?"true":"false");
 });
+
 }
 
-/* Focus Mode */
+/* ================= FOCUS MODE ================= */
 
 function setFocus(on){
+
 if(on)document.body.classList.remove("prayer");
+
 document.body.classList.toggle("focus",on);
+
 safeSet(K_FOCUS,on?"on":"off");
+
 document.querySelectorAll("[data-focus]").forEach(b=>{
 b.setAttribute("aria-pressed",on?"true":"false");
 });
+
 }
 
-/* Mobile Menu */
+/* ================= MOBILE MENU ================= */
 
 function initMenu(){
 
@@ -66,23 +101,34 @@ open?closeMenu():openMenu();
 });
 
 document.addEventListener("keydown",function(e){
-if(e.key==="Escape")closeMenu();
+
+if(e.key==="Escape"){
+closeMenu();
+setFocus(false);
+setPrayer(false);
+}
+
 });
 
 document.addEventListener("click",function(e){
+
 const inside=menu.contains(e.target)||btn.contains(e.target);
+
 if(!inside)closeMenu();
+
 });
 
 menu.addEventListener("click",function(e){
+
 if(e.target.tagName==="A")closeMenu();
+
 });
 
 if(safeGet(K_MENU)==="on")openMenu();
 
 }
 
-/* Prayer + Focus */
+/* ================= PRAYER + FOCUS BUTTONS ================= */
 
 function initModes(){
 
@@ -106,7 +152,7 @@ setFocus(!document.body.classList.contains("focus"));
 
 }
 
-/* Mailto Form */
+/* ================= MAILTO FORM ================= */
 
 function initMailtoForm(){
 
@@ -141,7 +187,7 @@ window.location.href=
 
 }
 
-/* Page Load */
+/* ================= PAGE LOAD ================= */
 
 document.addEventListener("DOMContentLoaded",function(){
 
@@ -161,6 +207,10 @@ initMenu();
 });
 
 }
+
+/* important for mobile */
+
+initExitButtons();
 
 initMailtoForm();
 
