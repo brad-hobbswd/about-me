@@ -840,7 +840,7 @@ padding-left:0;
 .focus-exit,
 .prayer-exit{
 position:fixed;
-bottom:20px;
+bottom:80px;
 padding:14px 18px;
 border-radius:999px;
 border:1px solid rgba(242,238,231,.18);
@@ -849,6 +849,8 @@ color:#f2eee7;
 font-weight:900;
 cursor:pointer;
 z-index:9999;
+min-width:140px;
+text-align:center;
 }
 
 .focus-exit{
@@ -887,4 +889,18 @@ body.prayer .prayer-exit *{
 visibility:visible !important;
 opacity:1 !important;
 display:block !important;
+}
+
+/* allow page links under the exit bar to remain clickable */
+
+body.focus::before,
+body.prayer::before{
+pointer-events:none;
+}
+
+/* allow clicks through empty areas */
+
+.focus-exit,
+.prayer-exit{
+pointer-events:auto;
 }
