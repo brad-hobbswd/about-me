@@ -873,3 +873,18 @@ visibility:visible !important;
 min-width:140px;
 text-align:center;
 }
+
+/* MOBILE FIX for prayer / focus exit buttons */
+
+body.focus .focus-exit,
+body.focus .focus-exit *,
+body.focus .prayer-exit,
+body.focus .prayer-exit *,
+body.prayer .focus-exit,
+body.prayer .focus-exit *,
+body.prayer .prayer-exit,
+body.prayer .prayer-exit *{
+visibility:visible !important;
+opacity:1 !important;
+display:block !important;
+}
