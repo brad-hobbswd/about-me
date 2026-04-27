@@ -8,9 +8,6 @@
 
 <title>Home | Brad Hobbs</title>
 
-<meta name="theme-color" content="#0c0a09" />
-<meta name="description" content="Teaching with clarity, living with worship, centered on Jesus in a quiet prayer closet atmosphere." />
-
 <style>
 
 /* ===== BASE ===== */
@@ -19,17 +16,16 @@ body{
   background:#a3855a;
   color:#24160d;
   font-family:system-ui, Arial;
-  line-height:1.5;
 }
 
 .container{
-  max-width:900px; /* tighter */
+  max-width:900px;
   margin:auto;
   padding:0 18px;
 }
 
 .section{
-  padding:40px 0; /* reduced */
+  padding:30px 0; /* tighter */
 }
 
 /* ===== NAVBAR ===== */
@@ -65,24 +61,23 @@ body{
 /* ===== HERO ===== */
 .hero{
   text-align:center;
-  padding:60px 20px 40px; /* tightened */
+  padding:50px 20px 30px;
 }
 
 .hero h1{
-  font-size:34px;
-  margin-bottom:10px;
-  font-family:Georgia, serif;
+  font-size:32px;
+  margin:0 0 8px;
 }
 
 .hero p{
-  font-size:16px;
-  margin:6px auto 0;
+  margin:4px auto 0;
   max-width:520px;
   color:#3b2a1c;
+  font-size:15px;
 }
 
 .hero-actions{
-  margin-top:18px;
+  margin-top:14px;
   display:flex;
   justify-content:center;
   gap:10px;
@@ -92,30 +87,28 @@ body{
 /* ===== BUTTON ===== */
 .btn{
   display:inline-block;
-  padding:10px 14px;
+  padding:8px 12px;
   background:#7b4b25;
   color:#fff7e6;
   text-decoration:none;
-  border-radius:10px;
+  border-radius:8px;
   font-weight:700;
-  font-size:14px;
+  font-size:13px;
 }
 
-.btn:hover{
-  background:#915c2e;
-}
-
-/* ===== GRID ===== */
+/* ===== GRID (FIXED SPACING) ===== */
 .grid3{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
-  gap:14px; /* tighter */
+  column-gap:12px;
+  row-gap:6px; /* 🔥 tighter rows */
 }
 
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:14px;
+  column-gap:12px;
+  row-gap:6px;
 }
 
 @media (max-width:900px){
@@ -125,18 +118,27 @@ body{
   }
 }
 
-/* ===== CARDS ===== */
+/* ===== CARDS (TIGHTENED) ===== */
 .card{
   background:#fff7e8;
   border:1px solid #d8b787;
-  border-radius:16px;
-  padding:18px; /* reduced */
-  box-shadow:0 10px 24px rgba(0,0,0,.12);
+  border-radius:14px;
+  padding:12px; /* 🔥 smaller */
+}
+
+.card h3,
+.card h2{
+  margin:0 0 6px; /* 🔥 reduced */
 }
 
 .card p{
+  margin:4px 0 6px;
   color:#3b2a1c;
-  margin:8px 0;
+  font-size:14px;
+}
+
+.card .btn{
+  margin-top:6px;
 }
 
 .soft{
@@ -147,20 +149,20 @@ body{
 .scripture{
   background:#fff3dc;
   border:1px solid #d6a85b;
-  border-radius:14px;
-  padding:14px; /* reduced */
+  border-radius:12px;
+  padding:12px;
   text-align:center;
-  font-style:italic;
-  margin:10px 0;
+  margin:8px 0;
+  font-size:14px;
 }
 
 /* ===== FOOTER ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:16px;
+  padding:14px;
   text-align:center;
-  font-size:14px;
+  font-size:13px;
 }
 
 </style>
@@ -171,7 +173,7 @@ body{
 
 <header class="site-header">
   <div class="topbar">
-    <div class="brand">Brad Hobbs</div>
+    <div>Brad Hobbs</div>
     <nav class="menu">
       <a href="about.html">About</a>
       <a href="education.html">Education</a>
