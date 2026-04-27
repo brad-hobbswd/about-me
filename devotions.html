@@ -1,83 +1,271 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/about-me/">
-  <title>Devotion Favs | Brad Hobbs</title>
-  <meta name="theme-color" content="#0c0a09" />
-  <meta name="description" content="Curated devotion favorites with Scripture anchored throughout." />
-  <style>html,body{background-color:#0c0a09;color:#f2eee7}</style>
-  <link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" />
-  <script defer src="/about-me/assets/js/main.js"></script>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<base href="/about-me/">
+
+<title>Devotion | Brad Hobbs</title>
+
+<meta name="theme-color" content="#0c0a09" />
+<meta name="description" content="Curated devotion favorites with Scripture anchored throughout." />
+
+<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+
+<style>
+
+/* ===== BASE ===== */
+body{
+  margin:0;
+  background:#a3855a;
+  color:#24160d;
+  font-family:system-ui, Arial;
+  line-height:1.55;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:0 18px;
+}
+
+.narrow{
+  max-width:760px;
+}
+
+/* ===== NAVBAR ===== */
+.site-header{
+  background:#5a3f2a;
+  border-bottom:2px solid #d6a85b;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 18px;
+}
+
+.menu{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.menu a + a{
+  border-left:1px solid rgba(243,230,207,.3);
+  padding-left:10px;
+}
+
+/* ===== HERO ===== */
+.page-hero{
+  padding:34px 0 14px;
+}
+
+.h1{
+  margin:0 0 6px;
+  font-size:30px;
+}
+
+.lead{
+  margin:0;
+  font-size:15px;
+  color:#3b2a1c;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:16px 0;
+}
+
+.h2{
+  margin:14px 0 6px;
+}
+
+p{
+  margin:6px 0;
+}
+
+/* ===== SCRIPTURE ===== */
+.scripture{
+  background:#fff3dc;
+  border:1px solid #d6a85b;
+  border-radius:10px;
+  padding:10px;
+  margin:6px 0 12px;
+}
+
+/* ===== GRID ===== */
+.grid2{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:6px;
+  margin-top:10px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  border-radius:10px;
+  padding:12px;
+}
+
+.card h3{
+  margin:0 0 4px;
+}
+
+.card p{
+  margin:2px 0;
+  font-size:14px;
+}
+
+/* divider feel */
+.card + .card{
+  border-top:1px solid rgba(90,63,42,.15);
+}
+
+/* ===== RULE ===== */
+.rule{
+  height:1px;
+  background:rgba(90,63,42,.2);
+  margin:14px 0;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width:1000px){
+
+  .container{ max-width:1000px; }
+
+  .grid2{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .card + .card{
+    border-top:none;
+  }
+
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  background:#5a3f2a;
+  color:#f3e6cf;
+  padding:12px;
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.footer-links a{
+  color:#f3e6cf;
+  text-decoration:none;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<div id="site-header"></div>
+<!-- ✅ SAME NAVBAR -->
+<header class="site-header">
+  <div class="topbar">
+    <div>Brad Hobbs</div>
+    <nav class="menu">
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="speaker.html">Speaker</a>
+      <a href="discography.html">Discography</a>
+      <a href="devotions.html">Devotions</a>
+      <a href="scriptures.html">Scriptures</a>
+    </nav>
+  </div>
+</header>
 
-<main id="main" class="page">
-    <section class="page-hero">
-      <div class="container narrow">
-        <h1 class="h1">Devotions</h1>
-        <p class="lead">Curated devotion reflections with Scripture anchored throughout.</p>
-      </div>
-    </section>
+<main>
 
-    <section class="section">
-      <div class="container narrow">
-        <section class="scripture" data-scripture>
-          <p class="verse">“But thou, when thou prayest, enter into thy closet...”</p>
-          <p class="ref">Matthew 6:6</p>
-        </section>
+<section class="page-hero">
+  <div class="container narrow">
+    <h1 class="h1">Devotions</h1>
+    <p class="lead">Curated devotion reflections with Scripture anchored throughout.</p>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container narrow">
 
-        <h2 class="h2">Featured devotion</h2>
-        <article class="card">
-          <h3 class="h3">Quiet strength</h3>
-          <p>Prayer forms the foundation, shaping teaching, worship, and speech with calm authority.</p>
-          <p>A quiet place becomes the starting point for public obedience.</p>
-        <section class="scripture" data-scripture>
-          <p class="verse">“My grace is sufficient for thee: for my strength is made perfect in weakness.”</p>
-          <p class="ref">2 Corinthians 12:9</p>
-        </section>
-
-        </article>
-
-        <div class="rule"></div>
-
-        <h2 class="h2">Archive placeholders</h2>
-        <div class="grid2">
-          <article class="card">
-            <h3 class="h3">Teaching and prayer</h3>
-            <p>Jesus taught persistence in prayer. Luke 18:1 reveals a clear purpose. Disciples must always pray and never lose heart. The voice of the Lord Jesus calls every believer toward continual communion with God whose name is Jesus.</p>
-          <p>Prayer forms faith, strengthens courage, and opens spiritual understanding. Teaching from Scripture guides prayer with truth and authority. A heart filled with the name of Jesus finds strength, mercy, and direction. Daily devotion builds endurance during trial and joy during seasons of blessing.</p>
-          <h3>Prayer</h3>
-          <p>Lord Jesus, mighty God and everlasting Father, Your name brings salvation and hope. Draw every heart toward faithful prayer. Fill mind and spirit with holy wisdom from Your Word. Let faith rise, courage grow, and love overflow. Glory and honor belong to Your great name forever. Amen.</p>
-          </article>
-          <article class="card">
-            <h3 class="h3">Worship in daily life</h3>
-            <p>True worship reaches far beyond a church service. Worship flows through ordinary moments of daily life. Scripture teaches that every action can honor Jesus when a heart stays surrendered to Him. Work, conversation, kindness, patience, and quiet faithfulness all become offerings before the Lord.</p>
-          <p>Bible reminds believers in Romans 12:1 that a life given to God becomes a living sacrifice. A living sacrifice speaks of daily devotion. Breathing. Walking. Serving. Loving. Every moment placed in the hands of Jesus becomes worship.</p>
-            <p>Worship rises while driving to work. Worship grows through helping a neighbor. Worship shines through gentle words and faithful obedience. A heart that remembers the name of Jesus throughout the day creates an altar in every place.</p>
-            <p>Jesus receives glory through ordinary faithfulness.</p>
-          <h3>Prayer</h3>
-          <p>Jesus, Your name fills my heart with reverence and joy. Every moment of this day belongs to You. Guide my words, actions, and thoughts so that each step becomes worship before You. Let kindness, patience, and faithfulness reflect Your presence in my life. Your name is holy and worthy of honor in every part of this day. Amen.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
-      <div class="footer-links">
-        <a href="scriptures.html">Scriptures</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="scripture">
+      “But thou, when thou prayest, enter into thy closet...”<br>
+      <strong>Matthew 6:6</strong>
     </div>
-  </footer>
+
+    <h2 class="h2">Featured devotion</h2>
+
+    <article class="card">
+      <h3>Quiet strength</h3>
+      <p>Prayer forms the foundation, shaping teaching, worship, and speech with calm authority.</p>
+      <p>A quiet place becomes the starting point for public obedience.</p>
+
+      <div class="scripture">
+        “My grace is sufficient for thee: for my strength is made perfect in weakness.”<br>
+        <strong>2 Corinthians 12:9</strong>
+      </div>
+    </article>
+
+    <div class="rule"></div>
+
+    <h2 class="h2">Archive placeholders</h2>
+
+    <div class="grid2">
+
+      <article class="card">
+        <h3>Teaching and prayer</h3>
+        <p>Jesus taught persistence in prayer. Luke 18:1 reveals a clear purpose. Disciples must always pray and never lose heart.</p>
+        <p>Prayer forms faith, strengthens courage, and opens spiritual understanding. Daily devotion builds endurance and joy.</p>
+
+        <h3>Prayer</h3>
+        <p>Lord Jesus, mighty God and everlasting Father, Your name brings salvation and hope. Draw every heart toward faithful prayer.</p>
+      </article>
+
+      <article class="card">
+        <h3>Worship in daily life</h3>
+        <p>True worship reaches beyond a service. Worship flows through ordinary moments of daily life.</p>
+        <p>Every moment placed in the hands of Jesus becomes worship.</p>
+
+        <h3>Prayer</h3>
+        <p>Jesus, Your name fills my heart with reverence and joy. Guide my words and actions so each step becomes worship.</p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p>Rooted in prayer. Centered in Jesus.</p>
+    <div class="footer-links">
+      <a href="scriptures.html">Scriptures</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
-
