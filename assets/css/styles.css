@@ -8,26 +8,17 @@
   --line:rgba(90,63,42,.2);
   --shadow:0 20px 50px rgba(0,0,0,.25);
   --radius:18px;
-  --dim:rgba(0,0,0,.6);
-  --focusdim:rgba(0,0,0,.75);
-  --glow:rgba(214,168,91,.35);
 }
 
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
+/* ===== BASE ===== */
 body{
-min-height:100vh;
-margin:0;
-color:var(--ink);
-background:#a3855a;
-font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-line-height:1.65;
-font-size:18px;
+  margin:0;
+  color:var(--ink);
+  background:#a3855a;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.65;
+  font-size:18px;
 }
-
-a{color:inherit}
 
 .container{
   max-width:1100px;
@@ -35,245 +26,98 @@ a{color:inherit}
   padding:0 18px;
 }
 
-.narrow{max-width:860px}
+.section{padding:34px 0}
 
-.page{min-height:70vh}
-
-.skip-link{
-  position:absolute;
-  left:-999px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+/* ===== HERO ===== */
+.hero{
+  padding:20px 0 0;
 }
 
-.skip-link:focus{
-  left:18px;
-  top:18px;
-  width:auto;
-  height:auto;
-  padding:10px 12px;
-  background:rgba(244,239,230,.96);
-  border:1px solid var(--line);
-  border-radius:12px;
-  z-index:2000;
+/* ===== CARDS (FIXED) ===== */
+.card{
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  border-radius:var(--radius);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  padding:20px;
+  color:#24160d;
+  transition:.25s ease;
 }
 
-/* ===== Header ===== */
-
-.site-header::after{
-  content:"";
-  display:block;
-  height:6px;
-  background:linear-gradient(
-    to bottom,
-    rgba(214,168,91,.45),
-    rgba(243,230,207,0)
-  );
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(0,0,0,.18);
 }
 
-/* layout */
-.topbar{
-  max-width:1100px;
-  margin:0 auto;
-  padding:8px 18px;
+.card .h3{
+  color:#1f120a;
+}
+
+.card p{
+  color:#3b2a1c;
+  line-height:1.6;
+}
+
+/* ===== SOFT CARDS FIX (IMPORTANT) ===== */
+.soft{
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  color:#24160d;
+}
+
+/* ===== GRID ===== */
+.grid3{
   display:grid;
-  grid-template-columns:auto 1fr auto;
-  align-items:center;
-  gap:24px;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
 }
 
-/* brand */
-.brandline{
-  display:flex;
-  flex-direction:column;
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
 }
 
-.brand{
-  font-family:Georgia, serif;
-  font-size:1.2rem;
-  font-weight:800;
-  text-decoration:none;
-  color:#f3e6cf;
+@media (max-width:980px){
+  .grid3,
+  .split{
+    grid-template-columns:1fr;
+  }
 }
 
-.brand-sub{
-  font-size:.75rem;
-  color:#e6d5b5;
+/* ===== SECTION BACKGROUND FIX ===== */
+.alt{
+  background:
+    url("../img/linen.svg"),
+    rgba(22,18,16,.35); /* LIGHTENED */
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
-/* navigation */
-.menu{
-display:flex;
-justify-content:center;
-gap:14px;
-flex-wrap:wrap;
-}
-
-.menu a{
-text-decoration:none;
-font-size:14px;
-font-weight:700;
-color:#f3e6cf;
-padding:4px 8px;
-border-radius:6px;
-transition:all .2s ease;
-}
-
-/* hover state */
-.menu a:hover{
-background:rgba(214,168,91,.35);
-color:#f3e6cf;
-}
-
-.menu a + a{
-border-left:1px solid rgba(243,230,207,.25);
-padding-left:12px;
-margin-left:6px;
-}
-
-/* prayer tools */
-.header-actions{
-  display:flex;
-  gap:10px;
-}
-
-.action-btn{
-  font-size:12px;
-  padding:5px 10px;
-  border-radius:12px;
+/* ===== SCRIPTURE ===== */
+.scripture{
+  background:#fff3dc;
   border:1px solid #d6a85b;
-  background:transparent;
-  color:#f3e6cf;
-  cursor:pointer;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 6px 20px rgba(214,168,91,.25);
+  margin:14px 0;
+  color:#2b1a0f;
 }
 
-.action-btn:hover{
-  background:#d6a85b;
-  color:#2d1c12;
-}
-
-/* header color correction */
-
-.brand{
-color:#f3e6cf;
-}
-
-.brand-sub{
-color:#e8d6b5;
-}
-
-.menu a{
-color:#f3e6cf;
-}
-
-.menu a:hover{
-color:#d6a85b;
-}
-
-.action-btn{
-color:#f3e6cf;
-border:1px solid #d6a85b;
-}
-
-/* Hero */
-.hero{
-background:transparent;
-padding:20px 0;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items:center;
-  text-align:center;
-  max-width:820px;
-  margin:auto;
-}
-/* banner fade into page */
-
-.hero{
-position:relative;
-padding:20px 0 0;
-background:transparent;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-left:0;
-right:0;
-bottom:-1px;
-height:55px;
-background:linear-gradient(
-to bottom,
-rgba(163,133,90,0),
-rgba(163,133,90,1)
-);
-pointer-events:none;
-}
-
-@media (max-width: 920px){
-  .hero-grid{grid-template-columns: 1fr}
-}
-
-.kicker{
+.verse{
   margin:0 0 10px;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  color: var(--muted);
-  font-weight: 900;
-  font-size: .8rem;
+  font-family:Georgia, serif;
+  font-weight:800;
+  color:var(--brown);
 }
 
-.h1{
-  margin:0 0 12px;
-  font-family: Georgia, serif;
-  font-weight: 900;
-  color:var(--ink);
-  letter-spacing: .01em;
-  line-height:1.12;
-  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+.ref{
+  font-weight:900;
+  color:rgba(75,63,54,.86);
 }
 
-.h2{
-  margin:0 0 12px;
-  font-family: Georgia, serif;
-  font-weight: 900;
-  color:var(--ink);
-  line-height:1.18;
-  font-size: 1.55rem;
-}
-
-.h3{
-  margin:0 0 8px;
-  font-family: Georgia, serif;
-  font-weight: 900;
-  color:var(--ink);
-  font-size: 1.12rem;
-}
-
-.lead{
-  color: var(--muted);
-  font-size: 1.06rem;
-  margin: 0 0 14px;
-}
-
-.micro{
-  margin: 14px 0 0;
-  color: rgba(75,63,54,.76);
-  font-size: .95rem;
-}
-
-.cta{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
+/* ===== BUTTONS ===== */
 .btn{
   display:inline-block;
   padding:12px 16px;
@@ -290,617 +134,35 @@ pointer-events:none;
   border-color:#e0b463;
 }
 
-.btn.primary{
-  background: var(--brass);
-  color:#2b1c12;
-}
-
 .btn.ghost{
-  background: transparent;
+  background:transparent;
 }
 
-.btn.small{
-  padding: 10px 14px;
-  border-radius: 12px;
-  margin-top: 10px;
-}
-
-.hero-card{
-  background:#fffaf0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 18px;
-}
-
-.quick{
-  margin: 0;
-  padding-left: 18px;
-}
-
-.quick li{margin: 8px 0}
-
-.quick a{text-decoration:none}
-.quick a:hover{text-decoration:underline}
-
-/* Sections */
-.section{padding: 34px 0}
-
-.alt{
-  background:
-    url("../img/linen.svg"),
-    rgba(22,18,16,.58);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background-size: 900px 900px, auto;
-  background-repeat: repeat, no-repeat;
-}
-
-.split{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-@media (max-width: 920px){
-  .split{grid-template-columns:1fr}
-}
-
-.grid2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.grid3{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-}
-
-@media (max-width: 980px){
-  .grid3{grid-template-columns:1fr}
-  .grid2{grid-template-columns:1fr}
-}
-
-.card{
-background:#fff7e8;
-border:1px solid #d8b787;
-border-radius:var(--radius);
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-padding:20px;
-color:#24160d;
-}
-.card .h3{
-  color:#1f120a;
-}
-.card p{
-  color:#3b2a1c;
-  line-height:1.6;
-}
-.soft{
-  background: rgba(28,23,20,.92);
-}
-
-.rule{
-  height: 1px;
-  background: rgba(162,135,86,.32);
-  margin: 18px 0;
-}
-
-.muted{
-  color:#6e5237;
-}
-
-/* Scripture */
-.scripture{
-background:#fff3dc;
-border:1px solid #d6a85b;
-border-radius:16px;
-padding:16px;
-box-shadow:0 6px 20px rgba(214,168,91,.25);
-margin:14px 0;
-color:#2b1a0f;
-}
-
-.verse{
-  margin: 0 0 10px;
-  font-family: Georgia, serif;
-  font-weight: 800;
-  color: var(--brown);
-  font-size: 1.08rem;
-}
-
-.ref{
-  margin: 0;
-  font-weight: 900;
-  color: rgba(75,63,54,.86);
-}
-
-/* Video */
-.frame{
-  border: 1px solid rgba(199,167,106,.30);
-  border-radius: var(--radius);
-  background:#fff5e3;
-  padding: 14px;
-  box-shadow: 0 14px 34px rgba(0,0,0,.34);
-}
-
-.video{
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 14px;
-}
-
-.video iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  border:0;
-}
-
-/* Links */
-.linkstack{
-  display:flex;
-  flex-direction:column;
-  gap: 12px;
-}
-
-.linkcard{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 14px;
-  padding: 16px;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background:#fffaf0;
-  text-decoration:none;
-}
-
-.linkcard:hover{
-  border-color: rgba(162,135,86,.55);
-  box-shadow: 0 10px 22px rgba(0,0,0,.10);
-}
-
-.mark{
-  font-weight: 900;
-  color: rgba(75,63,54,.70);
-}
-
-/* Contact */
-.contact-row{
-  display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.contact-pill{
-  display:inline-block;
-  padding: 12px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(215,207,194,.18);
-  text-decoration:none;
-  font-weight: 900;
-}
-
-.contact-pill:hover{
-  border-color: rgba(162,135,86,.55);
-  box-shadow: 0 10px 22px rgba(0,0,0,.10);
-}
-
-.form{
-  display:grid;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.field{display:grid; gap: 6px}
-
-.field span{
-  font-weight: 900;
-  color: rgba(75,63,54,.86);
-}
-
-input,
-textarea{
-  font:inherit;
-  padding:12px 14px;
-  border-radius:12px;
-  border:1px solid #caa87a;
-  background:#fffaf0;
-  color:#2b1a0f;
-}
-
-input:focus, textarea:focus{
-  outline: 2px solid rgba(162,135,86,.45);
-  outline-offset: 2px;
-}
-
-/* Page hero */
-.page-hero{
-  padding: 40px 0 20px;
-  border-bottom: 1px solid var(--line);
-  background:
-    url("../img/linen.svg"),
-    rgba(28,23,20,.58);
-  background-size: 900px 900px, auto;
-  background-repeat: repeat, no-repeat;
-}
-
-/* Bullets */
-.bullets{margin: 12px 0 0; padding-left: 18px}
-.bullets li{margin: 8px 0}
-
-/* Footer */
+/* ===== FOOTER ===== */
 .site-footer{
-border-top:2px solid #d6a85b;
-background:#5a3f2a;
-padding:18px 0;
-}
-
-.footer-row{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:12px;
-flex-wrap:wrap;
+  border-top:2px solid #d6a85b;
+  background:#5a3f2a;
+  padding:18px 0;
 }
 
 .footer-line{
-margin:0;
-color:#f3e6cf;
-font-weight:700;
-}
-
-.footer-links{
-display:flex;
-gap:14px;
+  color:#f3e6cf;
+  font-weight:700;
 }
 
 .footer-links a{
-text-decoration:none;
-font-weight:700;
-color:#f3e6cf;
+  color:#f3e6cf;
+  text-decoration:none;
 }
 
-.footer-links a:hover{
-color:#b89563;
-text-decoration:none;
+/* ===== SMALL POLISH ===== */
+.section{
+  opacity:0;
+  transform:translateY(20px);
+  transition:all .5s ease;
 }
 
-/* Prayer mode */
-body.prayer::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  background: var(--dim);
-  z-index: 999;
-}
-
-body.prayer main,
-body.prayer header,
-body.prayer footer{
-  filter: brightness(.55) saturate(.72);
-}
-
-body.prayer .scripture{
-  position: relative;
-  z-index: 1000;
-  background: rgba(244,239,230,.96);
-  border-color: rgba(162,135,86,.70);
-  box-shadow: 0 18px 40px rgba(0,0,0,.22);
-  filter:none;
-}
-
-input::placeholder, textarea::placeholder{color: rgba(242,238,231,.55)}
-
-/* Discography album grid */
-.album-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-@media (max-width: 980px){
-  .album-grid{grid-template-columns: 1fr}
-}
-
-.album-card{
-  background:#fffaf0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: 0 16px 44px rgba(0,0,0,.36);
-  padding: 18px;
-}
-
-.steps{
-  margin: 12px 0 0;
-  padding-left: 22px;
-}
-
-.steps li{margin: 10px 0}
-
-/* ===== Focus Mode ===== */
-
-body.focus::before{
-content:"";
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.75);
-z-index:900;
-}
-
-body.focus main,
-body.focus header,
-body.focus footer{
-filter:brightness(.35) saturate(.7);
-}
-
-/* highlight scripture */
-
-body.focus [data-scripture]{
-position:relative;
-z-index:1000;
-background:
-radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
-rgba(22,18,16,.92);
-border:1px solid rgba(199,167,106,.45);
-border-radius:16px;
-box-shadow:0 18px 40px rgba(0,0,0,.45);
-filter:none;
-}
-
-
-/* Keep scripture visible anywhere on the page */
-body.focus [data-scripture],
-body.focus [data-scripture] *{
-  visibility: visible;
-}
-
-
-/* Keep exit buttons visible */
-body.focus .focus-exit,
-body.focus .prayer-exit{
-  visibility: visible;
-}
-
-/* Floating exit buttons */
-
-.focus-exit{
-  right: 24px;
-}
-
-.prayer-exit{
-  left: 24px;
-}
-
-.focus-exit:hover,
-.prayer-exit:hover{
-  border-color: rgba(199,167,106,.55);
-}
-/* Prayer mode scripture highlight */
-body.prayer [data-scripture]{
-  position: relative;
-  z-index: 1000;
-  background:
-    radial-gradient(520px 220px at 20% 10%, rgba(199,167,106,.18), transparent 55%),
-    rgba(22,18,16,.92);
-  border-color: rgba(199,167,106,.62);
-  box-shadow: 0 18px 40px rgba(0,0,0,.46);
-  filter: none;
-}
-
-body.prayer .focus-exit,
-body.prayer .prayer-exit{
-  background: rgba(28,23,20,.92);
-  color: rgba(242,238,231,.92);
-  border-color: rgba(242,238,231,.18);
-}
-.banner-map{
-  max-width:1100px;
-  margin:0 auto;
-}
-
-.banner-img{
-width:100%;
-height:auto;
-display:block;
-margin:auto;
-border-radius:10px;
-border:4px solid #d6a85b;
-box-shadow:
-0 0 0 2px #8f6d3d,
-0 18px 35px rgba(0,0,0,.25);
-}
-
-.card,
-.album-card,
-.hero-card,
-.soft{
-  background:#fffaf0;
-  border:1px solid #d8b787;
-  color:#24160d;
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
-}
-.card p,
-.album-card p,
-.soft p{
-  color:#3b2a1c;
-}
-
-
-/* ===== Header Layer Fix ===== */
-
-.site-header{
-background:#5a3f2a;
-border-bottom:2px solid #d6a85b;
-position:relative;
-z-index:1000;
-}
-
-/* ===== Hamburger Toggle ===== */
-
-.menu-toggle{
-display:none;
-flex-direction:column;
-gap:5px;
-background:none;
-border:none;
-cursor:pointer;
-}
-
-.menu-toggle span{
-width:26px;
-height:3px;
-background:#f3e6cf;
-display:block;
-transition:all .3s ease;
-}
-
-/* hamburger animation */
-
-.menu-toggle.open span:nth-child(1){
-transform:translateY(8px) rotate(45deg);
-}
-
-.menu-toggle.open span:nth-child(2){
-opacity:0;
-}
-
-.menu-toggle.open span:nth-child(3){
-transform:translateY(-8px) rotate(-45deg);
-}
-
-/* ===== Mobile / Tablet Navigation ===== */
-
-@media (max-width:900px){
-
-.topbar{
-grid-template-columns:auto auto;
-gap:12px;
-}
-
-.header-actions{
-display:none;
-}
-
-.menu-toggle{
-display:flex;
-justify-self:end;
-}
-
-.menu{
-display:none;
-flex-direction:column;
-align-items:center;
-position:absolute;
-top:72px;
-left:0;
-width:100%;
-background:#5a3f2a;
-padding:22px 0;
-gap:16px;
-border-top:1px solid rgba(243,230,207,.15);
-box-shadow:0 10px 30px rgba(0,0,0,.25);
-z-index:1100;
-transform:translateY(-10px);
-opacity:0;
-transition:all .28s ease;
-}
-
-.menu.open{
-display:flex;
-transform:translateY(0);
-opacity:1;
-}
-
-.menu a{
-font-size:16px;
-padding:6px 12px;
-}
-
-.menu a + a{
-border-left:none;
-margin-left:0;
-padding-left:0;
-}
-
-}
-
-/* ensure exit buttons stay visible in focus/prayer modes */
-
-.focus-exit,
-.prayer-exit{
-position:fixed;
-bottom:80px;
-padding:14px 18px;
-border-radius:999px;
-border:1px solid rgba(242,238,231,.18);
-background:rgba(28,23,20,.92);
-color:#f2eee7;
-font-weight:900;
-cursor:pointer;
-z-index:9999;
-min-width:140px;
-text-align:center;
-}
-
-.focus-exit{
-right:20px;
-}
-
-.prayer-exit{
-left:20px;
-}
-
-/* keep them visible even when focus mode hides elements */
-
-body.focus .focus-exit,
-body.focus .focus-exit *,
-body.prayer .prayer-exit,
-body.prayer .prayer-exit *{
-visibility:visible !important;
-}
-
-.focus-exit,
-.prayer-exit{
-min-width:140px;
-text-align:center;
-}
-
-/* MOBILE FIX for prayer / focus exit buttons */
-
-body.focus .focus-exit,
-body.focus .focus-exit *,
-body.focus .prayer-exit,
-body.focus .prayer-exit *,
-body.prayer .focus-exit,
-body.prayer .focus-exit *,
-body.prayer .prayer-exit,
-body.prayer .prayer-exit *{
-visibility:visible !important;
-opacity:1 !important;
-display:block !important;
-}
-
-/* allow page links under the exit bar to remain clickable */
-
-body.focus::before,
-body.prayer::before{
-pointer-events:none;
-}
-
-/* allow clicks through empty areas */
-
-.focus-exit,
-.prayer-exit{
-pointer-events:auto;
+.section.visible{
+  opacity:1;
+  transform:translateY(0);
 }
