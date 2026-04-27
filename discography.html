@@ -1,19 +1,13 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
 
 <meta charset="utf-8" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<base href="/about-me/">
 
 <title>Discography | Brad Hobbs</title>
 
 <meta name="theme-color" content="#0c0a09" />
-
 <meta name="description" content="Recorded worship and Southern Gospel recordings in a YouTube playlist." />
 
 <link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
@@ -21,292 +15,191 @@
 <style>
 
 /* ===== BASE ===== */
-
 body{
-
   margin:0;
-
   background:#a3855a;
-
   color:#24160d;
-
   font-family:system-ui, Arial;
-
 }
 
 .container{
-
   max-width:1000px;
-
   margin:auto;
-
   padding:0 18px;
-
 }
 
 .narrow{
-
   max-width:760px;
-
 }
 
 /* ===== NAVBAR ===== */
-
 .site-header{
-
   background:#5a3f2a;
-
   border-bottom:2px solid #d6a85b;
-
 }
 
 .topbar{
-
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
-
   padding:10px 18px;
+}
 
+.brand{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:800;
+  font-size:16px;
 }
 
 .menu{
-
   display:flex;
-
-  gap:12px;
-
+  gap:10px;
   flex-wrap:wrap;
-
 }
 
 .menu a{
-
   color:#f3e6cf;
-
   text-decoration:none;
-
   font-weight:700;
-
   font-size:14px;
-
 }
 
 .menu a + a{
-
   border-left:1px solid rgba(243,230,207,.3);
-
   padding-left:10px;
-
 }
 
+/* ✅ EXACT SAME ACTIVE STYLE AS WORSHIP */
 .menu a.active{
-  color:#ffffff;
-  border-bottom:2px solid #d6a85b;
+  background:#d6a85b;
+  color:#24160d;
+  border-radius:6px;
+  padding:4px 8px;
+}
+
+/* HOVER */
+.menu a:hover{
+  background:rgba(214,168,91,.35);
+  border-radius:6px;
 }
 
 /* ===== HERO ===== */
-
 .page-hero{
-
   padding:34px 0 14px;
-
 }
 
 .hero-inner{
-
-  max-width:760px; /* aligns visually but keeps readable */
-
+  max-width:760px;
 }
 
 .h1{
-
   margin:0 0 6px;
-
   font-size:30px;
-
 }
 
 .lead{
-
   margin:0;
-
   font-size:15px;
-
+  color:#3b2a1c;
 }
 
 /* ===== SECTION ===== */
-
 .section{
-
   padding:16px 0;
-
 }
 
 .h2{
-
   margin:14px 0 4px;
-
 }
 
 .section .lead{
-
-  margin-bottom:10px; /* 🔥 spacing before cards */
-
+  margin-bottom:10px;
 }
 
 /* ===== SCRIPTURE ===== */
-
 .scripture{
-
   background:#fff3dc;
-
   border:1px solid #d6a85b;
-
   border-radius:10px;
-
   padding:10px;
-
   margin:6px 0 12px;
-
 }
 
 /* ===== GRID ===== */
-
 .album-grid{
-
   display:grid;
-
   grid-template-columns:1fr;
-
   gap:8px;
-
 }
 
 /* ===== CARD ===== */
-
 .album-card{
-
   background:#fff7e8;
-
   border:1px solid #d8b787;
-
   border-radius:10px;
-
   padding:12px;
-
-}
-
-.album-card h3{
-
-  margin:0 0 4px;
-
 }
 
 .muted{
-
   font-size:13px;
-
   margin-bottom:6px;
-
 }
 
 /* ===== VIDEO ===== */
-
 .video{
-
   position:relative;
-
   padding-top:56.25%;
-
   overflow:hidden;
-
   border-radius:8px;
-
 }
 
 .video iframe{
-
   position:absolute;
-
   top:0;
-
   left:0;
-
   width:100%;
-
   height:100%;
-
   border:0;
-
 }
 
 /* ===== RULE ===== */
-
 .rule{
-
   height:1px;
-
   background:rgba(90,63,42,.2);
-
   margin:14px 0;
-
 }
 
 /* ===== RESPONSIVE ===== */
-
 @media (min-width:800px){
-
   .album-grid{
-
     grid-template-columns:1fr 1fr;
-
     gap:12px;
-
   }
-
 }
 
 @media (min-width:1100px){
-
   .album-grid{
-
     grid-template-columns:1fr 1fr 1fr;
-
   }
-
 }
 
 /* ===== FOOTER ===== */
-
 .site-footer{
-
   background:#5a3f2a;
-
   color:#f3e6cf;
-
   padding:12px;
-
 }
 
 .footer-row{
-
   display:flex;
-
   justify-content:space-between;
-
   flex-wrap:wrap;
-
 }
 
 .footer-links a{
-
   color:#f3e6cf;
-
   text-decoration:none;
-
 }
 
 </style>
@@ -315,76 +208,49 @@ body{
 
 <body>
 
+<!-- ✅ EXACT MATCH TO WORSHIP -->
 <header class="site-header">
-
   <div class="topbar">
-
-    <div>Brad Hobbs</div>
+    <a href="index.html" class="brand">Brad Hobbs</a>
 
     <nav class="menu">
-
       <a href="index.html">Home</a>
-
       <a href="about.html">About</a>
-
       <a href="family.html">Family</a>
-
       <a href="education.html">Education</a>
-
       <a href="speaker.html">Speaker</a>
-
       <a href="worship.html">Worship</a>
-
       <a href="discography.html" class="active">Discography</a>
-
       <a href="devotions.html">Devotions</a>
-
       <a href="scriptures.html">Scriptures</a>
-
+      <a href="affiliations.html">Affiliations</a>
       <a href="contact.html">Contact</a>
-
     </nav>
-
   </div>
-
 </header>
 
 <main>
 
 <section class="page-hero">
-
   <div class="container">
-
     <div class="hero-inner">
-
       <h1 class="h1">Discography</h1>
-
       <p class="lead">
-
         Recorded worship across years with Southern Gospel influence and testimony shaped songs.
-
       </p>
-
     </div>
-
   </div>
-
 </section>
 
 <section class="section">
-
   <div class="container">
 
     <div class="scripture">
-
       “Sing unto him, sing psalms unto him: talk ye of all his wondrous works.”<br>
-
       <strong>Psalm 105:2</strong>
-
     </div>
 
     <h2 class="h2">Albums and playlists</h2>
-
     <p class="lead">Twelve Youtube Albums intregrated</p>
 
     <div class="album-grid">
@@ -559,34 +425,24 @@ body{
 
 </div>
 
-        </div>
+            </div>
 
     <div class="rule"></div>
 
   </div>
-
 </section>
 
 </main>
 
 <footer class="site-footer">
-
   <div class="container footer-row">
-
     <p>Rooted in prayer. Centered in Jesus.</p>
-
     <div class="footer-links">
-
       <a href="scriptures.html">Scriptures</a>
-
       <a href="contact.html">Contact</a>
-
     </div>
-
   </div>
-
 </footer>
 
 </body>
-
 </html>
