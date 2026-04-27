@@ -1,157 +1,227 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/about-me/">
-  <title>Home | Brad Hobbs</title>
-  <meta name="theme-color" content="#0c0a09" />
-  <meta name="description" content="Teaching with clarity, living with worship, centered on Jesus in a quiet prayer closet atmosphere." />
-  <style>html,body{background-color:#0c0a09;color:#f2eee7}</style>
-  <link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" />
-  <script defer src="/about-me/assets/js/main.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<base href="/about-me/">
+
+<title>Home | Brad Hobbs</title>
+
+<meta name="theme-color" content="#0c0a09" />
+<meta name="description" content="Teaching with clarity, living with worship, centered on Jesus in a quiet prayer closet atmosphere." />
+
+<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" />
+
+<style>
+
+/* ===== GLOBAL ===== */
+body{
+  background:#0c0a09;
+  color:#f2eee7;
+}
+
+/* ===== HERO (NEW) ===== */
+.modern-hero{
+  padding:120px 20px 100px;
+  text-align:center;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 60%),
+    #0c0a09;
+}
+
+.hero-title{
+  font-size:42px;
+  margin-bottom:16px;
+}
+
+.hero-sub{
+  color:#cfc7b8;
+  margin-bottom:30px;
+}
+
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn.ghost{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== CARDS UPGRADE ===== */
+.card{
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:24px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,255,255,0.2);
+}
+
+/* ===== SCRIPTURE ===== */
+.scripture{
+  text-align:center;
+  font-style:italic;
+  opacity:0.9;
+}
+
+.scripture .ref{
+  margin-top:6px;
+  font-size:14px;
+  color:#b8a98a;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.section{
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.6s ease;
+}
+
+.section.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+</style>
+
+<script defer src="/about-me/assets/js/main.js"></script>
 </head>
+
 <body>
 
 <div id="site-header"></div>
 
 <main id="main" class="page">
-  <section class="hero">
 
-<div class="container">
+<!-- ===== NEW HERO ===== -->
+<section class="modern-hero">
+  <div class="container hero-inner">
+    <h1 class="hero-title">Rooted in Prayer. Centered in Jesus.</h1>
+    <p class="hero-sub">
+      Teaching with clarity. Worship with reverence. Devotion with purpose.
+    </p>
 
-<img src="assets/img/banner.jpg" usemap="#banner-map" class="banner-img" alt="Welcome">
-
-<map name="banner-map">
-
-<area shape="rect"
-coords="394,631,716,707"
-href="education.html"
-alt="Explore Education">
-
-<area shape="rect"
-coords="744,633,1075,704"
-href="worship.html"
-alt="Explore Worship">
-
-<area shape="rect"
-coords="235,902,334,944"
-href="about.html"
-alt="About">
-
-<area shape="rect"
-coords="359,905,496,944"
-href="education.html"
-alt="Education">
-
-<area shape="rect"
-coords="522,906,636,941"
-href="speaker.html"
-alt="Speaker">
-
-<area shape="rect"
-coords="660,905,815,943"
-href="discography.html"
-alt="Discography">
-
-<area shape="rect"
-coords="834,903,1016,942"
-href="devotions.html"
-alt="Devotions">
-
-<area shape="rect"
-coords="1028,899,1172,941"
-href="scriptures.html"
-alt="Scriptures">
-
-</map>
-
-</div>
-
+    <div class="hero-actions">
+      <a href="education.html" class="btn">Education</a>
+      <a href="worship.html" class="btn ghost">Worship</a>
+      <a href="devotions.html" class="btn ghost">Devotions</a>
+    </div>
+  </div>
 </section>
 
-    <section class="section">
-      <div class="container narrow">
-        <section class="scripture" data-scripture>
-          <p class="verse">“Thy word is a lamp unto my feet, and a light unto my path.”</p>
-          <p class="ref">Psalm 119:105</p>
-        </section>
+<!-- ===== ORIGINAL CONTENT PRESERVED ===== -->
 
-      </div>
+<section class="section">
+  <div class="container narrow">
+    <section class="scripture" data-scripture>
+      <p class="verse">“Thy word is a lamp unto my feet, and a light unto my path.”</p>
+      <p class="ref">Psalm 119:105</p>
     </section>
+  </div>
+</section>
 
-    <section class="section alt">
-      <div class="container grid3">
-        <article class="card">
-          <h3 class="h3">Education</h3>
-          <p>Preschool teaching and elementary experience shaped by prayer, order, and steady encouragement.</p>
-        <section class="scripture" data-scripture>
-          <p class="verse">“Train up a child in the way he should go...”</p>
-          <p class="ref">Proverbs 22:6</p>
-        </section>
+<section class="section alt">
+  <div class="container grid3">
 
-          <a class="btn small" href="education.html">Open Education</a>
-        </article>
+    <article class="card">
+      <h3 class="h3">Education</h3>
+      <p>Preschool teaching and elementary experience shaped by prayer, order, and steady encouragement.</p>
 
-        <article class="card">
-          <h3 class="h3">Worship</h3>
-          <p>Piano and voice with Southern Gospel roots, offered with reverence and calm confidence.</p>
-        <section class="scripture" data-scripture>
-          <p class="verse">“Let every thing that hath breath praise the Lord.”</p>
-          <p class="ref">Psalm 150:6</p>
-        </section>
+      <section class="scripture" data-scripture>
+        <p class="verse">“Train up a child in the way he should go...”</p>
+        <p class="ref">Proverbs 22:6</p>
+      </section>
 
-          <a class="btn small" href="worship.html">Open Worship</a>
-        </article>
+      <a class="btn small" href="education.html">Open Education</a>
+    </article>
 
-        <article class="card">
-          <h3 class="h3">Speaker</h3>
-          <p>Devotional teaching with clarity and conviction, centered on Jesus and grounded in Scripture.</p>
-        <section class="scripture" data-scripture>
-          <p class="verse">“Speak the word only...”</p>
-          <p class="ref">Matthew 8:8</p>
-        </section>
+    <article class="card">
+      <h3 class="h3">Worship</h3>
+      <p>Piano and voice with Southern Gospel roots, offered with reverence and calm confidence.</p>
 
-          <a class="btn small" href="speaker.html">Open Speaker</a>
-        </article>
+      <section class="scripture" data-scripture>
+        <p class="verse">“Let every thing that hath breath praise the Lord.”</p>
+        <p class="ref">Psalm 150:6</p>
+      </section>
+
+      <a class="btn small" href="worship.html">Open Worship</a>
+    </article>
+
+    <article class="card">
+      <h3 class="h3">Speaker</h3>
+      <p>Devotional teaching with clarity and conviction, centered on Jesus and grounded in Scripture.</p>
+
+      <section class="scripture" data-scripture>
+        <p class="verse">“Speak the word only...”</p>
+        <p class="ref">Matthew 8:8</p>
+      </section>
+
+      <a class="btn small" href="speaker.html">Open Speaker</a>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+
+    <article class="card soft">
+      <h2 class="h2">Whispers in the Pew</h2>
+      <p class="lead">A devotional journey written from quiet spaces.</p>
+      <p>Publishing updates and excerpts will appear on the Book page.</p>
+      <a class="btn" href="book.html">Open Book</a>
+    </article>
+
+    <article class="card soft">
+      <h2 class="h2">Prayer Mode</h2>
+      <p class="lead">Prayer Mode dims the page and keeps Scripture bright.</p>
+      <p>Scripture Focus hides non Scripture content for quiet reading.</p>
+
+      <div class="cta">
+        <button class="btn" type="button" data-prayer>Prayer</button>
+        <button class="btn" type="button" data-focus>Scripture Focus</button>
       </div>
-    </section>
+    </article>
 
-    <section class="section">
-      <div class="container split">
-        <article class="card soft">
-          <h2 class="h2">Whispers in the Pew</h2>
-          <p class="lead">A devotional journey written from quiet spaces.</p>
-          <p>Publishing updates and excerpts will appear on the Book page.</p>
-          <a class="btn" href="book.html">Open Book</a>
-        </article>
+  </div>
+</section>
 
-        <article class="card soft">
-          <h2 class="h2">Prayer Mode</h2>
-          <p class="lead">Prayer Mode dims the page and keeps Scripture bright.</p>
-          <p>Scripture Focus hides non Scripture content for quiet reading.</p>
-          <div class="cta">
-            <button class="btn" type="button" data-prayer>Prayer</button>
-            <button class="btn" type="button" data-focus>Scripture Focus</button>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
-      <div class="footer-links">
-        <a href="scriptures.html">Scriptures</a>
-        <a href="contact.html">Contact</a>
-      </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+    <div class="footer-links">
+      <a href="scriptures.html">Scriptures</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  </div>
+</footer>
+
+<!-- ===== SCROLL SCRIPT ===== -->
 <script>
-imageMapResize();
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+sections.forEach(section => observer.observe(section));
 </script>
+
 </body>
 </html>
-
