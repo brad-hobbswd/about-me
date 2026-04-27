@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <base href="/about-me/">
@@ -11,187 +12,226 @@
 <meta name="description" content="Teaching with clarity, living with worship, centered on Jesus in a quiet prayer closet atmosphere." />
 
 <link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" />
+
+<!-- ❌ external css disabled to stop conflicts -->
+<!-- <link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" /> -->
 
 <style>
 
-/* ===== GLOBAL ===== */
+/* ===== BASE ===== */
 body{
-  background:#0c0a09;
-  color:#f2eee7;
+  margin:0;
+  background:#a3855a;
+  color:#24160d;
+  font-family:system-ui, Arial;
 }
 
-/* ===== HERO (NEW) ===== */
-.modern-hero{
-  padding:120px 20px 100px;
-  text-align:center;
-  background:
-    radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 60%),
-    #0c0a09;
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 18px;
 }
 
-.hero-title{
-  font-size:42px;
-  margin-bottom:16px;
+.section{
+  padding:40px 0;
 }
 
-.hero-sub{
-  color:#cfc7b8;
-  margin-bottom:30px;
+/* ===== NAVBAR ===== */
+.site-header{
+  background:#5a3f2a;
+  border-bottom:2px solid #d6a85b;
 }
 
-.hero-actions{
+.topbar{
   display:flex;
-  justify-content:center;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 18px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.menu{
+  display:flex;
   gap:12px;
-  flex-wrap:wrap;
 }
 
-.btn.ghost{
-  background:transparent;
-  border:1px solid rgba(255,255,255,0.2);
+.menu a{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:700;
+  padding:4px 8px;
 }
 
-/* ===== CARDS UPGRADE ===== */
+.menu a + a{
+  border-left:1px solid rgba(243,230,207,.3);
+  padding-left:12px;
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:30px 0;
+}
+
+.banner-img{
+  width:100%;
+  border-radius:10px;
+  border:4px solid #d6a85b;
+}
+
+/* ===== GRID ===== */
+.grid3{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+}
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+@media (max-width:900px){
+  .grid3,
+  .split{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== CARDS (FIXED) ===== */
 .card{
-  background:rgba(255,255,255,0.03);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:18px;
-  padding:24px;
-  transition:0.3s;
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  border-radius:16px;
+  padding:20px;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(255,255,255,0.2);
+.card p{
+  color:#3b2a1c;
+}
+
+/* 🔥 FIXED DARK CARDS */
+.soft{
+  background:#fff7e8;
 }
 
 /* ===== SCRIPTURE ===== */
 .scripture{
-  text-align:center;
-  font-style:italic;
-  opacity:0.9;
+  background:#fff3dc;
+  border:1px solid #d6a85b;
+  border-radius:12px;
+  padding:14px;
+  margin:14px 0;
 }
 
-.scripture .ref{
-  margin-top:6px;
-  font-size:14px;
-  color:#b8a98a;
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  background:#7b4b25;
+  color:#fff7e6;
+  text-decoration:none;
+  border-radius:10px;
+  margin-top:10px;
 }
 
-/* ===== SCROLL ANIMATION ===== */
-.section{
-  opacity:0;
-  transform:translateY(20px);
-  transition:all 0.6s ease;
-}
-
-.section.visible{
-  opacity:1;
-  transform:translateY(0);
+/* ===== FOOTER ===== */
+.site-footer{
+  background:#5a3f2a;
+  color:#f3e6cf;
+  padding:18px;
 }
 
 </style>
 
-<script defer src="/about-me/assets/js/main.js"></script>
 </head>
 
 <body>
 
-<div id="site-header"></div>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="topbar">
+    <div class="brand">Brad Hobbs</div>
+    <nav class="menu">
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="speaker.html">Speaker</a>
+      <a href="discography.html">Discography</a>
+      <a href="devotions.html">Devotions</a>
+      <a href="scriptures.html">Scriptures</a>
+    </nav>
+  </div>
+</header>
 
-<main id="main" class="page">
+<main>
 
-<!-- ===== NEW HERO ===== -->
-<section class="modern-hero">
-  <div class="container hero-inner">
-    <h1 class="hero-title">Rooted in Prayer. Centered in Jesus.</h1>
-    <p class="hero-sub">
-      Teaching with clarity. Worship with reverence. Devotion with purpose.
-    </p>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
 
-    <div class="hero-actions">
-      <a href="education.html" class="btn">Education</a>
-      <a href="worship.html" class="btn ghost">Worship</a>
-      <a href="devotions.html" class="btn ghost">Devotions</a>
+<img src="assets/img/banner.jpg" usemap="#banner-map" class="banner-img" alt="Welcome">
+
+<map name="banner-map">
+
+<area shape="rect" coords="394,631,716,707" href="education.html">
+<area shape="rect" coords="744,633,1075,704" href="worship.html">
+
+</map>
+
+  </div>
+</section>
+
+<!-- ===== SCRIPTURE ===== -->
+<section class="section">
+  <div class="container">
+    <div class="scripture">
+      “Thy word is a lamp unto my feet, and a light unto my path.”  
+      <br><strong>Psalm 119:105</strong>
     </div>
   </div>
 </section>
 
-<!-- ===== ORIGINAL CONTENT PRESERVED ===== -->
-
+<!-- ===== CARDS ===== -->
 <section class="section">
-  <div class="container narrow">
-    <section class="scripture" data-scripture>
-      <p class="verse">“Thy word is a lamp unto my feet, and a light unto my path.”</p>
-      <p class="ref">Psalm 119:105</p>
-    </section>
-  </div>
-</section>
-
-<section class="section alt">
   <div class="container grid3">
 
-    <article class="card">
-      <h3 class="h3">Education</h3>
+    <div class="card">
+      <h3>Education</h3>
       <p>Preschool teaching and elementary experience shaped by prayer, order, and steady encouragement.</p>
+      <a class="btn" href="education.html">Open Education</a>
+    </div>
 
-      <section class="scripture" data-scripture>
-        <p class="verse">“Train up a child in the way he should go...”</p>
-        <p class="ref">Proverbs 22:6</p>
-      </section>
-
-      <a class="btn small" href="education.html">Open Education</a>
-    </article>
-
-    <article class="card">
-      <h3 class="h3">Worship</h3>
+    <div class="card">
+      <h3>Worship</h3>
       <p>Piano and voice with Southern Gospel roots, offered with reverence and calm confidence.</p>
+      <a class="btn" href="worship.html">Open Worship</a>
+    </div>
 
-      <section class="scripture" data-scripture>
-        <p class="verse">“Let every thing that hath breath praise the Lord.”</p>
-        <p class="ref">Psalm 150:6</p>
-      </section>
-
-      <a class="btn small" href="worship.html">Open Worship</a>
-    </article>
-
-    <article class="card">
-      <h3 class="h3">Speaker</h3>
+    <div class="card">
+      <h3>Speaker</h3>
       <p>Devotional teaching with clarity and conviction, centered on Jesus and grounded in Scripture.</p>
-
-      <section class="scripture" data-scripture>
-        <p class="verse">“Speak the word only...”</p>
-        <p class="ref">Matthew 8:8</p>
-      </section>
-
-      <a class="btn small" href="speaker.html">Open Speaker</a>
-    </article>
+      <a class="btn" href="speaker.html">Open Speaker</a>
+    </div>
 
   </div>
 </section>
 
+<!-- ===== LOWER SECTION ===== -->
 <section class="section">
   <div class="container split">
 
-    <article class="card soft">
-      <h2 class="h2">Whispers in the Pew</h2>
-      <p class="lead">A devotional journey written from quiet spaces.</p>
-      <p>Publishing updates and excerpts will appear on the Book page.</p>
+    <div class="card soft">
+      <h2>Whispers in the Pew</h2>
+      <p>A devotional journey written from quiet spaces.</p>
       <a class="btn" href="book.html">Open Book</a>
-    </article>
+    </div>
 
-    <article class="card soft">
-      <h2 class="h2">Prayer Mode</h2>
-      <p class="lead">Prayer Mode dims the page and keeps Scripture bright.</p>
-      <p>Scripture Focus hides non Scripture content for quiet reading.</p>
-
-      <div class="cta">
-        <button class="btn" type="button" data-prayer>Prayer</button>
-        <button class="btn" type="button" data-focus>Scripture Focus</button>
-      </div>
-    </article>
+    <div class="card soft">
+      <h2>Prayer Mode</h2>
+      <p>Prayer Mode dims the page and keeps Scripture bright.</p>
+      <button class="btn">Prayer</button>
+    </div>
 
   </div>
 </section>
@@ -199,29 +239,8 @@ body{
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
+  Rooted in prayer. Centered in Jesus.
 </footer>
-
-<!-- ===== SCROLL SCRIPT ===== -->
-<script>
-const sections = document.querySelectorAll('.section');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-});
-
-sections.forEach(section => observer.observe(section));
-</script>
 
 </body>
 </html>
