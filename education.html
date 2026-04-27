@@ -34,7 +34,7 @@ body{
   max-width:760px;
 }
 
-/* ===== NAVBAR (MATCHES INDEX EXACTLY) ===== */
+/* ===== NAVBAR (MATCH INDEX + FIX WRAP) ===== */
 .site-header{
   background:#5a3f2a;
   border-bottom:2px solid #d6a85b;
@@ -54,20 +54,15 @@ body{
   font-family:Georgia, serif;
   font-size:1.2rem;
   font-weight:800;
-  text-decoration:none;
   color:#f3e6cf;
-}
-
-.brand-sub{
-  font-size:.75rem;
-  color:#e6d5b5;
 }
 
 .menu{
   display:flex;
   justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
+  align-items:center;
+  gap:0;
+  flex-wrap:nowrap; /* 🔥 FIX */
 }
 
 .menu a{
@@ -75,19 +70,29 @@ body{
   font-size:14px;
   font-weight:700;
   color:#f3e6cf;
-  padding:4px 8px;
-  border-radius:6px;
-  transition:.2s;
+  padding:4px 10px;
+  white-space:nowrap; /* 🔥 FIX */
 }
 
 .menu a + a{
   border-left:1px solid rgba(243,230,207,.25);
-  padding-left:12px;
-  margin-left:6px;
 }
 
 .menu a:hover{
   background:rgba(214,168,91,.35);
+  border-radius:6px;
+}
+
+/* MOBILE NAV */
+@media (max-width:900px){
+  .menu{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .menu a{
+    border:none;
+  }
 }
 
 /* ===== PAGE HERO ===== */
@@ -213,7 +218,7 @@ p{
 
 <body>
 
-<!-- ✅ dynamic header stays -->
+<!-- dynamic header -->
 <div id="site-header"></div>
 
 <main id="main" class="page">
@@ -235,28 +240,29 @@ p{
 
     <h2 class="h2">Teaching focus</h2>
 
-    <p>Passion and structure work best when joined together in the classroom...</p>
-    <p>Classroom leadership also develops from a place of inner stillness...</p>
+    <p>Passion and structure work best when joined together in the classroom. Passion inspires curiosity and motivates students to engage deeply with learning. Energy from a teacher who genuinely loves teaching creates an atmosphere where students sense excitement about discovery, growth, and new understanding. Structure provides the framework that allows that enthusiasm to remain focused and productive.</p>
+
+    <p>Classroom leadership also develops from a place of inner stillness and spiritual grounding. Quiet moments of prayer create space for wisdom, patience, and discernment to grow in the heart of a teacher.</p>
 
     <div class="grid2">
 
       <div class="card">
-        <h3 class="h3">Preschool</h3>
+        <h3>Preschool</h3>
         <p>Foundations, routines, encouragement, and patient guidance for young learners.</p>
       </div>
 
       <div class="card">
-        <h3 class="h3">Elementary</h3>
+        <h3>Elementary</h3>
         <p>Upper elementary experience with focus on clarity, growth, and confidence.</p>
       </div>
 
       <div class="card">
-        <h3 class="h3">Graduate pursuit</h3>
+        <h3>Graduate pursuit</h3>
         <p>Master’s studies and Rank 1 goal toward continued excellence in elementary education.</p>
       </div>
 
       <div class="card">
-        <h3 class="h3">Values</h3>
+        <h3>Values</h3>
         <p>Discipline, compassion, and purposeful instruction shaped by faith and integrity.</p>
       </div>
 
