@@ -21,7 +21,6 @@ body{
   background:#a3855a;
   color:#24160d;
   font-family:system-ui, Arial;
-  line-height:1.55;
 }
 
 .container{
@@ -78,7 +77,6 @@ body{
 .lead{
   margin:0;
   font-size:15px;
-  color:#3b2a1c;
 }
 
 /* ===== SECTION ===== */
@@ -95,15 +93,14 @@ body{
   margin:6px 0 12px;
 }
 
-/* ===== ALBUM GRID ===== */
+/* ===== GRID ===== */
 .album-grid{
   display:grid;
   grid-template-columns:1fr;
   gap:8px;
-  margin-top:10px;
 }
 
-/* ===== ALBUM CARD ===== */
+/* ===== CARD ===== */
 .album-card{
   background:#fff7e8;
   border:1px solid #d8b787;
@@ -117,7 +114,6 @@ body{
 
 .muted{
   font-size:13px;
-  color:#6b4c34;
   margin-bottom:6px;
 }
 
@@ -125,8 +121,8 @@ body{
 .video{
   position:relative;
   padding-top:56.25%;
-  border-radius:8px;
   overflow:hidden;
+  border-radius:8px;
 }
 
 .video iframe{
@@ -145,7 +141,7 @@ body{
   margin:14px 0;
 }
 
-/* ===== DESKTOP ===== */
+/* ===== RESPONSIVE ===== */
 @media (min-width:800px){
   .album-grid{
     grid-template-columns:1fr 1fr;
@@ -170,7 +166,6 @@ body{
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
-  gap:10px;
 }
 
 .footer-links a{
@@ -184,7 +179,6 @@ body{
 
 <body>
 
-<!-- ✅ SAME NAVBAR -->
 <header class="site-header">
   <div class="topbar">
     <div>Brad Hobbs</div>
@@ -217,23 +211,181 @@ body{
     </div>
 
     <h2 class="h2">Albums and playlists</h2>
-    <p class="lead">Twelve YouTube albums integrated</p>
+    <p class="lead">Twelve Youtube Albums intregrated</p>
 
     <div class="album-grid">
 
-      <!-- KEEPING YOUR CONTENT EXACTLY -->
-      <!-- (All your album cards remain unchanged below) -->
+      <div class="album-grid">
 
-      <!-- Example (rest stays same as you wrote) -->
-      <article class="album-card">
-        <h3>Goodness of God - Single</h3>
-        <p class="muted">Single Release</p>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJKrN3qwKuSv3I0hAGg1tLv" allowfullscreen></iframe>
-        </div>
-      </article>
+  <article class="album-card">
+    <h3 class="h3">Goodness of God - Single</h3>
+    <p class="muted">Single Release</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJKrN3qwKuSv3I0hAGg1tLv"
+        title="Goodness of God - Single"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
 
-      <!-- 👉 KEEP ALL YOUR OTHER ALBUMS EXACTLY AS THEY ARE -->
+  <article class="album-card">
+    <h3 class="h3">God Will Make This Trial A Blessing Album</h3>
+    <p class="muted">8 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLrGL5ruI8mv2ypyMV3BGDs"
+        title="God Will Make This Trial A Blessing Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">I'm So Tired of You, Satan Album</h3>
+    <p class="muted">9 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nKqdHElriaFTQTuCzPyIIv-"
+        title="I'm So Tired of You, Satan Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">There's Something About That Name Album</h3>
+    <p class="muted">18 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLRFXIlitLrN_f4NyVHWGPE"
+        title="There's Something About That Name Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">How Great It Is Album</h3>
+    <p class="muted">11 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nI7ZNrl6uNltohV-9qgESDk"
+        title="How Great It Is Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">Jesus, My High Tower Album</h3>
+    <p class="muted">8 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJf1C-tJjOGMclk0J7T65pS"
+        title="Jesus, My High Tower Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">I Need You More Album</h3>
+    <p class="muted">11 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nL-Kuhqh1mqDoJCXk7q3dj-"
+        title="I Need You More Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">The Blood is Still There Album</h3>
+    <p class="muted">9 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJjWvkDMVmrF3RlU3OYA3uA"
+        title="The Blood is Still There Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">On The Battlefield Album</h3>
+    <p class="muted">12 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nInxhkMWfQ0fIMKpK_q2Zec"
+        title="On The Battlefield Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">Thank You for Your Blessings On Me Album</h3>
+    <p class="muted">16 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJNMunHYQ78II8Pb8VXvkZC"
+        title="Thank You for Your Blessings On Me Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">If You Only Knew Album</h3>
+    <p class="muted">16 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLoB9EOCMNKrqZ1xe6u-cki"
+        title="If You Only Knew Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">Hold Me, While I Cry Album</h3>
+    <p class="muted">11 Videos Intregrated</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nIMHNu_rf4qzIDKfeHjRleJ"
+        title="Hold Me, While I Cry Album"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+  <article class="album-card">
+    <h3 class="h3">One - Single</h3>
+    <p class="muted">Single Release</p>
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/XABaqihiys8"
+        title="One - Single"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </article>
+
+</div>
 
     </div>
 
