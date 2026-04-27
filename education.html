@@ -166,6 +166,33 @@ p{
   text-decoration:none;
 }
 
+/* ===== NAVBAR ===== */
+
+.menu{
+  display:flex;
+  gap:0; /* important so divider spacing is controlled */
+  flex-wrap:wrap;
+}
+
+.menu a{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  padding:0 10px;
+}
+
+/* 🔥 THIS IS THE DIVIDER RULE */
+.menu a + a{
+  border-left:1px solid rgba(243,230,207,.35);
+}
+
+.menu a + a{
+  border-left:1px solid rgba(243,230,207,.25);
+  margin-left:6px;
+  padding-left:12px;
+}
+
 </style>
 
 <script defer src="/about-me/assets/js/main.js"></script>
