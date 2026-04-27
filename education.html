@@ -1,85 +1,256 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/about-me/">
-  <title>Education | Brad Hobbs</title>
-  <meta name="theme-color" content="#0c0a09" />
-  <meta name="description" content="Education journey and teaching philosophy rooted in prayer." />
-  <style>html,body{background-color:#0c0a09;color:#f2eee7}</style>
-  <link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" />
-  <script defer src="/about-me/assets/js/main.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<base href="/about-me/">
+
+<title>Education | Brad Hobbs</title>
+
+<meta name="theme-color" content="#0c0a09" />
+<meta name="description" content="Education journey and teaching philosophy rooted in prayer." />
+
+<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+
+<style>
+
+/* ===== BASE ===== */
+body{
+  margin:0;
+  background:#a3855a;
+  color:#24160d;
+  font-family:system-ui, Arial;
+  line-height:1.55;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:0 18px;
+}
+
+.narrow{
+  max-width:760px;
+}
+
+/* ===== PAGE HERO ===== */
+.page-hero{
+  padding:34px 0 14px;
+  text-align:left;
+}
+
+.h1{
+  margin:0 0 6px;
+  font-size:30px;
+}
+
+.lead{
+  margin:0;
+  font-size:15px;
+  color:#3b2a1c;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:16px 0;
+}
+
+/* ===== TYPOGRAPHY FLOW ===== */
+.h2{
+  margin:14px 0 6px;
+}
+
+p{
+  margin:6px 0;
+}
+
+/* ===== SCRIPTURE ===== */
+.scripture{
+  background:#fff3dc;
+  border:1px solid #d6a85b;
+  border-radius:10px;
+  padding:10px;
+  margin:6px 0 12px;
+}
+
+.verse{
+  margin:0 0 4px;
+  font-weight:600;
+}
+
+.ref{
+  margin:0;
+  font-weight:700;
+}
+
+/* ===== GRID ===== */
+.grid2{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:6px;
+  margin-top:10px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  border-radius:10px;
+  padding:12px;
+}
+
+.card h3{
+  margin:0 0 4px;
+}
+
+.card p{
+  margin:2px 0;
+  font-size:14px;
+}
+
+/* subtle divider between cards */
+.card + .card{
+  border-top:1px solid rgba(90,63,42,.15);
+}
+
+/* ===== RULE ===== */
+.rule{
+  height:1px;
+  background:rgba(90,63,42,.2);
+  margin:14px 0;
+}
+
+/* ===== TABLET ===== */
+@media (min-width:700px){
+
+  .container{
+    max-width:760px;
+  }
+
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width:1000px){
+
+  .container{
+    max-width:1000px;
+  }
+
+  .grid2{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .card + .card{
+    border-top:none;
+  }
+
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  background:#5a3f2a;
+  color:#f3e6cf;
+  padding:12px;
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.footer-links a{
+  color:#f3e6cf;
+  text-decoration:none;
+}
+
+</style>
+
+<script defer src="/about-me/assets/js/main.js"></script>
 </head>
+
 <body>
 
 <div id="site-header"></div>
 
 <main id="main" class="page">
-    <section class="page-hero">
-      <div class="container narrow">
-        <h1 class="h1">Education</h1>
-        <p class="lead">Serious learning, structured leadership, and a heart shaped by prayer.</p>
-      </div>
+
+<section class="page-hero">
+  <div class="container narrow">
+    <h1 class="h1">Education</h1>
+    <p class="lead">Serious learning, structured leadership, and a heart shaped by prayer.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+
+    <section class="scripture" data-scripture>
+      <p class="verse">“And Jesus increased in wisdom and stature...”</p>
+      <p class="ref">Luke 2:52</p>
     </section>
 
-    <section class="section">
-      <div class="container narrow">
-        <section class="scripture" data-scripture>
-          <p class="verse">“And Jesus increased in wisdom and stature...”</p>
-          <p class="ref">Luke 2:52</p>
-        </section>
+    <h2 class="h2">Teaching focus</h2>
 
+    <p>Passion and structure work best when joined together in the classroom. Passion inspires curiosity and motivates students to engage deeply with learning. Energy from a teacher who genuinely loves teaching creates an atmosphere where students sense excitement about discovery, growth, and new understanding. Structure provides the framework that allows that enthusiasm to remain focused and productive. Clear plans, organized lessons, and consistent classroom expectations guide students through the learning process with confidence. Passion without direction can create confusion, while structure without enthusiasm can feel lifeless. A balanced classroom brings both together, allowing creativity and order to strengthen one another and support meaningful learning.</p>
 
-        <h2 class="h2">Teaching focus</h2>
-        <p>Passion and structure work best when joined together in the classroom. Passion inspires curiosity and motivates students to engage deeply with learning. Energy from a teacher who genuinely loves teaching creates an atmosphere where students sense excitement about discovery, growth, and new understanding. Structure provides the framework that allows that enthusiasm to remain focused and productive. Clear plans, organized lessons, and consistent classroom expectations guide students through the learning process with confidence. Passion without direction can create confusion, while structure without enthusiasm can feel lifeless. A balanced classroom brings both together, allowing creativity and order to strengthen one another and support meaningful learning.</p>
-        <p>Classroom leadership also develops from a place of inner stillness and spiritual grounding. Quiet moments of prayer create space for wisdom, patience, and discernment to grow in the heart of a teacher. Prayer centers the mind and shapes the posture of leadership, encouraging humility, compassion, and steady guidance. Through prayer, a teacher becomes more attentive to the needs of students and more prepared to respond with grace and understanding. Leadership shaped through prayer nurtures an environment where respect, kindness, and perseverance flourish. Such leadership influences the tone of the entire classroom and reminds students that strength often grows from quiet faith and thoughtful reflection.</p>
+    <p>Classroom leadership also develops from a place of inner stillness and spiritual grounding. Quiet moments of prayer create space for wisdom, patience, and discernment to grow in the heart of a teacher. Prayer centers the mind and shapes the posture of leadership, encouraging humility, compassion, and steady guidance. Through prayer, a teacher becomes more attentive to the needs of students and more prepared to respond with grace and understanding. Leadership shaped through prayer nurtures an environment where respect, kindness, and perseverance flourish. Such leadership influences the tone of the entire classroom and reminds students that strength often grows from quiet faith and thoughtful reflection.</p>
 
-        <div class="grid2">
-          <div class="card">
-            <h3 class="h3">Preschool</h3>
-            <p>Foundations, routines, encouragement, and patient guidance for young learners.</p>
-          </div>
-          <div class="card">
-            <h3 class="h3">Elementary</h3>
-            <p>Upper elementary experience with focus on clarity, growth, and confidence.</p>
-          </div>
-          <div class="card">
-            <h3 class="h3">Graduate pursuit</h3>
-            <p>Master’s studies and Rank 1 goal toward continued excellence in elementary education.</p>
-          </div>
-          <div class="card">
-            <h3 class="h3">Values</h3>
-            <p>Discipline, compassion, and purposeful instruction shaped by faith and integrity.</p>
-          </div>
-        </div>
+    <div class="grid2">
 
-        <div class="rule"></div>
-
-        <h2 class="h2">Teaching philosophy</h2>
-        <p>A healthy learning environment begins with clarity and stability. Clear expectations give students a sense of direction and security, allowing every learner to understand what success looks like. Calm and predictable routines strengthen that foundation by creating a classroom atmosphere where distractions lessen and focus grows. A structured environment does more than maintain order. Structure invites curiosity, supports concentration, and allows each student to invest energy into learning rather than uncertainty. Students thrive when the path ahead feels understandable and the daily rhythm of the classroom offers steadiness.</p>
-        <p>Relationships stand at the center of meaningful teaching. Genuine care, patience, and respect cultivate trust between teacher and student. A classroom shaped by strong relationships becomes a place where students feel safe to ask questions, take intellectual risks, and grow through challenges. Encouragement plays a powerful role within that relationship. Words of affirmation, recognition of effort, and steady support help students discover abilities that may have remained hidden without guidance. Confidence develops gradually through consistent reinforcement and compassionate mentorship. A teacher who believes in students often becomes the voice that helps them believe in themselves.</p>
-        <p>Spiritual grounding also guides the heart of this philosophy. Prayer and the wisdom found in Scripture offer stability through every season of life and education. Faith provides perspective during moments of success as well as difficulty. Scripture encourages humility, patience, compassion, and perseverance, qualities that shape both teaching and learning. A classroom influenced by prayer and biblical wisdom nurtures character alongside knowledge, reminding students that education forms both the mind and the heart. Through these principles, teaching becomes more than instruction. Teaching becomes a calling to guide, encourage, and strengthen lives for the future.</p>
-
-        <section class="scripture" data-scripture>
-          <p class="verse">“Let all things be done decently and in order.”</p>
-          <p class="ref">1 Corinthians 14:40</p>
-        </section>
-
+      <div class="card">
+        <h3 class="h3">Preschool</h3>
+        <p>Foundations, routines, encouragement, and patient guidance for young learners.</p>
       </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
-      <div class="footer-links">
-        <a href="scriptures.html">Scriptures</a>
-        <a href="contact.html">Contact</a>
+
+      <div class="card">
+        <h3 class="h3">Elementary</h3>
+        <p>Upper elementary experience with focus on clarity, growth, and confidence.</p>
       </div>
+
+      <div class="card">
+        <h3 class="h3">Graduate pursuit</h3>
+        <p>Master’s studies and Rank 1 goal toward continued excellence in elementary education.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="h3">Values</h3>
+        <p>Discipline, compassion, and purposeful instruction shaped by faith and integrity.</p>
+      </div>
+
     </div>
-  </footer>
+
+    <div class="rule"></div>
+
+    <h2 class="h2">Teaching philosophy</h2>
+
+    <p>A healthy learning environment begins with clarity and stability. Clear expectations give students a sense of direction and security, allowing every learner to understand what success looks like. Calm and predictable routines strengthen that foundation by creating a classroom atmosphere where distractions lessen and focus grows. A structured environment does more than maintain order. Structure invites curiosity, supports concentration, and allows each student to invest energy into learning rather than uncertainty. Students thrive when the path ahead feels understandable and the daily rhythm of the classroom offers steadiness.</p>
+
+    <p>Relationships stand at the center of meaningful teaching. Genuine care, patience, and respect cultivate trust between teacher and student. A classroom shaped by strong relationships becomes a place where students feel safe to ask questions, take intellectual risks, and grow through challenges. Encouragement plays a powerful role within that relationship. Words of affirmation, recognition of effort, and steady support help students discover abilities that may have remained hidden without guidance. Confidence develops gradually through consistent reinforcement and compassionate mentorship. A teacher who believes in students often becomes the voice that helps them believe in themselves.</p>
+
+    <p>Spiritual grounding also guides the heart of this philosophy. Prayer and the wisdom found in Scripture offer stability through every season of life and education. Faith provides perspective during moments of success as well as difficulty. Scripture encourages humility, patience, compassion, and perseverance, qualities that shape both teaching and learning. A classroom influenced by prayer and biblical wisdom nurtures character alongside knowledge, reminding students that education forms both the mind and the heart. Through these principles, teaching becomes more than instruction. Teaching becomes a calling to guide, encourage, and strengthen lives for the future.</p>
+
+    <section class="scripture" data-scripture>
+      <p class="verse">“Let all things be done decently and in order.”</p>
+      <p class="ref">1 Corinthians 14:40</p>
+    </section>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+    <div class="footer-links">
+      <a href="scriptures.html">Scriptures</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
-
