@@ -19,14 +19,9 @@ body{
 }
 
 .container{
-  max-width:880px; /* slightly tighter desktop */
+  max-width:880px;
   margin:auto;
-  padding:0 18px;
-}
-
-/* ===== SECTION SPACING (DESKTOP FIX) ===== */
-.section{
-  padding:28px 0; /* 🔥 reduced from 40–60 */
+  padding:0 16px;
 }
 
 /* ===== NAVBAR ===== */
@@ -39,12 +34,13 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 18px;
+  padding:10px 16px;
 }
 
 .menu{
   display:flex;
   gap:10px;
+  flex-wrap:wrap;
 }
 
 .menu a{
@@ -62,11 +58,11 @@ body{
 /* ===== HERO ===== */
 .hero{
   text-align:center;
-  padding:50px 20px 26px; /* 🔥 tighter desktop */
+  padding:40px 16px 20px;
 }
 
 .hero h1{
-  font-size:32px;
+  font-size:30px;
   margin:0 0 6px;
 }
 
@@ -77,10 +73,11 @@ body{
 }
 
 .hero-actions{
-  margin-top:12px;
+  margin-top:10px;
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:8px;
+  flex-wrap:wrap;
 }
 
 /* ===== BUTTON ===== */
@@ -91,38 +88,36 @@ body{
   color:#fff7e6;
   border-radius:8px;
   text-decoration:none;
+  display:inline-block;
 }
 
-/* ===== GRID (DESKTOP FIX) ===== */
-.grid3{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  column-gap:14px;
-  row-gap:10px; /* 🔥 reduced */
+/* ===== SECTION ===== */
+.section{
+  padding:18px 0;
 }
 
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  column-gap:14px;
-  row-gap:10px;
+/* ===== STACKED FLOW (KEY CHANGE) ===== */
+.stack{
+  display:flex;
+  flex-direction:column;
+  gap:6px; /* 🔥 tight flow */
 }
 
 /* ===== CARDS ===== */
 .card{
   background:#fff7e8;
   border:1px solid #d8b787;
-  border-radius:14px;
-  padding:14px; /* 🔥 tighter */
+  border-radius:12px;
+  padding:12px;
 }
 
-.card h3,
-.card h2{
-  margin:0 0 5px;
+.card h2,
+.card h3{
+  margin:0 0 4px;
 }
 
 .card p{
-  margin:4px 0;
+  margin:2px 0 4px;
   font-size:14px;
 }
 
@@ -132,43 +127,49 @@ body{
 
 /* ===== SCRIPTURE ===== */
 .scripture{
-  padding:12px;
-  margin:8px 0;
-  font-size:14px;
+  background:#fff3dc;
+  border:1px solid #d6a85b;
   border-radius:10px;
+  padding:10px;
+  text-align:center;
+  font-size:14px;
+  margin:6px 0 10px;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width:900px){
+/* ===== TABLET ===== */
+@media (min-width:700px){
 
   .container{
-    max-width:100%;
-  }
-
-  .section{
-    padding:18px 0;
-  }
-
-  .grid3,
-  .split{
-    grid-template-columns:1fr;
-    gap:8px; /* 🔥 tight stack */
-  }
-
-  .card{
-    padding:10px;
-  }
-
-  .hero{
-    padding:30px 12px 16px;
+    max-width:720px;
   }
 
   .hero h1{
-    font-size:26px;
+    font-size:34px;
   }
 
   .hero p{
-    font-size:14px;
+    font-size:16px;
+  }
+
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width:1000px){
+
+  .container{
+    max-width:880px;
+  }
+
+  .hero{
+    padding:50px 20px 26px;
+  }
+
+  .section{
+    padding:22px 0;
+  }
+
+  .stack{
+    gap:8px; /* slightly more breathing room */
   }
 
 }
@@ -230,9 +231,9 @@ body{
   </div>
 </section>
 
-<!-- CARDS -->
+<!-- MAIN CARDS (FLOW STACK) -->
 <section class="section">
-  <div class="container grid3">
+  <div class="container stack">
 
     <div class="card">
       <h3>Education</h3>
@@ -255,17 +256,17 @@ body{
   </div>
 </section>
 
-<!-- LOWER -->
+<!-- LOWER STACK -->
 <section class="section">
-  <div class="container split">
+  <div class="container stack">
 
-    <div class="card soft">
+    <div class="card">
       <h2>Whispers in the Pew</h2>
       <p>A devotional journey written from quiet spaces.</p>
       <a class="btn" href="book.html">Open Book</a>
     </div>
 
-    <div class="card soft">
+    <div class="card">
       <h2>Prayer Mode</h2>
       <p>Prayer Mode dims the page and keeps Scripture bright.</p>
       <button class="btn">Prayer</button>
