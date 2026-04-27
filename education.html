@@ -34,65 +34,35 @@ body{
   max-width:760px;
 }
 
-/* ===== NAVBAR (MATCH INDEX + FIX WRAP) ===== */
+/* ===== NAVBAR (NOW MATCHES INDEX) ===== */
 .site-header{
   background:#5a3f2a;
   border-bottom:2px solid #d6a85b;
 }
 
 .topbar{
-  max-width:1100px;
-  margin:0 auto;
-  padding:8px 18px;
-  display:grid;
-  grid-template-columns:auto 1fr auto;
+  display:flex;
+  justify-content:space-between;
   align-items:center;
-  gap:24px;
-}
-
-.brand{
-  font-family:Georgia, serif;
-  font-size:1.2rem;
-  font-weight:800;
-  color:#f3e6cf;
+  padding:10px 18px;
 }
 
 .menu{
   display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:0;
-  flex-wrap:nowrap; /* 🔥 FIX */
+  gap:12px;
+  flex-wrap:wrap;
 }
 
 .menu a{
-  text-decoration:none;
-  font-size:14px;
-  font-weight:700;
   color:#f3e6cf;
-  padding:4px 10px;
-  white-space:nowrap; /* 🔥 FIX */
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
 }
 
 .menu a + a{
-  border-left:1px solid rgba(243,230,207,.25);
-}
-
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
-
-/* MOBILE NAV */
-@media (max-width:900px){
-  .menu{
-    flex-wrap:wrap;
-    gap:10px;
-  }
-
-  .menu a{
-    border:none;
-  }
+  border-left:1px solid rgba(243,230,207,.3);
+  padding-left:10px;
 }
 
 /* ===== PAGE HERO ===== */
