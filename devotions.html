@@ -4,9 +4,8 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<base href="/about-me/">
 
-<title>Devotion | Brad Hobbs</title>
+<title>Devotions | Brad Hobbs</title>
 
 <meta name="theme-color" content="#0c0a09" />
 <meta name="description" content="Curated devotion favorites with Scripture anchored throughout." />
@@ -47,9 +46,16 @@ body{
   padding:10px 18px;
 }
 
+.brand{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:800;
+  font-size:16px;
+}
+
 .menu{
   display:flex;
-  gap:12px;
+  gap:10px;
   flex-wrap:wrap;
 }
 
@@ -63,6 +69,20 @@ body{
 .menu a + a{
   border-left:1px solid rgba(243,230,207,.3);
   padding-left:10px;
+}
+
+/* ✅ SAME ACTIVE STYLE */
+.menu a.active{
+  background:#d6a85b;
+  color:#24160d;
+  border-radius:6px;
+  padding:4px 8px;
+}
+
+/* HOVER */
+.menu a:hover{
+  background:rgba(214,168,91,.35);
+  border-radius:6px;
 }
 
 /* ===== HERO ===== */
@@ -128,7 +148,6 @@ p{
   font-size:14px;
 }
 
-/* divider feel */
 .card + .card{
   border-top:1px solid rgba(90,63,42,.15);
 }
@@ -181,17 +200,23 @@ p{
 
 <body>
 
-<!-- ✅ SAME NAVBAR -->
+<!-- ✅ MATCHES WORSHIP NAVBAR -->
 <header class="site-header">
   <div class="topbar">
-    <div>Brad Hobbs</div>
+    <a href="index.html" class="brand">Brad Hobbs</a>
+
     <nav class="menu">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <a href="family.html">Family</a>
       <a href="education.html">Education</a>
       <a href="speaker.html">Speaker</a>
+      <a href="worship.html">Worship</a>
       <a href="discography.html">Discography</a>
-      <a href="devotions.html">Devotions</a>
+      <a href="devotions.html" class="active">Devotions</a>
       <a href="scriptures.html">Scriptures</a>
+      <a href="affiliations.html">Affiliations</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
