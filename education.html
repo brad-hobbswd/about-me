@@ -34,7 +34,7 @@ body{
   max-width:760px;
 }
 
-/* ===== NAVBAR (NOW MATCHES INDEX) ===== */
+/* ===== NAVBAR (EXACT MATCH TO INDEX) ===== */
 .site-header{
   background:#5a3f2a;
   border-bottom:2px solid #d6a85b;
@@ -86,7 +86,6 @@ body{
   padding:16px 0;
 }
 
-/* ===== TYPOGRAPHY ===== */
 .h2{
   margin:14px 0 6px;
 }
@@ -140,11 +139,6 @@ p{
   margin:14px 0;
 }
 
-/* ===== TABLET ===== */
-@media (min-width:700px){
-  .container{ max-width:760px; }
-}
-
 /* ===== DESKTOP ===== */
 @media (min-width:1000px){
 
@@ -182,16 +176,26 @@ p{
 
 </style>
 
-<script defer src="/about-me/assets/js/main.js"></script>
-
 </head>
 
 <body>
 
-<!-- dynamic header -->
-<div id="site-header"></div>
+<!-- ✅ STATIC HEADER (SAME AS INDEX) -->
+<header class="site-header">
+  <div class="topbar">
+    <div>Brad Hobbs</div>
+    <nav class="menu">
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="speaker.html">Speaker</a>
+      <a href="discography.html">Discography</a>
+      <a href="devotions.html">Devotions</a>
+      <a href="scriptures.html">Scriptures</a>
+    </nav>
+  </div>
+</header>
 
-<main id="main" class="page">
+<main>
 
 <section class="page-hero">
   <div class="container narrow">
@@ -203,10 +207,10 @@ p{
 <section class="section">
   <div class="container narrow">
 
-    <section class="scripture" data-scripture>
-      <p class="verse">“And Jesus increased in wisdom and stature...”</p>
-      <p class="ref">Luke 2:52</p>
-    </section>
+    <div class="scripture">
+      “And Jesus increased in wisdom and stature...”<br>
+      <strong>Luke 2:52</strong>
+    </div>
 
     <h2 class="h2">Teaching focus</h2>
 
@@ -246,10 +250,10 @@ p{
     <p>Relationships stand at the center of meaningful teaching...</p>
     <p>Spiritual grounding also guides the heart of this philosophy...</p>
 
-    <section class="scripture" data-scripture>
-      <p class="verse">“Let all things be done decently and in order.”</p>
-      <p class="ref">1 Corinthians 14:40</p>
-    </section>
+    <div class="scripture">
+      “Let all things be done decently and in order.”<br>
+      <strong>1 Corinthians 14:40</strong>
+    </div>
 
   </div>
 </section>
@@ -258,7 +262,7 @@ p{
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+    <p>Rooted in prayer. Centered in Jesus.</p>
     <div class="footer-links">
       <a href="scriptures.html">Scriptures</a>
       <a href="contact.html">Contact</a>
