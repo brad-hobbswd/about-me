@@ -1,70 +1,272 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/about-me/">
-  <title>Worship | Brad Hobbs</title>
-  <meta name="theme-color" content="#0c0a09" />
-  <meta name="description" content="Worship foundation and musical calling centered on Jesus." />
-  <style>html,body{background-color:#0c0a09;color:#f2eee7}</style>
-  <link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" />
-  <script defer src="/about-me/assets/js/main.js"></script>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<base href="/about-me/">
+
+<title>Worship | Brad Hobbs</title>
+
+<meta name="theme-color" content="#0c0a09" />
+<meta name="description" content="Worship foundation and musical calling centered on Jesus." />
+
+<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+
+<style>
+
+/* ===== BASE ===== */
+body{
+  margin:0;
+  background:#a3855a;
+  color:#24160d;
+  font-family:system-ui, Arial;
+  line-height:1.55;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:0 18px;
+}
+
+.narrow{
+  max-width:760px;
+}
+
+/* ===== NAVBAR ===== */
+.site-header{
+  background:#5a3f2a;
+  border-bottom:2px solid #d6a85b;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 18px;
+}
+
+.menu{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.menu a + a{
+  border-left:1px solid rgba(243,230,207,.3);
+  padding-left:10px;
+}
+
+/* ===== HERO ===== */
+.page-hero{
+  padding:34px 0 14px;
+}
+
+.h1{
+  margin:0 0 6px;
+  font-size:30px;
+}
+
+.lead{
+  margin:0;
+  font-size:15px;
+  color:#3b2a1c;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:16px 0;
+}
+
+.h2{
+  margin:14px 0 6px;
+}
+
+p{
+  margin:6px 0;
+}
+
+/* ===== SCRIPTURE ===== */
+.scripture{
+  background:#fff3dc;
+  border:1px solid #d6a85b;
+  border-radius:10px;
+  padding:10px;
+  margin:6px 0 12px;
+}
+
+/* ===== GRID ===== */
+.grid2{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:6px;
+  margin-top:10px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  border-radius:10px;
+  padding:12px;
+}
+
+.card h3{
+  margin:0 0 4px;
+}
+
+.card p{
+  margin:2px 0;
+  font-size:14px;
+}
+
+/* divider feel */
+.card + .card{
+  border-top:1px solid rgba(90,63,42,.15);
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:8px 12px;
+  font-size:13px;
+  background:#7b4b25;
+  color:#fff7e6;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+/* ===== RULE ===== */
+.rule{
+  height:1px;
+  background:rgba(90,63,42,.2);
+  margin:14px 0;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width:1000px){
+
+  .container{ max-width:1000px; }
+
+  .grid2{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .card + .card{
+    border-top:none;
+  }
+
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  background:#5a3f2a;
+  color:#f3e6cf;
+  padding:12px;
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.footer-links a{
+  color:#f3e6cf;
+  text-decoration:none;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<div id="site-header"></div>
+<!-- ✅ SAME NAVBAR -->
+<header class="site-header">
+  <div class="topbar">
+    <div>Brad Hobbs</div>
+    <nav class="menu">
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="speaker.html">Speaker</a>
+      <a href="discography.html">Discography</a>
+      <a href="devotions.html">Devotions</a>
+      <a href="scriptures.html">Scriptures</a>
+    </nav>
+  </div>
+</header>
 
-<main id="main" class="page">
-    <section class="page-hero">
-      <div class="container narrow">
-        <h1 class="h1">Worship</h1>
-        <p class="lead">Worship stays near, shaped by piano, voice, and reverence.</p>
-      </div>
-    </section>
+<main>
 
-    <section class="section">
-      <div class="container narrow">
-        <section class="scripture" data-scripture>
-          <p class="verse">“God is a Spirit: and they that worship him must worship him in spirit and in truth.”</p>
-          <p class="ref">John 4:24</p>
-        </section>
+<section class="page-hero">
+  <div class="container narrow">
+    <h1 class="h1">Worship</h1>
+    <p class="lead">Worship stays near, shaped by piano, voice, and reverence.</p>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container narrow">
 
-        <h2 class="h2">Quiet strength</h2>
-        <p class="lead">Worship grows from a quiet and devoted life of prayer. Private moments with Jesus shape the heart long before any song rises in public. A prayer closet becomes the place where faith deepens, humility forms, and strength develops in the presence of the Lord. In that sacred stillness, devotion matures and a life of worship begins to take root.</p>
-        <p>Music then flows naturally as an expression of that devotion. Songs offered through voice or piano become a reflection of the relationship already formed with Jesus in prayer. Worship through music carries sincerity when the heart has first bowed before Him in quiet reverence. True worship does not begin on a platform. True worship begins in prayer and continues as a living expression of love for Jesus.</p>
-
-        <div class="grid2">
-          <div class="card">
-            <h3 class="h3">Piano</h3>
-            <p>Simple accompaniment that supports focused worship and calm attention.</p>
-          </div>
-          <div class="card">
-            <h3 class="h3">Voice</h3>
-            <p>Clear delivery shaped by Southern Gospel heritage and testimony.</p>
-          </div>
-        </div>
-
-        <div class="rule"></div>
-
-        <h2 class="h2">Recorded music</h2>
-        <p>Discography page includes a YouTube playlist embed for past recordings.</p>
-        <a class="btn" href="discography.html">Open Discography</a>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
-      <div class="footer-links">
-        <a href="scriptures.html">Scriptures</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="scripture">
+      “God is a Spirit: and they that worship him must worship him in spirit and in truth.”<br>
+      <strong>John 4:24</strong>
     </div>
-  </footer>
+
+    <h2 class="h2">Quiet strength</h2>
+
+    <p class="lead">Worship grows from a quiet and devoted life of prayer. Private moments with Jesus shape the heart long before any song rises in public.</p>
+
+    <p>Music then flows naturally as an expression of that devotion. Songs offered through voice or piano become a reflection of the relationship already formed with Jesus in prayer.</p>
+
+    <div class="grid2">
+
+      <div class="card">
+        <h3>Piano</h3>
+        <p>Simple accompaniment that supports focused worship and calm attention.</p>
+      </div>
+
+      <div class="card">
+        <h3>Voice</h3>
+        <p>Clear delivery shaped by Southern Gospel heritage and testimony.</p>
+      </div>
+
+    </div>
+
+    <div class="rule"></div>
+
+    <h2 class="h2">Recorded music</h2>
+
+    <p>Discography page includes a YouTube playlist embed for past recordings.</p>
+
+    <a class="btn" href="discography.html">Open Discography</a>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p>Rooted in prayer. Centered in Jesus.</p>
+    <div class="footer-links">
+      <a href="scriptures.html">Scriptures</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
-
