@@ -11,11 +11,6 @@
 <meta name="theme-color" content="#0c0a09" />
 <meta name="description" content="Teaching with clarity, living with worship, centered on Jesus in a quiet prayer closet atmosphere." />
 
-<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
-
-<!-- ❌ external css disabled to stop conflicts -->
-<!-- <link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" /> -->
-
 <style>
 
 /* ===== BASE ===== */
@@ -24,16 +19,17 @@ body{
   background:#a3855a;
   color:#24160d;
   font-family:system-ui, Arial;
+  line-height:1.6;
 }
 
 .container{
   max-width:1100px;
   margin:auto;
-  padding:0 18px;
+  padding:0 20px;
 }
 
 .section{
-  padding:40px 0;
+  padding:60px 0;
 }
 
 /* ===== NAVBAR ===== */
@@ -46,21 +42,19 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 18px;
-  max-width:1100px;
-  margin:auto;
+  padding:14px 20px;
 }
 
 .menu{
   display:flex;
-  gap:12px;
+  gap:14px;
 }
 
 .menu a{
   color:#f3e6cf;
   text-decoration:none;
   font-weight:700;
-  padding:4px 8px;
+  font-size:14px;
 }
 
 .menu a + a{
@@ -68,28 +62,63 @@ body{
   padding-left:12px;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (UPGRADED) ===== */
 .hero{
-  padding:30px 0;
+  text-align:center;
+  padding:80px 20px 60px;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,.2), transparent 60%),
+    #a3855a;
 }
 
-.banner-img{
-  width:100%;
-  border-radius:10px;
-  border:4px solid #d6a85b;
+.hero h1{
+  font-size:42px;
+  margin-bottom:16px;
+  font-family:Georgia, serif;
+}
+
+.hero p{
+  font-size:18px;
+  max-width:600px;
+  margin:auto;
+  color:#3b2a1c;
+}
+
+.hero-actions{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  background:#7b4b25;
+  color:#fff7e6;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:700;
+  transition:.2s;
+}
+
+.btn:hover{
+  background:#915c2e;
 }
 
 /* ===== GRID ===== */
 .grid3{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
-  gap:16px;
+  gap:20px;
 }
 
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;
+  gap:20px;
 }
 
 @media (max-width:900px){
@@ -99,19 +128,30 @@ body{
   }
 }
 
-/* ===== CARDS (FIXED) ===== */
+/* ===== CARDS (UPGRADED LOOK) ===== */
 .card{
   background:#fff7e8;
   border:1px solid #d8b787;
-  border-radius:16px;
-  padding:20px;
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.card h3{
+  margin-bottom:10px;
 }
 
 .card p{
   color:#3b2a1c;
 }
 
-/* 🔥 FIXED DARK CARDS */
+/* ===== SOFT SECTION ===== */
 .soft{
   background:#fff7e8;
 }
@@ -120,27 +160,18 @@ body{
 .scripture{
   background:#fff3dc;
   border:1px solid #d6a85b;
-  border-radius:12px;
-  padding:14px;
-  margin:14px 0;
-}
-
-/* ===== BUTTON ===== */
-.btn{
-  display:inline-block;
-  padding:10px 14px;
-  background:#7b4b25;
-  color:#fff7e6;
-  text-decoration:none;
-  border-radius:10px;
-  margin-top:10px;
+  border-radius:16px;
+  padding:18px;
+  text-align:center;
+  font-style:italic;
 }
 
 /* ===== FOOTER ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:18px;
+  padding:20px;
+  text-align:center;
 }
 
 </style>
@@ -149,7 +180,6 @@ body{
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="site-header">
   <div class="topbar">
     <div class="brand">Brad Hobbs</div>
@@ -166,33 +196,33 @@ body{
 
 <main>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
+    <h1>Rooted in Prayer. Centered in Jesus.</h1>
+    <p>
+      Teaching with clarity, worship with reverence, and devotion flowing from a quiet place with Jesus.
+    </p>
 
-<img src="assets/img/banner.jpg" usemap="#banner-map" class="banner-img" alt="Welcome">
-
-<map name="banner-map">
-
-<area shape="rect" coords="394,631,716,707" href="education.html">
-<area shape="rect" coords="744,633,1075,704" href="worship.html">
-
-</map>
-
-  </div>
-</section>
-
-<!-- ===== SCRIPTURE ===== -->
-<section class="section">
-  <div class="container">
-    <div class="scripture">
-      “Thy word is a lamp unto my feet, and a light unto my path.”  
-      <br><strong>Psalm 119:105</strong>
+    <div class="hero-actions">
+      <a href="education.html" class="btn">Education</a>
+      <a href="worship.html" class="btn">Worship</a>
+      <a href="devotions.html" class="btn">Devotions</a>
     </div>
   </div>
 </section>
 
-<!-- ===== CARDS ===== -->
+<!-- SCRIPTURE -->
+<section class="section">
+  <div class="container">
+    <div class="scripture">
+      “Thy word is a lamp unto my feet, and a light unto my path.”<br>
+      <strong>Psalm 119:105</strong>
+    </div>
+  </div>
+</section>
+
+<!-- CARDS -->
 <section class="section">
   <div class="container grid3">
 
@@ -217,7 +247,7 @@ body{
   </div>
 </section>
 
-<!-- ===== LOWER SECTION ===== -->
+<!-- LOWER -->
 <section class="section">
   <div class="container split">
 
