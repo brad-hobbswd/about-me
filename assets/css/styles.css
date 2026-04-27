@@ -1,3 +1,4 @@
+/* ===== ROOT ===== */
 :root{
   --paper:#f3e6cf;
   --oak:#5a3f2a;
@@ -6,7 +7,6 @@
   --brass:#d6a85b;
   --muted:rgba(45,28,18,.7);
   --line:rgba(90,63,42,.2);
-  --shadow:0 20px 50px rgba(0,0,0,.25);
   --radius:18px;
 }
 
@@ -26,43 +26,110 @@ body{
   padding:0 18px;
 }
 
-.section{padding:34px 0}
-
-/* ===== HERO ===== */
-.hero{
-  padding:20px 0 0;
+/* ===== HEADER / NAVBAR (RESTORED) ===== */
+.site-header{
+  background:#5a3f2a;
+  border-bottom:2px solid #d6a85b;
+  position:relative;
+  z-index:1000;
 }
 
-/* ===== CARDS (FIXED) ===== */
-.card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:var(--radius);
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
-  padding:20px;
-  color:#24160d;
-  transition:.25s ease;
+.topbar{
+  max-width:1100px;
+  margin:0 auto;
+  padding:10px 18px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:24px;
 }
 
-.card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 14px 30px rgba(0,0,0,.18);
+.brand{
+  font-family:Georgia, serif;
+  font-weight:800;
+  color:#f3e6cf;
+  text-decoration:none;
 }
 
-.card .h3{
-  color:#1f120a;
+.brand-sub{
+  font-size:.75rem;
+  color:#e6d5b5;
 }
 
-.card p{
-  color:#3b2a1c;
-  line-height:1.6;
+.menu{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
-/* ===== SOFT CARDS FIX (IMPORTANT) ===== */
-.soft{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  color:#24160d;
+.menu a{
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
+  color:#f3e6cf;
+  padding:4px 8px;
+  border-radius:6px;
+  transition:.2s;
+}
+
+/* 🔥 NAVBAR DIVIDER RULE RESTORED */
+.menu a + a{
+  border-left:1px solid rgba(243,230,207,.25);
+  padding-left:12px;
+  margin-left:6px;
+}
+
+.menu a:hover{
+  background:rgba(214,168,91,.35);
+  color:#fff;
+}
+
+/* ===== MOBILE MENU ===== */
+.menu-toggle{
+  display:none;
+}
+
+@media (max-width:900px){
+
+  .topbar{
+    grid-template-columns:auto auto;
+  }
+
+  .menu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#5a3f2a;
+    padding:20px 0;
+  }
+
+  .menu.open{
+    display:flex;
+  }
+
+  .menu a + a{
+    border:none;
+    margin:0;
+    padding:8px 0;
+  }
+
+}
+
+/* ===== SECTIONS ===== */
+.section{
+  padding:34px 0;
+}
+
+.alt{
+  background:
+    url("../img/linen.svg"),
+    rgba(22,18,16,.35);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
 /* ===== GRID ===== */
@@ -85,13 +152,30 @@ body{
   }
 }
 
-/* ===== SECTION BACKGROUND FIX ===== */
-.alt{
-  background:
-    url("../img/linen.svg"),
-    rgba(22,18,16,.35); /* LIGHTENED */
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
+/* ===== CARDS (FIXED VISIBILITY) ===== */
+.card{
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  border-radius:var(--radius);
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  padding:20px;
+  color:#24160d;
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+}
+
+.card p{
+  color:#3b2a1c;
+}
+
+/* 🔥 IMPORTANT FIX */
+.soft{
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  color:#24160d;
 }
 
 /* ===== SCRIPTURE ===== */
@@ -102,11 +186,9 @@ body{
   padding:16px;
   box-shadow:0 6px 20px rgba(214,168,91,.25);
   margin:14px 0;
-  color:#2b1a0f;
 }
 
 .verse{
-  margin:0 0 10px;
   font-family:Georgia, serif;
   font-weight:800;
   color:var(--brown);
@@ -114,7 +196,6 @@ body{
 
 .ref{
   font-weight:900;
-  color:rgba(75,63,54,.86);
 }
 
 /* ===== BUTTONS ===== */
@@ -131,7 +212,6 @@ body{
 
 .btn:hover{
   background:#915c2e;
-  border-color:#e0b463;
 }
 
 .btn.ghost{
@@ -153,16 +233,4 @@ body{
 .footer-links a{
   color:#f3e6cf;
   text-decoration:none;
-}
-
-/* ===== SMALL POLISH ===== */
-.section{
-  opacity:0;
-  transform:translateY(20px);
-  transition:all .5s ease;
-}
-
-.section.visible{
-  opacity:1;
-  transform:translateY(0);
 }
