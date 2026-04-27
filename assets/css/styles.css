@@ -234,3 +234,34 @@ body{
   color:#f3e6cf;
   text-decoration:none;
 }
+
+/* ===== FINAL OVERRIDES (FORCE FIX) ===== */
+
+/* Fix dark sections */
+.soft{
+  background:#fff7e8 !important;
+  border:1px solid #d8b787 !important;
+  color:#24160d !important;
+}
+
+/* Ensure ALL cards stay readable */
+.card,
+.album-card,
+.hero-card{
+  background:#fff7e8 !important;
+  border:1px solid #d8b787 !important;
+  color:#24160d !important;
+}
+
+/* Improve text contrast */
+.card p,
+.soft p{
+  color:#3b2a1c !important;
+}
+
+/* Slightly lighten alt section */
+.alt{
+  background:
+    url("../img/linen.svg"),
+    rgba(22,18,16,.35) !important;
+}
