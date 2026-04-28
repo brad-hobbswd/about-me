@@ -71,7 +71,6 @@ body{
   padding-left:10px;
 }
 
-/* ACTIVE */
 .menu a.active{
   background:#d6a85b;
   color:#24160d;
@@ -79,7 +78,6 @@ body{
   padding:4px 8px;
 }
 
-/* HOVER */
 .menu a:hover{
   background:rgba(214,168,91,.35);
   border-radius:6px;
@@ -199,16 +197,30 @@ p{
 
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (UPDATED) ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:12px;
+  padding:8px 12px;
+  font-size:13px;
 }
 
 .footer-row{
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-line{
+  margin:0;
+  white-space:nowrap;
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
   flex-wrap:wrap;
   gap:10px;
 }
@@ -216,6 +228,13 @@ p{
 .footer-links a{
   color:#f3e6cf;
   text-decoration:none;
+  font-weight:600;
+  font-size:13px;
+}
+
+.footer-links a + a{
+  border-left:1px solid rgba(243,230,207,.4);
+  padding-left:10px;
 }
 
 </style>
@@ -224,7 +243,6 @@ p{
 
 <body>
 
-<!-- ✅ FINAL NAVBAR -->
 <header class="site-header">
   <div class="topbar">
     <a href="index.html" class="brand">Brad Hobbs</a>
@@ -264,19 +282,22 @@ p{
 
     <h2 class="h2">Speaking focus</h2>
 
-    <p class="lead">Teaching stays clear and grounded in Scripture.</p>
-    <p>Prayer remains the starting point.</p>
+    <p class="lead">Teaching remains clear, Scripture-centered, and grounded in prayer.</p>
+
+    <p>Every message begins in prayer and remains anchored in the Word of God. Speaking flows from a place of quiet preparation with Jesus, where direction, clarity, and conviction are formed before any words are shared publicly.</p>
+
+    <p>Delivery stays steady, purposeful, and focused on helping others grow in faith. Messages aim to strengthen, encourage, and guide with practical application rooted in Scripture.</p>
 
     <div class="grid2">
 
       <div class="card">
         <h3>Devotional teaching</h3>
-        <p>Messages built for encouragement, obedience, and practical faith.</p>
+        <p>Messages built for encouragement, obedience, and practical faith that connects Scripture to daily life.</p>
       </div>
 
       <div class="card">
         <h3>Worship connection</h3>
-        <p>Southern Gospel influence supports atmosphere and reflection.</p>
+        <p>Southern Gospel influence supports atmosphere, reflection, and a reverent response to the Word.</p>
       </div>
 
     </div>
@@ -290,6 +311,7 @@ p{
       <li>Faith and obedience</li>
       <li>Worship and reverence</li>
       <li>Teaching with purpose</li>
+      <li>Spiritual growth through daily devotion</li>
     </ul>
 
     <div class="cta">
@@ -303,10 +325,12 @@ p{
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p>Rooted in prayer. Centered in Jesus.</p>
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+
     <div class="footer-links">
       <a href="scriptures.html">Scriptures</a>
       <a href="contact.html">Contact</a>
+      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
     </div>
   </div>
 </footer>
