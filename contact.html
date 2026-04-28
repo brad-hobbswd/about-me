@@ -71,7 +71,6 @@ body{
   padding-left:10px;
 }
 
-/* ACTIVE */
 .menu a.active{
   background:#d6a85b;
   color:#24160d;
@@ -105,12 +104,16 @@ body{
   padding:16px 0;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD SYSTEM ===== */
 .card{
   background:#fff7e8;
   border:1px solid #d8b787;
   border-radius:10px;
   padding:14px;
+}
+
+.card + .card{
+  margin-top:10px;
 }
 
 /* ===== CONTACT BUTTONS ===== */
@@ -181,7 +184,7 @@ body{
   margin-top:12px;
 }
 
-/* ===== FOOTER (UPDATED) ===== */
+/* ===== FOOTER ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
@@ -259,8 +262,8 @@ body{
 <section class="section">
   <div class="container narrow">
 
+    <!-- CARD 1 -->
     <article class="card">
-
       <h2 class="h2">Text first before calling</h2>
       <p class="lead">Text provides context and supports scheduling.</p>
 
@@ -268,9 +271,10 @@ body{
         <a class="contact-pill" href="mailto:brad.hobbs13@icloud.com?subject=Website%20Message">Email</a>
         <a class="contact-pill" href="sms:8595511146?&body=Hello%20Brad%2C%20">Text</a>
       </div>
+    </article>
 
-      <div class="rule"></div>
-
+    <!-- CARD 2 -->
+    <article class="card">
       <h2 class="h2">Send a message</h2>
       <p class="muted">Form submission opens a prepared email draft.</p>
 
@@ -300,11 +304,12 @@ body{
 
       </form>
 
+      <div class="rule"></div>
+
       <p class="muted">
         Phone and email remain available for professional communication connected to education, worship, speaking, and publishing.
         Text first supports clarity and availability.
       </p>
-
     </article>
 
     <div class="scripture">
