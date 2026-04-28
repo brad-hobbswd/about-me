@@ -66,13 +66,11 @@ body{
   font-size:14px;
 }
 
-/* divider */
 .menu a + a{
   border-left:1px solid rgba(243,230,207,.3);
   padding-left:10px;
 }
 
-/* ACTIVE */
 .menu a.active{
   background:#d6a85b;
   color:#24160d;
@@ -80,7 +78,6 @@ body{
   padding:4px 8px;
 }
 
-/* HOVER */
 .menu a:hover{
   background:rgba(214,168,91,.35);
   border-radius:6px;
@@ -144,7 +141,6 @@ p{
   margin:0 0 4px;
 }
 
-/* divider feel */
 .card + .card{
   border-top:1px solid rgba(90,63,42,.15);
 }
@@ -156,32 +152,30 @@ p{
   margin:14px 0;
 }
 
-/* ===== DESKTOP ===== */
-@media (min-width:1000px){
-
-  .container{ max-width:1000px; }
-
-  .grid2{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-
-  .card + .card{
-    border-top:none;
-  }
-
-}
-
 /* ===== FOOTER ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:12px;
+  padding:8px 12px;
+  font-size:13px;
 }
 
 .footer-row{
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-line{
+  margin:0;
+  white-space:nowrap;
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
   flex-wrap:wrap;
   gap:10px;
 }
@@ -189,6 +183,13 @@ p{
 .footer-links a{
   color:#f3e6cf;
   text-decoration:none;
+  font-weight:600;
+  font-size:13px;
+}
+
+.footer-links a + a{
+  border-left:1px solid rgba(243,230,207,.4);
+  padding-left:10px;
 }
 
 </style>
@@ -197,7 +198,6 @@ p{
 
 <body>
 
-<!-- ✅ NAVBAR -->
 <header class="site-header">
   <div class="topbar">
     <a href="index.html" class="brand">Brad Hobbs</a>
@@ -239,16 +239,20 @@ p{
 
     <p class="lead">Family life deserves prayer, protection, and steady love centered on Jesus.</p>
 
+    <p>Fatherhood and partnership stand at the center of daily life. Gabriel and Justin are not additions to the journey. They are the heart of it. Love within this home reflects a shared need for one another, grounded in a deeper need for Jesus. Strength, patience, and joy continue to grow through that connection.</p>
+
+    <p>Responsibility brings purpose. Presence brings stability. Prayer covers every moment, creating a home where love remains consistent and faith continues to lead.</p>
+
     <div class="grid2">
 
       <article class="card">
-        <h3>Son</h3>
-        <p>Love, guidance, and presence remain daily priorities with prayer covering every season.</p>
+        <h3>Gabriel</h3>
+        <p>A son deeply loved, guided with intention, and covered in prayer through every stage of growth.</p>
       </article>
 
       <article class="card">
-        <h3>Partner</h3>
-        <p>Love, honor, and faithfulness remain the standard with prayer shaping unity and peace.</p>
+        <h3>Justin</h3>
+        <p>A partner honored with love, faithfulness, and unity shaped through prayer and shared life.</p>
       </article>
 
     </div>
@@ -262,7 +266,7 @@ p{
       <strong>Numbers 6:24</strong>
     </div>
 
-    <p class="muted">Personal wording and names can be added later.</p>
+    <p>Lord Jesus, You are the center of this home. Cover Gabriel and Justin with peace, strength, and protection. Let love remain steady, let patience grow, and let every moment reflect Your presence. Keep this home grounded in truth, guided by Your Spirit, and held together through Your name.</p>
 
   </div>
 </section>
@@ -271,10 +275,12 @@ p{
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p>Rooted in prayer. Centered in Jesus.</p>
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+
     <div class="footer-links">
       <a href="scriptures.html">Scriptures</a>
       <a href="contact.html">Contact</a>
+      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
     </div>
   </div>
 </footer>
