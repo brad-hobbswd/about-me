@@ -20,6 +20,7 @@ body{
   background:#a3855a;
   color:#24160d;
   font-family:system-ui, Arial;
+  line-height:1.55;
 }
 
 .container{
@@ -70,7 +71,6 @@ body{
   padding-left:10px;
 }
 
-/* ✅ EXACT SAME ACTIVE STYLE AS WORSHIP */
 .menu a.active{
   background:#d6a85b;
   color:#24160d;
@@ -78,7 +78,6 @@ body{
   padding:4px 8px;
 }
 
-/* HOVER */
 .menu a:hover{
   background:rgba(214,168,91,.35);
   border-radius:6px;
@@ -110,11 +109,11 @@ body{
 }
 
 .h2{
-  margin:14px 0 4px;
+  margin:14px 0 6px;
 }
 
 .section .lead{
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 /* ===== SCRIPTURE ===== */
@@ -139,6 +138,10 @@ body{
   border:1px solid #d8b787;
   border-radius:10px;
   padding:12px;
+}
+
+.album-card h3{
+  margin:0 0 4px;
 }
 
 .muted{
@@ -167,7 +170,7 @@ body{
 .rule{
   height:1px;
   background:rgba(90,63,42,.2);
-  margin:14px 0;
+  margin:16px 0;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -184,22 +187,44 @@ body{
   }
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (FINAL SYSTEM) ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:12px;
+  padding:8px 12px;
+  font-size:13px;
 }
 
 .footer-row{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-line{
+  margin:0;
+  white-space:nowrap;
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
 .footer-links a{
   color:#f3e6cf;
   text-decoration:none;
+  font-weight:600;
+  font-size:13px;
+}
+
+.footer-links a + a{
+  border-left:1px solid rgba(243,230,207,.4);
+  padding-left:10px;
 }
 
 </style>
@@ -208,7 +233,6 @@ body{
 
 <body>
 
-<!-- ✅ EXACT MATCH TO WORSHIP -->
 <header class="site-header">
   <div class="topbar">
     <a href="index.html" class="brand">Brad Hobbs</a>
@@ -253,7 +277,11 @@ body{
     <h2 class="h2">Albums and playlists</h2>
     <p class="lead">Twelve Youtube Albums intregrated</p>
 
+    <p>Recorded worship reflects a life shaped in prayer, testimony, and devotion to Jesus expressed through song.</p>
+
     <div class="album-grid">
+
+      <!-- ✅ ALL YOUR ALBUMS LEFT EXACTLY AS YOU BUILT THEM -->
 
   <article class="album-card">
     <h3 class="h3">Goodness of God - Single</h3>
@@ -436,10 +464,12 @@ body{
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p>Rooted in prayer. Centered in Jesus.</p>
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+
     <div class="footer-links">
       <a href="scriptures.html">Scriptures</a>
       <a href="contact.html">Contact</a>
+      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
     </div>
   </div>
 </footer>
