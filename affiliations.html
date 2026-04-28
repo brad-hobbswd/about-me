@@ -71,7 +71,6 @@ body{
   padding-left:10px;
 }
 
-/* ACTIVE */
 .menu a.active{
   background:#d6a85b;
   color:#24160d;
@@ -109,7 +108,6 @@ body{
   margin:14px 0 6px;
 }
 
-/* 🔥 spacing fix */
 .section .lead{
   margin-bottom:10px;
 }
@@ -123,44 +121,60 @@ body{
   margin:6px 0 12px;
 }
 
-/* ===== LINKS ===== */
-.linkstack{
-  display:flex;
-  flex-direction:column;
+/* ===== GRID (NEW) ===== */
+.grid2{
+  display:grid;
+  grid-template-columns:1fr;
   gap:8px;
   margin-top:10px;
 }
 
-.linkcard{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+/* ===== CARD ===== */
+.card{
   background:#fff7e8;
   border:1px solid #d8b787;
   border-radius:10px;
-  padding:12px;
-  text-decoration:none;
-  color:#24160d;
+  padding:14px;
 }
 
-.linkcard:hover{
-  background:#fff3dc;
+.card h3{
+  margin:0 0 4px;
 }
 
-.muted{
+.card p{
+  margin:2px 0 6px;
+  font-size:14px;
+}
+
+/* ===== LINK BUTTON ===== */
+.card a{
+  display:inline-block;
+  margin-top:6px;
   font-size:13px;
+  text-decoration:none;
+  color:#7b4b25;
+  font-weight:700;
 }
 
-.mark{
-  font-size:18px;
+/* ===== DESKTOP ===== */
+@media (min-width:900px){
+  .grid2{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
 }
 
-/* ===== FOOTER ===== */
+@media (min-width:1200px){
+  .grid2{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+
 /* ===== FOOTER ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:8px 12px; /* 🔥 thinner */
+  padding:8px 12px;
   font-size:13px;
 }
 
@@ -174,7 +188,7 @@ body{
 
 .footer-line{
   margin:0;
-  white-space:nowrap; /* keeps it on one line */
+  white-space:nowrap;
 }
 
 .footer-links{
@@ -191,7 +205,6 @@ body{
   font-size:13px;
 }
 
-/* 🔥 divider lines like navbar */
 .footer-links a + a{
   border-left:1px solid rgba(243,230,207,.4);
   padding-left:10px;
@@ -243,79 +256,62 @@ body{
     <h2 class="h2">Connections</h2>
     <p class="lead">Meaningful relationships and organizations that strengthen purpose and service.</p>
 
-    <div class="linkstack">
+    <div class="grid2">
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank" rel="noopener">
-        <div>
-          <h3>Brad Hobbs Web Design</h3>
-          <p class="muted">Website design and development that built this platform.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <!-- CARD -->
+      <div class="card">
+        <h3>Brad Hobbs Web Design</h3>
+        <p>Website design and development that built this platform.</p>
+        <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/whispers-in-the-pew/" target="_blank" rel="noopener">
-        <div>
-          <h3>Whispers in the Pew</h3>
-          <p class="muted">Devotional project and book journey.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>Whispers in the Pew</h3>
+        <p>Devotional project and book journey.</p>
+        <a href="https://brad-hobbswd.github.io/whispers-in-the-pew/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank" rel="noopener">
-        <div>
-          <h3>Love That Covers</h3>
-          <p class="muted">Message centered on grace, healing, and restoration.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>Love That Covers</h3>
+        <p>Message centered on grace, healing, and restoration.</p>
+        <a href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank" rel="noopener">
-        <div>
-          <h3>Love That Covers LGBTQIA+</h3>
-          <p class="muted">Affirming message of love, dignity, and belonging.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>Love That Covers LGBTQIA+</h3>
+        <p>Affirming message of love, dignity, and belonging.</p>
+        <a href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/seventy-times-seven/" target="_blank" rel="noopener">
-        <div>
-          <h3>Seven Times Seventy</h3>
-          <p class="muted">Forgiveness and spiritual growth focus.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>Seven Times Seventy</h3>
+        <p>Forgiveness and spiritual growth focus.</p>
+        <a href="https://brad-hobbswd.github.io/seventy-times-seven/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/she-stays-for-the-kids/" target="_blank" rel="noopener">
-        <div>
-          <h3>She Stays for the Kids</h3>
-          <p class="muted">Story and reflection centered on family and resilience.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>She Stays for the Kids</h3>
+        <p>Story and reflection centered on family and resilience.</p>
+        <a href="https://brad-hobbswd.github.io/she-stays-for-the-kids/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/words-that-sound-good/" target="_blank" rel="noopener">
-        <div>
-          <h3>Words That Sound Good</h3>
-          <p class="muted">Writing and expression project.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>Words That Sound Good</h3>
+        <p>Writing and expression project.</p>
+        <a href="https://brad-hobbswd.github.io/words-that-sound-good/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/what-they-said-about-you/" target="_blank" rel="noopener">
-        <div>
-          <h3>What They Said About You</h3>
-          <p class="muted">Identity, truth, and restoration focus.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>What They Said About You</h3>
+        <p>Identity, truth, and restoration focus.</p>
+        <a href="https://brad-hobbswd.github.io/what-they-said-about-you/" target="_blank">Visit →</a>
+      </div>
 
-      <a class="linkcard" href="https://brad-hobbswd.github.io/sanctified/" target="_blank" rel="noopener">
-        <div>
-          <h3>Sanctified</h3>
-          <p class="muted">Holiness and transformation journey.</p>
-        </div>
-        <span class="mark">↗</span>
-      </a>
+      <div class="card">
+        <h3>Sanctified</h3>
+        <p>Holiness and transformation journey.</p>
+        <a href="https://brad-hobbswd.github.io/sanctified/" target="_blank">Visit →</a>
+      </div>
 
     </div>
 
