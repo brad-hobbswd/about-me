@@ -192,16 +192,30 @@ p{
 
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (UPDATED) ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:12px;
+  padding:8px 12px;
+  font-size:13px;
 }
 
 .footer-row{
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-line{
+  margin:0;
+  white-space:nowrap;
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
   flex-wrap:wrap;
   gap:10px;
 }
@@ -209,6 +223,13 @@ p{
 .footer-links a{
   color:#f3e6cf;
   text-decoration:none;
+  font-weight:600;
+  font-size:13px;
+}
+
+.footer-links a + a{
+  border-left:1px solid rgba(243,230,207,.4);
+  padding-left:10px;
 }
 
 </style>
@@ -217,7 +238,6 @@ p{
 
 <body>
 
-<!-- ✅ FINAL NAVBAR -->
 <header class="site-header">
   <div class="topbar">
     <a href="index.html" class="brand">Brad Hobbs</a>
@@ -308,10 +328,12 @@ p{
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p>Rooted in prayer. Centered in Jesus.</p>
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+
     <div class="footer-links">
       <a href="scriptures.html">Scriptures</a>
       <a href="contact.html">Contact</a>
+      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
     </div>
   </div>
 </footer>
