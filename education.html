@@ -71,7 +71,6 @@ body{
   padding-left:10px;
 }
 
-/* ACTIVE */
 .menu a.active{
   background:#d6a85b;
   color:#24160d;
@@ -79,7 +78,6 @@ body{
   padding:4px 8px;
 }
 
-/* HOVER */
 .menu a:hover{
   background:rgba(214,168,91,.35);
   border-radius:6px;
@@ -175,16 +173,30 @@ p{
 
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (UPDATED) ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:12px;
+  padding:8px 12px;
+  font-size:13px;
 }
 
 .footer-row{
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-line{
+  margin:0;
+  white-space:nowrap;
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
   flex-wrap:wrap;
   gap:10px;
 }
@@ -192,6 +204,13 @@ p{
 .footer-links a{
   color:#f3e6cf;
   text-decoration:none;
+  font-weight:600;
+  font-size:13px;
+}
+
+.footer-links a + a{
+  border-left:1px solid rgba(243,230,207,.4);
+  padding-left:10px;
 }
 
 </style>
@@ -200,7 +219,6 @@ p{
 
 <body>
 
-<!-- ✅ FINAL NAVBAR -->
 <header class="site-header">
   <div class="topbar">
     <a href="index.html" class="brand">Brad Hobbs</a>
@@ -240,9 +258,9 @@ p{
 
     <h2 class="h2">Teaching focus</h2>
 
-    <p>Passion and structure work best when joined together in the classroom...</p>
+    <p>Passion and structure work together to create a classroom where students feel both supported and challenged. Passion builds connection, encourages curiosity, and invites students into the learning process. Structure provides the clarity and consistency needed for growth. Expectations remain steady, routines remain clear, and students gain confidence through a stable environment.</p>
 
-    <p>Classroom leadership also develops from a place of inner stillness and spiritual grounding...</p>
+    <p>Classroom leadership develops through prayer and quiet discipline. Time spent with Jesus strengthens patience, sharpens discernment, and prepares the heart to lead well. A teacher grounded in prayer carries a calm authority that shapes both the atmosphere and the direction of the classroom.</p>
 
     <div class="grid2">
 
@@ -272,9 +290,11 @@ p{
 
     <h2 class="h2">Teaching philosophy</h2>
 
-    <p>A healthy learning environment begins with clarity and stability...</p>
-    <p>Relationships stand at the center of meaningful teaching...</p>
-    <p>Spiritual grounding also guides the heart of this philosophy...</p>
+    <p>A healthy learning environment begins with clarity and order. Students thrive when expectations remain consistent and instruction stays purposeful. Organization within the classroom allows learning to move forward without confusion or distraction.</p>
+
+    <p>Relationships stand at the center of meaningful teaching. Students respond when they feel seen, valued, and supported. Respect, encouragement, and steady presence create an environment where confidence grows and learning becomes personal.</p>
+
+    <p>Spiritual grounding strengthens every part of this philosophy. Prayer prepares the heart before instruction begins. Dependence on Jesus shapes decisions, interactions, and leadership. Teaching becomes more than instruction when guided by His wisdom.</p>
 
     <div class="scripture">
       “Let all things be done decently and in order.”<br>
@@ -288,10 +308,12 @@ p{
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p>Rooted in prayer. Centered in Jesus.</p>
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+
     <div class="footer-links">
       <a href="scriptures.html">Scriptures</a>
       <a href="contact.html">Contact</a>
+      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
     </div>
   </div>
 </footer>
