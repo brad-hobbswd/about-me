@@ -1,77 +1,263 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/about-me/">
-  <title>Affiliations | Brad Hobbs</title>
-  <meta name="theme-color" content="#0c0a09" />
-  <meta name="description" content="Affiliations and community links." />
-  <style>html,body{background-color:#0c0a09;color:#f2eee7}</style>
-  <link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/about-me/assets/css/styles.css?v=11" />
-  <script defer src="/about-me/assets/js/main.js"></script>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Affiliations | Brad Hobbs</title>
+
+<meta name="theme-color" content="#0c0a09" />
+<meta name="description" content="Affiliations and community links." />
+
+<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+
+<style>
+
+/* ===== BASE ===== */
+body{
+  margin:0;
+  background:#a3855a;
+  color:#24160d;
+  font-family:system-ui, Arial;
+  line-height:1.55;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:0 18px;
+}
+
+.narrow{
+  max-width:760px;
+}
+
+/* ===== NAVBAR ===== */
+.site-header{
+  background:#5a3f2a;
+  border-bottom:2px solid #d6a85b;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 18px;
+}
+
+.brand{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:800;
+  font-size:16px;
+}
+
+.menu{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  color:#f3e6cf;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.menu a + a{
+  border-left:1px solid rgba(243,230,207,.3);
+  padding-left:10px;
+}
+
+/* ACTIVE */
+.menu a.active{
+  background:#d6a85b;
+  color:#24160d;
+  border-radius:6px;
+  padding:4px 8px;
+}
+
+.menu a:hover{
+  background:rgba(214,168,91,.35);
+  border-radius:6px;
+}
+
+/* ===== HERO ===== */
+.page-hero{
+  padding:34px 0 14px;
+}
+
+.h1{
+  margin:0 0 6px;
+  font-size:30px;
+}
+
+.lead{
+  margin:0;
+  font-size:15px;
+  color:#3b2a1c;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:16px 0;
+}
+
+.h2{
+  margin:14px 0 6px;
+}
+
+/* ===== SCRIPTURE ===== */
+.scripture{
+  background:#fff3dc;
+  border:1px solid #d6a85b;
+  border-radius:10px;
+  padding:10px;
+  margin:6px 0 12px;
+}
+
+/* ===== LINKS ===== */
+.linkstack{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:10px;
+}
+
+.linkcard{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff7e8;
+  border:1px solid #d8b787;
+  border-radius:10px;
+  padding:12px;
+  text-decoration:none;
+  color:#24160d;
+}
+
+.linkcard:hover{
+  background:#fff3dc;
+}
+
+.muted{
+  font-size:13px;
+}
+
+.mark{
+  font-size:18px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer{
+  background:#5a3f2a;
+  color:#f3e6cf;
+  padding:12px;
+}
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.footer-links a{
+  color:#f3e6cf;
+  text-decoration:none;
+}
+
+</style>
+
 </head>
+
 <body>
-<div id="site-header"></div>
 
-<main id="main" class="page">
-    <section class="page-hero">
-      <div class="container narrow">
-        <h1 class="h1">Affiliations</h1>
-        <p class="lead">Organizations and links connected to ministry and education.</p>
-      </div>
-    </section>
+<!-- ✅ MATCHES ALL OTHER PAGES -->
+<header class="site-header">
+  <div class="topbar">
+    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <section class="section">
-      <div class="container narrow">
-        <section class="scripture" data-scripture>
-          <p class="verse">“Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.”</p>
-          <p class="ref">Proverbs 27:17</p>
-        </section>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="family.html">Family</a>
+      <a href="education.html">Education</a>
+      <a href="speaker.html">Speaker</a>
+      <a href="worship.html">Worship</a>
+      <a href="discography.html">Discography</a>
+      <a href="devotions.html">Devotions</a>
+      <a href="scriptures.html">Scriptures</a>
+      <a href="affiliations.html" class="active">Affiliations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
+<main>
 
-        <h2 class="h2">Links</h2>
-        <p class="lead">Replace placeholders with real links when ready.</p>
+<section class="page-hero">
+  <div class="container narrow">
+    <h1 class="h1">Affiliations</h1>
+    <p class="lead">Organizations and connections that support growth, learning, and ministry.</p>
+  </div>
+</section>
 
-        <div class="linkstack">
-          <a class="linkcard" href="#" rel="noopener">
-            <div>
-              <h3 class="h3">Church</h3>
-              <p class="muted">Add official name and link.</p>
-            </div>
-            <span class="mark">↗</span>
-          </a>
+<section class="section">
+  <div class="container narrow">
 
-          <a class="linkcard" href="#" rel="noopener">
-            <div>
-              <h3 class="h3">Ministry connection</h3>
-              <p class="muted">Add name and link.</p>
-            </div>
-            <span class="mark">↗</span>
-          </a>
-
-          <a class="linkcard" href="#" rel="noopener">
-            <div>
-              <h3 class="h3">Education organization</h3>
-              <p class="muted">Add name and link.</p>
-            </div>
-            <span class="mark">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
-      <div class="footer-links">
-        <a href="scriptures.html">Scriptures</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="scripture">
+      “Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.”<br>
+      <strong>Proverbs 27:17</strong>
     </div>
-  </footer>
+
+    <h2 class="h2">Connections</h2>
+    <p class="lead">Meaningful relationships and organizations that strengthen purpose and service.</p>
+
+    <div class="linkstack">
+
+      <a class="linkcard" href="#" rel="noopener">
+        <div>
+          <h3>Church</h3>
+          <p class="muted">Add official name and link.</p>
+        </div>
+        <span class="mark">↗</span>
+      </a>
+
+      <a class="linkcard" href="#" rel="noopener">
+        <div>
+          <h3>Ministry connection</h3>
+          <p class="muted">Add name and link.</p>
+        </div>
+        <span class="mark">↗</span>
+      </a>
+
+      <a class="linkcard" href="#" rel="noopener">
+        <div>
+          <h3>Education organization</h3>
+          <p class="muted">Add name and link.</p>
+        </div>
+        <span class="mark">↗</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p>Rooted in prayer. Centered in Jesus.</p>
+    <div class="footer-links">
+      <a href="scriptures.html">Scriptures</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
-
