@@ -156,15 +156,30 @@ body{
 }
 
 /* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
 .site-footer{
   background:#5a3f2a;
   color:#f3e6cf;
-  padding:12px;
+  padding:8px 12px; /* 🔥 thinner */
+  font-size:13px;
 }
 
 .footer-row{
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-line{
+  margin:0;
+  white-space:nowrap; /* keeps it on one line */
+}
+
+.footer-links{
+  display:flex;
+  align-items:center;
   flex-wrap:wrap;
   gap:10px;
 }
@@ -172,6 +187,14 @@ body{
 .footer-links a{
   color:#f3e6cf;
   text-decoration:none;
+  font-weight:600;
+  font-size:13px;
+}
+
+/* 🔥 divider lines like navbar */
+.footer-links a + a{
+  border-left:1px solid rgba(243,230,207,.4);
+  padding-left:10px;
 }
 
 </style>
@@ -303,7 +326,8 @@ body{
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p>Rooted in prayer. Centered in Jesus.</p>
+    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+
     <div class="footer-links">
       <a href="scriptures.html">Scriptures</a>
       <a href="contact.html">Contact</a>
