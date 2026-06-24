@@ -1,336 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<title>Home | Brad Hobbs</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<style>
+<meta
+name="description"
+content="Official website of Bradley Hobbs. Teaching, worship, devotion, Southern Gospel music, web design, and Christian ministry rooted in prayer and centered in Jesus.">
 
-/* ===== BASE ===== */
-body{
-  margin:0;
-  background:#a3855a;
-  color:#24160d;
-  font-family:system-ui, Arial;
-}
+<meta
+name="keywords"
+content="Brad Hobbs, Bradley Hobbs, Christian Author, Devotions, Worship, Southern Gospel, Teacher, Ministry">
 
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:0 18px;
-}
+<meta
+name="author"
+content="Bradley Hobbs">
 
-/* ===== NAVBAR ===== */
-.site-header{
-  background:#5a3f2a;
-  border-bottom:2px solid #d6a85b;
-}
+<meta
+property="og:title"
+content="Brad Hobbs | Rooted in Prayer. Centered in Jesus.">
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 18px;
-}
+<meta
+property="og:description"
+content="Teaching, worship, writing, and ministry centered on Jesus Christ.">
 
-.brand{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-}
+<meta
+property="og:image"
+content="images/social-preview.jpg">
 
-.menu{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+<meta
+property="og:type"
+content="website">
 
-.menu a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
+<meta
+property="og:url"
+content="https://brad-hobbswd.github.io">
 
-.menu a + a{
-  border-left:1px solid rgba(243,230,207,.3);
-  padding-left:10px;
-}
+<title>
 
-/* ACTIVE */
-.menu a.active{
-  background:#d6a85b;
-  color:#24160d;
-  border-radius:6px;
-  padding:4px 8px;
-}
+Brad Hobbs |
+Rooted in Prayer.
+Centered in Jesus.
 
-/* HOVER */
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
+</title>
 
-/* ===== HERO ===== */
-.hero{
-  text-align:center;
-  padding:40px 20px 18px;
-}
+<link
+rel="icon"
+href="images/favicon.png">
 
-.hero h1{
-  font-size:32px;
-  margin:0 0 6px;
-}
+<link
+rel="stylesheet"
+href="styles.css">
 
-.hero p{
-  margin:4px auto 0;
-  font-size:15px;
-  max-width:520px;
-}
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-.hero-actions{
-  margin-top:10px;
-  display:flex;
-  justify-content:center;
-  gap:10px;
-}
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-/* ===== BUTTON ===== */
-.btn{
-  padding:8px 12px;
-  font-size:13px;
-  background:#7b4b25;
-  color:#fff7e6;
-  border-radius:8px;
-  text-decoration:none;
-  display:inline-block;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap"
+rel="stylesheet">
 
-/* ===== SECTION ===== */
-.section{
-  padding:16px 0;
-}
-
-/* ===== CARD WRAPPER ===== */
-.stack{
-  display:flex;
-  flex-direction:column;
-}
-
-/* ===== CARD ===== */
-.card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:10px;
-  padding:14px;
-}
-
-.card + .card{
-  border-top:1px solid rgba(90,63,42,.15);
-  margin-top:6px;
-  padding-top:12px;
-}
-
-.card h2,
-.card h3{
-  margin:0 0 4px;
-}
-
-.card p{
-  margin:2px 0 4px;
-  font-size:14px;
-}
-
-/* ===== SCRIPTURE ===== */
-.scripture{
-  background:#fff3dc;
-  border:1px solid #d6a85b;
-  border-radius:10px;
-  padding:10px;
-  text-align:center;
-  font-size:14px;
-  margin:6px 0 10px;
-}
-
-/* ===== TABLET ===== */
-@media (min-width:700px){
-  .container{ max-width:720px; }
-}
-
-/* ===== DESKTOP ===== */
-@media (min-width:1000px){
-
-  .container{ max-width:1000px; }
-
-  .stack{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-
-  .card + .card{
-    border-top:none;
-    margin-top:0;
-    padding-top:14px;
-  }
-
-  .section{
-    padding:20px 0;
-  }
-
-}
-
-/* ===== FOOTER (UPDATED) ===== */
-.site-footer{
-  background:#5a3f2a;
-  color:#f3e6cf;
-  padding:8px 12px;
-  font-size:13px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.footer-line{
-  margin:0;
-  white-space:nowrap;
-}
-
-.footer-links{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.footer-links a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
-
-.footer-links a + a{
-  border-left:1px solid rgba(243,230,207,.4);
-  padding-left:10px;
-}
-
-</style>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="topbar">
-    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <nav class="menu">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="family.html">Family</a>
-      <a href="education.html">Education</a>
-      <a href="speaker.html">Speaker</a>
-      <a href="worship.html">Worship</a>
-      <a href="discography.html">Discography</a>
-      <a href="devotions.html">Devotions</a>
-      <a href="scriptures.html">Scriptures</a>
-      <a href="affiliations.html">Affiliations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<div class="container">
+
+<nav class="navbar">
+
+<a
+href="index.html"
+class="logo">
+
+Brad
+<span>Hobbs</span>
+
+</a>
+
+<ul class="nav-menu">
+
+<li>
+<a
+href="index.html"
+class="active">
+Home
+</a>
+</li>
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+<li>
+<a href="book.html">
+Book
+</a>
+</li>
+
+<li>
+<a href="devotions.html">
+Devotions
+</a>
+</li>
+
+<li>
+<a href="education.html">
+Education
+</a>
+</li>
+
+<li>
+<a href="speaker.html">
+Speaker
+</a>
+</li>
+
+<li>
+<a href="worship.html">
+Worship
+</a>
+</li>
+
+<li>
+<a href="scriptures.html">
+Scriptures
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
+
+<div class="menu-toggle">
+
+<span></span>
+
+</div>
+
+</nav>
+
+</div>
+
 </header>
 
 <main>
 
 <section class="hero">
-  <div class="container">
-    <h1>Rooted in Prayer. Centered in Jesus.</h1>
-    <p>
-      Teaching with clarity, worship with reverence, and devotion flowing from a quiet place with Jesus.
-    </p>
 
-    <div class="hero-actions">
-      <a href="education.html" class="btn">Education</a>
-      <a href="worship.html" class="btn">Worship</a>
-      <a href="devotions.html" class="btn">Devotions</a>
-    </div>
-  </div>
+<video
+autoplay
+muted
+loop
+playsinline>
+
+<source
+src="video/hero.mp4"
+type="video/mp4">
+
+</video>
+
+<div class="hero-overlay"></div>
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-subtitle">
+
+Teaching • Worship • Writing
+
+</div>
+
+<h1>
+
+Rooted in Prayer.<br>
+
+Centered in Jesus.
+
+</h1>
+
+<p class="lead">
+
+Welcome to my ministry.
+
+Whether through teaching,
+Southern Gospel music,
+writing,
+or daily devotionals,
+my desire is simple:
+
+To point people toward Jesus Christ with truth,
+grace,
+and unwavering faith.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="about.html"
+class="btn">
+
+Discover My Story
+
+</a>
+
+<a
+href="devotions.html"
+class="btn btn-outline">
+
+Read Devotions
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll-indicator">
+
+Scroll
+
+</div>
+
 </section>
-
-<section class="section">
-  <div class="container">
-    <div class="scripture">
-      “Thy word is a lamp unto my feet, and a light unto my path.”<br>
-      <strong>Psalm 119:105</strong>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container stack">
-
-    <div class="card">
-      <h3>Education</h3>
-      <p>Preschool teaching and elementary experience shaped by prayer, order, and steady encouragement.</p>
-      <a class="btn" href="education.html">Open Education</a>
-    </div>
-
-    <div class="card">
-      <h3>Worship</h3>
-      <p>Piano and voice with Southern Gospel roots, offered with reverence and calm confidence.</p>
-      <a class="btn" href="worship.html">Open Worship</a>
-    </div>
-
-    <div class="card">
-      <h3>Speaker</h3>
-      <p>Devotional teaching with clarity and conviction, centered on Jesus and grounded in Scripture.</p>
-      <a class="btn" href="speaker.html">Open Speaker</a>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <div class="container stack">
-
-    <div class="card">
-      <h2>Whispers in the Pew</h2>
-      <p>A devotional journey written from quiet spaces.</p>
-      <a class="btn" href="book.html">Open Book</a>
-    </div>
-
-    <div class="card">
-      <h2>Prayer</h2>
-      <p>Prayer remains the foundation of every page, guiding teaching, worship, and daily life.</p>
-      <a class="btn" href="devotions.html">Enter Devotions</a>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
-
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
