@@ -555,17 +555,19 @@ transform:translateY(0);
 
 background:transparent;
 
-border:2px solid rgba(255,255,255,.35);
+border:2px solid var(--gold);
 
-color:var(--text-white);
+color:var(--gold-dark);
 
 }
 
 .btn-outline:hover{
 
-background:var(--text-white);
+background:var(--gold);
 
-color:var(--primary);
+color:white;
+
+border-color:var(--gold);
 
 }
 
