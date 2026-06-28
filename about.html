@@ -1,342 +1,998 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<title>About | Brad Hobbs</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#0c0a09" />
-<meta name="description" content="About Brad Hobbs, educator, worshipper, speaker, author, centered on Jesus." />
+<meta
+name="description"
+content="Learn more about Bradley Hobbs, educator, worship leader, speaker, author, and follower of Jesus Christ. Discover the journey, calling, and ministry behind Rooted in Prayer. Centered in Jesus.">
 
-<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+<meta
+name="keywords"
+content="Brad Hobbs, Bradley Hobbs, About Bradley Hobbs, Christian Author, Southern Gospel, Worship Leader, Speaker, Teacher, Ministry">
 
-<style>
+<meta
+name="author"
+content="Bradley Hobbs">
 
-/* ===== BASE ===== */
-body{
-  margin:0;
-  background:#a3855a;
-  color:#24160d;
-  font-family:system-ui, Arial;
-  line-height:1.55;
-}
+<meta
+property="og:title"
+content="About Bradley Hobbs">
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:0 18px;
-}
+<meta
+property="og:description"
+content="Education, worship, writing, and ministry centered on Jesus Christ.">
 
-.narrow{
-  max-width:760px;
-}
+<meta
+property="og:image"
+content="images/social-preview.jpg">
 
-/* ===== NAVBAR ===== */
-.site-header{
-  background:#5a3f2a;
-  border-bottom:2px solid #d6a85b;
-}
+<meta
+property="og:type"
+content="website">
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 18px;
-}
+<meta
+property="og:url"
+content="https://brad-hobbswd.github.io/about.html">
 
-.brand{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-}
+<meta
+name="theme-color"
+content="#1f2a33">
 
-.menu{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+<title>
 
-.menu a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
+About Bradley Hobbs | Rooted in Prayer. Centered in Jesus.
 
-.menu a + a{
-  border-left:1px solid rgba(243,230,207,.3);
-  padding-left:10px;
-}
+</title>
 
-/* ACTIVE */
-.menu a.active{
-  background:#d6a85b;
-  color:#24160d;
-  border-radius:6px;
-  padding:4px 8px;
-}
+<link
+rel="icon"
+type="image/png"
+href="images/favicon.png">
 
-/* HOVER */
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-/* ===== HERO ===== */
-.page-hero{
-  padding:34px 0 14px;
-}
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-.h1{
-  margin:0 0 6px;
-  font-size:30px;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap"
+rel="stylesheet">
 
-.lead{
-  margin:0;
-  font-size:15px;
-  color:#3b2a1c;
-}
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-/* ===== SECTION ===== */
-.section{
-  padding:16px 0;
-}
-
-.h2{
-  margin:14px 0 6px;
-}
-
-p{
-  margin:6px 0;
-}
-
-/* ===== SCRIPTURE ===== */
-.scripture{
-  background:#fff3dc;
-  border:1px solid #d6a85b;
-  border-radius:10px;
-  padding:10px;
-  margin:6px 0 12px;
-}
-
-/* ===== GRID ===== */
-.grid2{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:6px;
-  margin-top:10px;
-}
-
-/* ===== CARDS ===== */
-.card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:10px;
-  padding:12px;
-}
-
-.card h3{
-  margin:0 0 4px;
-}
-
-.card p{
-  margin:2px 0;
-  font-size:14px;
-}
-
-.card + .card{
-  border-top:1px solid rgba(90,63,42,.15);
-}
-
-/* ===== RULE ===== */
-.rule{
-  height:1px;
-  background:rgba(90,63,42,.2);
-  margin:14px 0;
-}
-
-/* ===== CTA ===== */
-.cta{
-  margin-top:12px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:8px 12px;
-  font-size:13px;
-  background:#7b4b25;
-  color:#fff7e6;
-  border-radius:8px;
-  text-decoration:none;
-}
-
-/* ===== DESKTOP ===== */
-@media (min-width:1000px){
-
-  .container{ max-width:1000px; }
-
-  .grid2{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-
-  .card + .card{
-    border-top:none;
-  }
-
-}
-
-/* ===== FOOTER (UPDATED) ===== */
-.site-footer{
-  background:#5a3f2a;
-  color:#f3e6cf;
-  padding:8px 12px;
-  font-size:13px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.footer-line{
-  margin:0;
-  white-space:nowrap;
-}
-
-.footer-links{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.footer-links a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
-
-.footer-links a + a{
-  border-left:1px solid rgba(243,230,207,.4);
-  padding-left:10px;
-}
-
-</style>
+<link
+rel="stylesheet"
+href="assets/css/styles.css">
 
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="topbar">
-    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="family.html">Family</a>
-      <a href="education.html">Education</a>
-      <a href="speaker.html">Speaker</a>
-      <a href="worship.html">Worship</a>
-      <a href="discography.html">Discography</a>
-      <a href="devotions.html">Devotions</a>
-      <a href="scriptures.html">Scriptures</a>
-      <a href="affiliations.html">Affiliations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<div class="container">
+
+<nav class="navbar">
+
+<a
+href="index.html"
+class="logo"
+aria-label="Brad Hobbs Home">
+
+Brad
+<span>Hobbs</span>
+
+</a>
+
+<button
+class="menu-toggle"
+aria-label="Toggle Navigation"
+aria-expanded="false">
+
+<span></span>
+
+</button>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html" class="active">About</a></li>
+
+<li><a href="book.html">Book</a></li>
+
+<li><a href="devotions.html">Devotions</a></li>
+
+<li><a href="education.html">Education</a></li>
+
+<li><a href="speaker.html">Speaker</a></li>
+
+<li><a href="worship.html">Worship</a></li>
+
+<li><a href="scriptures.html">Scriptures</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
 
 <main>
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1 class="h1">About</h1>
-    <p class="lead">A life shaped by prayer, disciplined learning, and worship centered on Jesus.</p>
-  </div>
+<!-- ==========================================================
+PAGE HERO
+========================================================== -->
+
+<section class="page-banner">
+
+<div class="page-banner-content reveal">
+
+<span class="section-subtitle">
+
+About Bradley Hobbs
+
+</span>
+
+<h1>
+
+A Life Rooted in Prayer.<br>
+
+Centered in Jesus.
+
+</h1>
+
+<p>
+
+Education, worship, writing, speaking, and ministry all flow from one purpose:
+
+to glorify Jesus Christ and faithfully serve wherever He leads.
+
+</p>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="container narrow">
+<!-- ==========================================================
+INTRODUCTION
+========================================================== -->
 
-    <div class="scripture">
-      “In all thy ways acknowledge him, and he shall direct thy paths.”<br>
-      <strong>Proverbs 3:6</strong>
-    </div>
+<section>
 
-    <h2 class="h2">Story and calling</h2>
+<div class="container">
 
-    <p>Education, worship, and speaking form a unified calling that remains rooted in prayer to Jesus. Each area strengthens the others and flows from the same place of devotion and purpose. Teaching becomes more than the transfer of knowledge. Worship becomes more than music. Speaking becomes more than communication. Through prayer, every responsibility remains centered on Jesus and guided by His wisdom. A life grounded in prayer keeps the heart attentive to His direction and ensures that every opportunity to serve others reflects His presence.</p>
+<div class="ministry-grid">
 
-    <p>Teaching carries a deep sense of responsibility and intentional structure. Students and families deserve preparation, clarity, and consistency from the teacher who stands before them. A serious approach to education communicates respect for the trust placed in the classroom. Passion also remains essential. Enthusiasm for learning, patience during challenges, and a genuine desire to see students succeed create an environment where growth becomes possible for every learner.</p>
+<div class="ministry-image reveal">
 
-    <p>Worship holds a special place within this calling. Music through piano and voice expresses gratitude and reverence toward Jesus while connecting with the rich tradition of Southern Gospel heritage. Songs shaped by faith carry stories of hope, redemption, and steadfast trust in the Lord.</p>
+<img
+src="images/brad.jpg"
+alt="Bradley Hobbs">
 
-    <p>Speaking also remains closely submitted to Scripture and guided by obedience. The Word of God provides the foundation for every message and every moment of encouragement shared with others.</p>
+</div>
 
-    <div class="rule"></div>
+<div class="ministry-content reveal">
 
-    <h2 class="h2">Life pillars</h2>
+<span class="section-subtitle">
 
-    <div class="grid2">
+My Story
 
-      <div class="card">
-        <h3>Education</h3>
-        <p>Preschool leadership and elementary experience with continued graduate growth.</p>
-      </div>
+</span>
 
-      <div class="card">
-        <h3>Worship</h3>
-        <p>Worship offered through piano and song with reverence.</p>
-      </div>
+<h2>
 
-      <div class="card">
-        <h3>Speaker</h3>
-        <p>Devotional teaching that strengthens faith and points hearts toward Jesus.</p>
-      </div>
+More Than A Biography
 
-      <div class="card">
-        <h3>Family</h3>
-        <p>Fatherhood and partnership covered by prayer and guided by love.</p>
-      </div>
+</h2>
 
-    </div>
+<p>
 
-    <div class="rule"></div>
+Every chapter of my life has been shaped by God's grace and guided through prayer.
 
-    <div class="cta">
-      <a class="btn" href="education.html">Education</a>
-      <a class="btn" href="worship.html">Worship</a>
-      <a class="btn" href="speaker.html">Speaker</a>
-    </div>
+While education, worship, speaking, writing, and leadership each represent different opportunities to serve, they all flow from one calling:
 
-  </div>
+to glorify Jesus Christ in every area of life.
+
+</p>
+
+<p>
+
+This website is not simply a collection of accomplishments.
+
+It is a testimony of God's faithfulness and a place where ministry, education, worship, Scripture, and encouragement come together to strengthen others in their walk with Him.
+
+</p>
+
+<p>
+
+Whether I am teaching in a classroom, leading worship, writing a devotion, speaking before others, or simply encouraging someone one on one, my desire remains unchanged:
+
+to point people toward Jesus Christ with humility, compassion, and truth.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+SCRIPTURE
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"In all thy ways acknowledge him, and he shall direct thy paths."
+
+</blockquote>
+
+<cite>
+
+Proverbs 3:6
+
+</cite>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+STORY & CALLING
+========================================================== -->
+
+<section>
+
+<div class="container container-md">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Calling
+
+</span>
+
+<h2 class="section-title">
+
+Education, Worship, and Ministry Working Together
+
+</h2>
+
+<p class="section-description">
+
+Every opportunity to serve begins with prayer and finds its purpose in Jesus Christ.
+
+</p>
+
+</div>
+
+
+<div class="ministry-grid">
+
+<div class="ministry-content reveal">
+
+<p>
+
+Education, worship, and speaking are not separate pursuits. They are expressions of the same calling rooted in prayer and centered on Jesus Christ. Each strengthens the others and flows from a life devoted to serving Him with humility, excellence, and faithfulness.
+
+</p>
+
+<p>
+
+Teaching is far more than the transfer of knowledge. It is an opportunity to encourage, mentor, and help others discover confidence in their own abilities. Every classroom becomes a place where patience, compassion, preparation, and consistency demonstrate the love of Christ through everyday interactions.
+
+</p>
+
+<p>
+
+Students and families deserve an educator who is prepared, intentional, and genuinely invested in their success. Learning flourishes where respect, encouragement, and structure are combined with kindness and understanding.
+
+</p>
+
+<p>
+
+The same principles extend beyond education into every area of ministry. Whether serving in leadership, offering encouragement, or simply listening to someone who needs hope, every opportunity becomes another chance to reflect the character of Jesus Christ.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/teaching.jpg"
+alt="Teaching and Ministry">
+
+</div>
+
+</div>
+
+<div class="ministry-grid mt-5">
+
+<div class="ministry-image reveal">
+
+<img
+src="images/worship.jpg"
+alt="Southern Gospel Worship">
+
+</div>
+
+<div class="ministry-content reveal">
+
+<h2>
+
+A Heart For Worship
+
+</h2>
+
+<p>
+
+Worship has always held a special place within my life and ministry. Through Southern Gospel music, piano, and singing, I seek to glorify Jesus Christ rather than draw attention to myself.
+
+</p>
+
+<p>
+
+Every song carries a message. Music has the ability to remind weary hearts that God remains faithful, His promises remain true, and His grace is sufficient for every season of life.
+
+</p>
+
+<p>
+
+True worship is never about performance. It is an offering of gratitude, reverence, and surrender that belongs completely to Jesus Christ.
+
+</p>
+
+<p>
+
+Whether leading worship before a congregation or singing quietly in personal devotion, my desire remains the same: that every note points people toward the Savior.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="ministry-grid mt-5">
+
+<div class="ministry-content reveal">
+
+<h2>
+
+Speaking With Biblical Conviction
+
+</h2>
+
+<p>
+
+Speaking provides another opportunity to encourage believers through the truth of God's Word. Every message begins with Scripture because the Bible remains the final authority for faith, life, and ministry.
+
+</p>
+
+<p>
+
+Rather than relying upon personal opinions or motivational ideas, my goal is to faithfully communicate biblical truth with compassion, humility, and clarity.
+
+</p>
+
+<p>
+
+Whether teaching a Bible study, sharing a devotional, encouraging a congregation, or speaking in everyday conversation, my prayer is that every word honors Jesus Christ and strengthens the faith of those who hear it.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/speaking.jpg"
+alt="Christian Speaker">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+LIFE PILLARS
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Life Pillars
+
+</span>
+
+<h2 class="section-title">
+
+The Foundations That Shape My Life
+
+</h2>
+
+<p class="section-description">
+
+Every responsibility is strengthened by these enduring commitments that continue to guide my journey of faith and service.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+</div>
+
+<h3>
+
+Education
+
+</h3>
+
+<p>
+
+Serving children and families through leadership, learning, compassion, and a lifelong commitment to educational excellence.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+<h3>
+
+Worship
+
+</h3>
+
+<p>
+
+Offering praise through Southern Gospel music, piano, testimony, and heartfelt worship that exalts Jesus Christ.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-person-chalkboard"></i>
+
+</div>
+
+<h3>
+
+Speaking
+
+</h3>
+
+<p>
+
+Encouraging believers through Scripture centered teaching that inspires spiritual growth and faithful discipleship.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-heart"></i>
+
+</div>
+
+<h3>
+
+Family
+
+</h3>
+
+<p>
+
+Fatherhood, family, and relationships remain gifts from God that are strengthened through prayer, love, and faithful commitment.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+MINISTRY JOURNEY
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Journey
+
+</span>
+
+<h2 class="section-title">
+
+A Life Of Growth And Service
+
+</h2>
+
+<p class="section-description">
+
+Each season has provided new opportunities to learn, grow, and faithfully serve wherever God has opened the door.
+
+</p>
+
+</div>
+
+<div class="timeline">
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<div class="timeline-year">
+
+A Foundation of Faith
+
+</div>
+
+<h3>
+
+Rooted in Prayer
+
+</h3>
+
+<p>
+
+Long before ministry became public, it was first cultivated through private prayer, personal devotion, and a growing desire to know Jesus Christ more deeply. Every opportunity that followed has been built upon that foundation.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<div class="timeline-year">
+
+Education
+
+</div>
+
+<h3>
+
+Serving Children and Families
+
+</h3>
+
+<p>
+
+Teaching has provided countless opportunities to encourage children, partner with families, and help create learning environments where every student feels valued. Leadership within education continues to strengthen both professional excellence and Christian character.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<div class="timeline-year">
+
+Worship
+
+</div>
+
+<h3>
+
+Music That Points to Jesus
+
+</h3>
+
+<p>
+
+Southern Gospel music, piano, and worship have remained constant reminders that every gift belongs to God. Whether before a congregation or in personal devotion, worship continues to be an expression of gratitude rather than performance.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<div class="timeline-year">
+
+Writing
+
+</div>
+
+<h3>
+
+Encouraging Others Through God's Word
+
+</h3>
+
+<p>
+
+Writing devotionals, articles, and books has become another avenue for sharing biblical encouragement. Every page is written with the hope of strengthening faith, pointing readers toward Scripture, and reminding them of God's unfailing grace.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item reveal">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<div class="timeline-year">
+
+Today
+
+</div>
+
+<h3>
+
+Continuing the Journey
+
+</h3>
+
+<p>
+
+The journey continues with gratitude and expectancy. Whether teaching, writing, worshipping, speaking, or serving in everyday life, my prayer remains the same: that every opportunity would glorify Jesus Christ and encourage others to follow Him faithfully.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+MISSION
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="ministry-grid">
+
+<div class="ministry-content reveal">
+
+<span class="section-subtitle">
+
+Mission
+
+</span>
+
+<h2>
+
+Why I Do What I Do
+
+</h2>
+
+<p>
+
+Everything on this website exists for one purpose: to glorify Jesus Christ.
+
+Whether through education, worship, writing, speaking, or personal encouragement, my desire is to faithfully use every opportunity God provides to strengthen others in their relationship with Him.
+
+</p>
+
+<p>
+
+Success is not measured by recognition or accomplishments, but by faithful obedience to the Lord. Every lesson taught, every devotion written, every song sung, and every conversation shared is another opportunity to reflect His grace and truth.
+
+</p>
+
+<p>
+
+My prayer is that every visitor leaves this website encouraged, strengthened by Scripture, and reminded that Jesus Christ remains faithful through every season of life.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/prayer.jpg"
+alt="Prayer and Devotion">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+CALL TO ACTION
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"Commit thy works unto the Lord, and thy thoughts shall be established."
+
+</blockquote>
+
+<cite>
+
+Proverbs 16:3
+
+</cite>
+
+<div class="hero-buttons mt-4">
+
+<a
+href="book.html"
+class="btn">
+
+Explore My Book
+
+</a>
+
+<a
+href="devotions.html"
+class="btn btn-outline">
+
+Read Devotions
+
+</a>
+
+<a
+href="contact.html"
+class="btn btn-light">
+
+Get In Touch
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+<!-- ==========================================================
+FOOTER
+========================================================== -->
 
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
-    </div>
-  </div>
+<footer class="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+Brad
+<span class="text-gold">Hobbs</span>
+
+</div>
+
+<p>
+
+Rooted in Prayer.
+Centered in Jesus.
+
+Thank you for taking the time to learn more about my journey. I pray this website encourages you to grow deeper in your walk with Jesus Christ.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Explore
+
+</h3>
+
+<div class="footer-links">
+
+<a href="about.html">About</a>
+
+<a href="book.html">Book</a>
+
+<a href="devotions.html">Devotions</a>
+
+<a href="worship.html">Worship</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Resources
+
+</h3>
+
+<div class="footer-links">
+
+<a href="education.html">Education</a>
+
+<a href="speaker.html">Speaker</a>
+
+<a href="scriptures.html">Scriptures</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Connect
+
+</h3>
+
+<div class="social-links">
+
+<a href="#" aria-label="Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a href="#" aria-label="YouTube">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="#" aria-label="Instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#" aria-label="Email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Bradley Hobbs. All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed with faith, purpose, and excellence.
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
+<a
+href="#"
+class="back-top"
+aria-label="Back to Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+<script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
