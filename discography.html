@@ -1,478 +1,1085 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<title>Discography | Brad Hobbs</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#0c0a09" />
-<meta name="description" content="Recorded worship and Southern Gospel recordings in a YouTube playlist." />
+<meta
+name="description"
+content="Explore the worship music and Southern Gospel recordings of Bradley Hobbs. Listen to albums, playlists, and songs centered on Jesus Christ.">
 
-<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+<meta
+name="keywords"
+content="Bradley Hobbs, Southern Gospel, Christian Music, Worship, Discography, Piano, Gospel Albums">
 
-<style>
+<meta
+name="author"
+content="Bradley Hobbs">
 
-/* ===== BASE ===== */
-body{
-  margin:0;
-  background:#a3855a;
-  color:#24160d;
-  font-family:system-ui, Arial;
-  line-height:1.55;
-}
+<meta
+property="og:title"
+content="Discography | Bradley Hobbs">
 
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:0 18px;
-}
+<meta
+property="og:description"
+content="A growing collection of worship music, Southern Gospel recordings, and songs that glorify Jesus Christ.">
 
-.narrow{
-  max-width:760px;
-}
+<meta
+property="og:image"
+content="images/social-preview.jpg">
 
-/* ===== NAVBAR ===== */
-.site-header{
-  background:#5a3f2a;
-  border-bottom:2px solid #d6a85b;
-}
+<meta
+property="og:type"
+content="website">
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 18px;
-}
+<meta
+property="og:url"
+content="https://brad-hobbswd.github.io/discography.html">
 
-.brand{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-}
+<meta
+name="theme-color"
+content="#1f2a33">
 
-.menu{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+<title>
 
-.menu a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
+Discography | Bradley Hobbs
 
-.menu a + a{
-  border-left:1px solid rgba(243,230,207,.3);
-  padding-left:10px;
-}
+</title>
 
-.menu a.active{
-  background:#d6a85b;
-  color:#24160d;
-  border-radius:6px;
-  padding:4px 8px;
-}
+<link
+rel="icon"
+type="image/png"
+href="images/favicon.png">
 
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-/* ===== HERO ===== */
-.page-hero{
-  padding:34px 0 14px;
-}
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-.hero-inner{
-  max-width:760px;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap"
+rel="stylesheet">
 
-.h1{
-  margin:0 0 6px;
-  font-size:30px;
-}
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-.lead{
-  margin:0;
-  font-size:15px;
-  color:#3b2a1c;
-}
-
-/* ===== SECTION ===== */
-.section{
-  padding:16px 0;
-}
-
-.h2{
-  margin:14px 0 6px;
-}
-
-.section .lead{
-  margin-bottom:12px;
-}
-
-/* ===== SCRIPTURE ===== */
-.scripture{
-  background:#fff3dc;
-  border:1px solid #d6a85b;
-  border-radius:10px;
-  padding:10px;
-  margin:6px 0 12px;
-}
-
-/* ===== GRID ===== */
-.album-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:8px;
-}
-
-/* ===== CARD ===== */
-.album-card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:10px;
-  padding:12px;
-}
-
-.album-card h3{
-  margin:0 0 4px;
-}
-
-.muted{
-  font-size:13px;
-  margin-bottom:6px;
-}
-
-/* ===== VIDEO ===== */
-.video{
-  position:relative;
-  padding-top:56.25%;
-  overflow:hidden;
-  border-radius:8px;
-}
-
-.video iframe{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  border:0;
-}
-
-/* ===== RULE ===== */
-.rule{
-  height:1px;
-  background:rgba(90,63,42,.2);
-  margin:16px 0;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (min-width:800px){
-  .album-grid{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-}
-
-@media (min-width:1100px){
-  .album-grid{
-    grid-template-columns:1fr 1fr 1fr;
-  }
-}
-
-/* ===== FOOTER (FINAL SYSTEM) ===== */
-.site-footer{
-  background:#5a3f2a;
-  color:#f3e6cf;
-  padding:8px 12px;
-  font-size:13px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.footer-line{
-  margin:0;
-  white-space:nowrap;
-}
-
-.footer-links{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.footer-links a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
-
-.footer-links a + a{
-  border-left:1px solid rgba(243,230,207,.4);
-  padding-left:10px;
-}
-
-</style>
+<link
+rel="stylesheet"
+href="assets/css/styles.css">
 
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="topbar">
-    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="family.html">Family</a>
-      <a href="education.html">Education</a>
-      <a href="speaker.html">Speaker</a>
-      <a href="worship.html">Worship</a>
-      <a href="discography.html" class="active">Discography</a>
-      <a href="devotions.html">Devotions</a>
-      <a href="scriptures.html">Scriptures</a>
-      <a href="affiliations.html">Affiliations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<div class="container">
+
+<nav class="navbar">
+
+<a
+href="index.html"
+class="logo">
+
+Brad
+<span>Hobbs</span>
+
+</a>
+
+<button
+class="menu-toggle"
+aria-label="Toggle Navigation"
+aria-expanded="false">
+
+<span></span>
+
+</button>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="book.html">Book</a></li>
+
+<li><a href="devotions.html">Devotions</a></li>
+
+<li><a href="education.html">Education</a></li>
+
+<li><a href="speaker.html">Speaker</a></li>
+
+<li><a href="worship.html">Worship</a></li>
+
+<li><a href="discography.html" class="active">Discography</a></li>
+
+<li><a href="scriptures.html">Scriptures</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
 
 <main>
 
-<section class="page-hero">
-  <div class="container">
-    <div class="hero-inner">
-      <h1 class="h1">Discography</h1>
-      <p class="lead">
-        Recorded worship across years with Southern Gospel influence and testimony shaped songs.
-      </p>
-    </div>
-  </div>
-</section>
+<section class="page-banner">
 
-<section class="section">
-  <div class="container">
+<div class="page-banner-content reveal">
 
-    <div class="scripture">
-      “Sing unto him, sing psalms unto him: talk ye of all his wondrous works.”<br>
-      <strong>Psalm 105:2</strong>
-    </div>
+<span class="section-subtitle">
 
-    <h2 class="h2">Albums and playlists</h2>
-    <p class="lead">Twelve Youtube Albums intregrated</p>
+Music Ministry
 
-    <p>Recorded worship reflects a life shaped in prayer, testimony, and devotion to Jesus expressed through song.</p>
+</span>
 
-    <div class="album-grid">
+<h1>
 
-      <!-- ✅ ALL YOUR ALBUMS LEFT EXACTLY AS YOU BUILT THEM -->
+Songs Of Faith.<br>
 
-  <article class="album-card">
-    <h3 class="h3">Goodness of God - Single</h3>
-    <p class="muted">Single Release</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJKrN3qwKuSv3I0hAGg1tLv"
-        title="Goodness of God - Single"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
+Songs Of Hope.
 
-  <article class="album-card">
-    <h3 class="h3">God Will Make This Trial A Blessing Album</h3>
-    <p class="muted">8 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLrGL5ruI8mv2ypyMV3BGDs"
-        title="God Will Make This Trial A Blessing Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
+</h1>
 
-  <article class="album-card">
-    <h3 class="h3">I'm So Tired of You, Satan Album</h3>
-    <p class="muted">9 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nKqdHElriaFTQTuCzPyIIv-"
-        title="I'm So Tired of You, Satan Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
+<p>
 
-  <article class="album-card">
-    <h3 class="h3">There's Something About That Name Album</h3>
-    <p class="muted">18 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLRFXIlitLrN_f4NyVHWGPE"
-        title="There's Something About That Name Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
+Every recording reflects a journey of worship, prayer, and faith. Through Southern Gospel music, piano, and testimony, each song is offered to glorify Jesus Christ and encourage those who listen.
 
-  <article class="album-card">
-    <h3 class="h3">How Great It Is Album</h3>
-    <p class="muted">11 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nI7ZNrl6uNltohV-9qgESDk"
-        title="How Great It Is Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">Jesus, My High Tower Album</h3>
-    <p class="muted">8 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJf1C-tJjOGMclk0J7T65pS"
-        title="Jesus, My High Tower Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">I Need You More Album</h3>
-    <p class="muted">11 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nL-Kuhqh1mqDoJCXk7q3dj-"
-        title="I Need You More Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">The Blood is Still There Album</h3>
-    <p class="muted">9 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJjWvkDMVmrF3RlU3OYA3uA"
-        title="The Blood is Still There Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">On The Battlefield Album</h3>
-    <p class="muted">12 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nInxhkMWfQ0fIMKpK_q2Zec"
-        title="On The Battlefield Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">Thank You for Your Blessings On Me Album</h3>
-    <p class="muted">16 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJNMunHYQ78II8Pb8VXvkZC"
-        title="Thank You for Your Blessings On Me Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">If You Only Knew Album</h3>
-    <p class="muted">16 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLoB9EOCMNKrqZ1xe6u-cki"
-        title="If You Only Knew Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">Hold Me, While I Cry Album</h3>
-    <p class="muted">11 Videos Intregrated</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nIMHNu_rf4qzIDKfeHjRleJ"
-        title="Hold Me, While I Cry Album"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
-
-  <article class="album-card">
-    <h3 class="h3">One - Single</h3>
-    <p class="muted">Single Release</p>
-    <div class="video">
-      <iframe
-        src="https://www.youtube.com/embed/XABaqihiys8"
-        title="One - Single"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </article>
+</p>
 
 </div>
 
-            </div>
+</section>
 
-    <div class="rule"></div>
+<section>
 
-  </div>
+<div class="container">
+
+<div class="ministry-grid">
+
+<div class="ministry-content reveal">
+
+<span class="section-subtitle">
+
+The Story Behind The Music
+
+</span>
+
+<h2>
+
+Music That Points Hearts To Jesus
+
+</h2>
+
+<p>
+
+Music has always been more than performance. Every recording represents a season of life marked by God's faithfulness, answered prayer, and unwavering grace. Whether recorded in quiet moments of personal worship or shared publicly, each song reflects a desire to honor Jesus Christ above all else.
+
+</p>
+
+<p>
+
+Southern Gospel music has profoundly shaped my musical journey. Its timeless messages of hope, redemption, and steadfast faith continue to inspire every recording and every opportunity to worship.
+
+</p>
+
+<p>
+
+My prayer is that these songs encourage believers, strengthen weary hearts, and remind every listener that God remains faithful through every season of life.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/discography.jpg"
+alt="Bradley Hobbs Music Ministry">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"Sing unto him, sing psalms unto him: talk ye of all his wondrous works."
+
+</blockquote>
+
+<cite>
+
+Psalm 105:2
+
+</cite>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Music Library
+
+</span>
+
+<h2 class="section-title">
+
+Albums & Singles
+
+</h2>
+
+<p class="section-description">
+
+Browse a growing collection of worship recordings, Southern Gospel albums, and personal favorites that proclaim the goodness and faithfulness of Jesus Christ.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-compact-disc"></i>
+
+</div>
+
+<h3>
+
+Featured Collection
+
+</h3>
+
+<p>
+
+Explore worship recordings, Southern Gospel favorites, and songs of encouragement that proclaim the faithfulness of Jesus Christ.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+<h3>
+
+Southern Gospel
+
+</h3>
+
+<p>
+
+A musical heritage rooted in timeless hymns, testimony, and songs that continue to strengthen faith across generations.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-heart"></i>
+
+</div>
+
+<h3>
+
+Songs of Faith
+
+</h3>
+
+<p>
+
+Every recording represents another opportunity to share hope, worship, and the unchanging love of Jesus Christ.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+ALBUM COLLECTION
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Discography
+
+</span>
+
+<h2 class="section-title">
+
+Complete Music Collection
+
+</h2>
+
+<p class="section-description">
+
+Browse each album below. Every playlist is embedded directly from YouTube for convenient listening.
+
+</p>
+
+</div>
+
+<div class="album-grid">
+
+<!-- ==========================================================
+GOODNESS OF GOD
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+Goodness of God
+
+</h3>
+
+<p class="muted">
+
+Single Release
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJKrN3qwKuSv3I0hAGg1tLv"
+title="Goodness of God"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+GOD WILL MAKE THIS TRIAL A BLESSING
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+God Will Make This Trial a Blessing
+
+</h3>
+
+<p class="muted">
+
+8 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLrGL5ruI8mv2ypyMV3BGDs"
+title="God Will Make This Trial a Blessing"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+I'M SO TIRED OF YOU SATAN
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+I'm So Tired of You, Satan
+
+</h3>
+
+<p class="muted">
+
+9 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nKqdHElriaFTQTuCzPyIIv-"
+title="I'm So Tired of You, Satan"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+THERE'S SOMETHING ABOUT THAT NAME
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+There's Something About That Name
+
+</h3>
+
+<p class="muted">
+
+18 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLRFXIlitLrN_f4NyVHWGPE"
+title="There's Something About That Name"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+HOW GREAT IT IS
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+How Great It Is
+
+</h3>
+
+<p class="muted">
+
+11 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nI7ZNrl6uNltohV-9qgESDk"
+title="How Great It Is"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+JESUS MY HIGH TOWER
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+Jesus, My High Tower
+
+</h3>
+
+<p class="muted">
+
+8 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJf1C-tJjOGMclk0J7T65pS"
+title="Jesus, My High Tower"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+
+<!-- ==========================================================
+I NEED YOU MORE
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+I Need You More
+
+</h3>
+
+<p class="muted">
+
+11 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nL-Kuhqh1mqDoJCXk7q3dj-"
+title="I Need You More"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+THE BLOOD IS STILL THERE
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+The Blood Is Still There
+
+</h3>
+
+<p class="muted">
+
+9 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJjWvkDMVmrF3RlU3OYA3uA"
+title="The Blood Is Still There"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+ON THE BATTLEFIELD
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+On The Battlefield
+
+</h3>
+
+<p class="muted">
+
+12 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nInxhkMWfQ0fIMKpK_q2Zec"
+title="On The Battlefield"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+THANK YOU FOR YOUR BLESSINGS ON ME
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+Thank You For Your Blessings On Me
+
+</h3>
+
+<p class="muted">
+
+16 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nJNMunHYQ78II8Pb8VXvkZC"
+title="Thank You For Your Blessings On Me"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+IF YOU ONLY KNEW
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+If You Only Knew
+
+</h3>
+
+<p class="muted">
+
+16 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nLoB9EOCMNKrqZ1xe6u-cki"
+title="If You Only Knew"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+HOLD ME WHILE I CRY
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+Hold Me While I Cry
+
+</h3>
+
+<p class="muted">
+
+11 Videos Integrated
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/videoseries?list=PLd8_iqz-1-nIMHNu_rf4qzIDKfeHjRleJ"
+title="Hold Me While I Cry"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+<!-- ==========================================================
+ONE
+========================================================== -->
+
+<article class="album-card reveal">
+
+<h3>
+
+One
+
+</h3>
+
+<p class="muted">
+
+Single Release
+
+</p>
+
+<div class="video">
+
+<iframe
+src="https://www.youtube.com/embed/XABaqihiys8"
+title="One"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+CLOSING MESSAGE
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="ministry-grid">
+
+<div class="ministry-content reveal">
+
+<span class="section-subtitle">
+
+A Personal Note
+
+</span>
+
+<h2>
+
+Thank You For Listening
+
+</h2>
+
+<p>
+
+Thank you for taking the time to listen to these recordings. Every song represents a chapter of my journey with Jesus Christ and serves as a reminder of His goodness, mercy, and unfailing faithfulness.
+
+</p>
+
+<p>
+
+Some songs were recorded during seasons of joy, while others were born through seasons of trial. Yet every recording shares the same purpose: to glorify Jesus Christ and encourage those who may need hope, strength, or comfort today.
+
+</p>
+
+<p>
+
+My prayer is that these songs point your heart toward worship, strengthen your faith, and remind you that God is always worthy of our praise.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/piano-worship.jpg"
+alt="Piano Worship">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+CALL TO ACTION
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"Let every thing that hath breath praise the Lord. Praise ye the Lord."
+
+</blockquote>
+
+<cite>
+
+Psalm 150:6
+
+</cite>
+
+<div class="hero-buttons mt-4">
+
+<a
+href="worship.html"
+class="btn">
+
+Worship Ministry
+
+</a>
+
+<a
+href="speaker.html"
+class="btn btn-outline">
+
+Speaking Ministry
+
+</a>
+
+<a
+href="contact.html"
+class="btn btn-light">
+
+Contact
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
 
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
-    </div>
-  </div>
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+Brad
+<span class="text-gold">Hobbs</span>
+
+</div>
+
+<p>
+
+Rooted in Prayer.
+Centered in Jesus.
+
+Every recording is offered as an expression of worship and a testimony of God's faithfulness. May these songs encourage your heart and strengthen your walk with Christ.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Explore
+
+</h3>
+
+<div class="footer-links">
+
+<a href="about.html">About</a>
+
+<a href="worship.html">Worship</a>
+
+<a href="discography.html">Discography</a>
+
+<a href="book.html">Books</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Resources
+
+</h3>
+
+<div class="footer-links">
+
+<a href="devotions.html">Devotions</a>
+
+<a href="scriptures.html">Scriptures</a>
+
+<a href="education.html">Education</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Connect
+
+</h3>
+
+<div class="social-links">
+
+<a
+href="mailto:brad.hobbs13@icloud.com"
+aria-label="Email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+<a
+href="#"
+aria-label="YouTube">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a
+href="#"
+aria-label="Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a
+href="sms:8595511146"
+aria-label="Text">
+
+<i class="fas fa-comment"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Bradley Hobbs. All Rights Reserved.
+
+</p>
+
+<p>
+
+"Make a joyful noise unto the Lord, all ye lands."
+
+Psalm 100:1
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
+<a
+href="#"
+class="back-top"
+aria-label="Back To Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+<script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
