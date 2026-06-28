@@ -43,6 +43,7 @@ ROOT VARIABLES
 --text:#2c2c2c;
 --text-light:#6e6e6e;
 --text-white:#ffffff;
+--text-muted:#7b7b7b;
 
 /* Borders */
 
@@ -2982,12 +2983,98 @@ scroll-behavior:auto !important;
 
 .text-muted{
 
-color:var(--text-muted);
+color:var(--text-light);
 
 font-size:.95rem;
 
 margin-top:-10px;
 
 margin-bottom:30px;
+
+}
+
+/*=========================================================
+DISCOGRAPHY
+=========================================================*/
+
+.album-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+gap:35px;
+
+align-items:start;
+
+}
+
+.album-card{
+
+background:var(--surface);
+
+border-radius:28px;
+
+padding:30px;
+
+box-shadow:var(--shadow-md);
+
+transition:
+
+transform .35s ease,
+
+box-shadow .35s ease;
+
+}
+
+.album-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.album-card h3{
+
+margin-bottom:8px;
+
+}
+
+.album-card .muted{
+
+font-size:.85rem;
+
+font-weight:600;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+color:var(--gold-dark);
+
+margin-bottom:24px;
+
+}
+
+.video{
+
+overflow:hidden;
+
+border-radius:18px;
+
+box-shadow:var(--shadow-sm);
+
+aspect-ratio:16 / 9;
+
+}
+
+.video iframe{
+
+width:100%;
+
+height:100%;
+
+display:block;
 
 }
