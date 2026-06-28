@@ -472,8 +472,34 @@ CONTACT FORM
 
 <div class="container container-sm">
 
+<div class="contact-card reveal">
+
+<span class="section-subtitle">
+
+Send A Message
+
+</span>
+
+<h2>
+
+I'd Love To Hear From You
+
+</h2>
+
+<p>
+
+Complete the form below to open a prefilled email draft. Whether your message is about speaking, education, worship, publishing, ministry, or a prayer request, I look forward to hearing from you.
+
+</p>
+
+<p class="text-muted">
+
+I normally respond within one to two business days.
+
+</p>
+
 <form
-class="contact-form reveal"
+class="contact-form"
 data-mailto>
 
 <div class="form-grid">
@@ -490,13 +516,14 @@ Full Name
 type="text"
 id="name"
 name="name"
+placeholder="John Smith"
 required>
 
 </div>
 
 <div class="form-group">
 
-<label for="email">
+<label for="reply">
 
 Email Address
 
@@ -504,8 +531,9 @@ Email Address
 
 <input
 type="email"
-id="email"
+id="reply"
 name="reply"
+placeholder="john@example.com"
 required>
 
 </div>
@@ -524,6 +552,7 @@ Subject
 type="text"
 id="subject"
 name="subject"
+placeholder="Speaking Invitation"
 required>
 
 </div>
@@ -540,6 +569,7 @@ Message
 id="message"
 name="message"
 rows="8"
+placeholder="Tell me how I can help. Include any event information, questions, or prayer requests."
 required></textarea>
 
 </div>
@@ -579,6 +609,8 @@ Send A Text
 </div>
 
 </form>
+
+</div>
 
 </div>
 
