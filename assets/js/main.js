@@ -159,3 +159,44 @@ updateBackTop();
 });
 
 });
+
+
+/*=========================================================
+MAILTO CONTACT FORM
+=========================================================*/
+
+const mailtoForm = document.querySelector("[data-mailto]");
+
+if(mailtoForm){
+
+mailtoForm.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const formData = new FormData(mailtoForm);
+
+const name = formData.get("name") || "";
+
+const reply = formData.get("reply") || "";
+
+const subject = formData.get("subject") || "";
+
+const message = formData.get("message") || "";
+
+const body =
+
+`Name: ${name}
+
+Email: ${reply}
+
+${message}`;
+
+const mailto =
+
+`mailto:brad.hobbs13@icloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+window.location.href = mailto;
+
+});
+
+}
