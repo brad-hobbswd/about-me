@@ -1,219 +1,161 @@
-(function(){
+/*=========================================================
+BRAD HOBBS
+Official Website
+Main JavaScript
+Version 4.0
+=========================================================*/
 
-const K_PRAYER="prayerMode";
-const K_FOCUS="focusMode";
-const K_MENU="menuOpen";
+document.documentElement.classList.add("js");
 
-function safeGet(k){
-try{return localStorage.getItem(k);}catch(e){return null;}
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-function safeSet(k,v){
-try{localStorage.setItem(k,v);}catch(e){}
-}
+const header = document.querySelector(".site-header");
 
-/* ================= EXIT BUTTONS ================= */
+const menuToggle = document.querySelector(".menu-toggle");
 
-function initExitButtons(){
+const navMenu = document.querySelector(".nav-menu");
 
-const focusExit=document.createElement("button");
-focusExit.className="focus-exit";
-focusExit.textContent="Exit Focus";
+const reveals = document.querySelectorAll(".reveal");
 
-focusExit.addEventListener("click",function(){
-setFocus(false);
-});
+const backTop = document.querySelector(".back-top");
 
-const prayerExit=document.createElement("button");
-prayerExit.className="prayer-exit";
-prayerExit.textContent="Exit Prayer";
+/*=========================================================
+HEADER
+=========================================================*/
 
-prayerExit.addEventListener("click",function(){
-setPrayer(false);
-});
+const updateHeader = () => {
 
-document.body.appendChild(focusExit);
-document.body.appendChild(prayerExit);
+if(window.scrollY > 50){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
 
 }
 
-/* ================= PRAYER MODE ================= */
+};
 
-function setPrayer(on){
+/*=========================================================
+BACK TO TOP
+=========================================================*/
 
-if(on)document.body.classList.remove("focus");
+const updateBackTop = () => {
 
-document.body.classList.toggle("prayer",on);
+if(!backTop) return;
 
-safeSet(K_PRAYER,on?"on":"off");
+if(window.scrollY > 500){
 
-document.querySelectorAll("[data-prayer]").forEach(b=>{
-b.setAttribute("aria-pressed",on?"true":"false");
-});
+backTop.classList.add("show");
 
-}
+}else{
 
-/* ================= FOCUS MODE ================= */
-
-function setFocus(on){
-
-if(on)document.body.classList.remove("prayer");
-
-document.body.classList.toggle("focus",on);
-
-safeSet(K_FOCUS,on?"on":"off");
-
-document.querySelectorAll("[data-focus]").forEach(b=>{
-b.setAttribute("aria-pressed",on?"true":"false");
-});
+backTop.classList.remove("show");
 
 }
 
-/* ================= MOBILE MENU ================= */
+};
 
-function initMenu(){
+/*=========================================================
+SCROLL REVEAL
+=========================================================*/
 
-const btn=document.querySelector("[data-menu-btn]");
-const menu=document.querySelector("[data-menu]");
+const observer = new IntersectionObserver((entries)=>{
 
-if(!btn||!menu)return;
+entries.forEach(entry=>{
 
-function openMenu(){
-menu.classList.add("open");
-btn.classList.add("open");
-btn.setAttribute("aria-expanded","true");
-safeSet(K_MENU,"on");
-}
+if(entry.isIntersecting){
 
-function closeMenu(){
-menu.classList.remove("open");
-btn.classList.remove("open");
-btn.setAttribute("aria-expanded","false");
-safeSet(K_MENU,"off");
-}
+entry.target.classList.add("active");
 
-btn.addEventListener("click",function(){
-
-const open=menu.classList.contains("open");
-
-open?closeMenu():openMenu();
-
-});
-
-document.addEventListener("keydown",function(e){
-
-if(e.key==="Escape"){
-closeMenu();
-setFocus(false);
-setPrayer(false);
 }
 
 });
 
-document.addEventListener("click",function(e){
+},{
+threshold:0.15,
+rootMargin:"0px 0px -60px 0px"
+});
 
-const inside=menu.contains(e.target)||btn.contains(e.target);
+reveals.forEach(item=>observer.observe(item));
 
-if(!inside)closeMenu();
+/*=========================================================
+MOBILE MENU
+=========================================================*/
+
+if(menuToggle && navMenu){
+
+menuToggle.addEventListener("click",()=>{
+
+menuToggle.classList.toggle("active");
+
+navMenu.classList.toggle("active");
+
+const expanded = menuToggle.getAttribute("aria-expanded")==="true";
+
+menuToggle.setAttribute("aria-expanded",!expanded);
 
 });
 
-menu.addEventListener("click",function(e){
+document.querySelectorAll(".nav-menu a").forEach(link=>{
 
-if(e.target.tagName==="A")closeMenu();
+link.addEventListener("click",()=>{
+
+menuToggle.classList.remove("active");
+
+navMenu.classList.remove("active");
+
+menuToggle.setAttribute("aria-expanded","false");
 
 });
 
-if(safeGet(K_MENU)==="on")openMenu();
+});
 
 }
 
-/* ================= PRAYER + FOCUS BUTTONS ================= */
+/*=========================================================
+SMOOTH SCROLL
+=========================================================*/
 
-function initModes(){
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 
-setPrayer(safeGet(K_PRAYER)==="on");
-setFocus(safeGet(K_FOCUS)==="on");
+anchor.addEventListener("click",(e)=>{
 
-const prayerButtons=document.querySelectorAll("[data-prayer],[data-prayer-cta]");
-const focusButtons=document.querySelectorAll("[data-focus]");
+const target=document.querySelector(anchor.getAttribute("href"));
 
-prayerButtons.forEach(b=>{
-b.addEventListener("click",()=>{
-setPrayer(!document.body.classList.contains("prayer"));
-});
-});
-
-focusButtons.forEach(b=>{
-b.addEventListener("click",()=>{
-setFocus(!document.body.classList.contains("focus"));
-});
-});
-
-}
-
-/* ================= MAILTO FORM ================= */
-
-function initMailtoForm(){
-
-const form=document.querySelector("[data-mailto]");
-if(!form)return;
-
-form.addEventListener("submit",function(e){
+if(target){
 
 e.preventDefault();
 
-const data=new FormData(form);
+target.scrollIntoView({
 
-const name=String(data.get("name")||"").trim();
-const reply=String(data.get("reply")||"").trim();
-const subject=String(data.get("subject")||"").trim();
-const message=String(data.get("message")||"").trim();
+behavior:"smooth",
 
-const lines=[
-"Name: "+name,
-"Reply email: "+reply,
-"",
-message
-];
-
-const body=encodeURIComponent(lines.join("\n"));
-const subj=encodeURIComponent(subject||"Website message");
-
-window.location.href=
-"mailto:brad.hobbs13@icloud.com?subject="+subj+"&body="+body;
+block:"start"
 
 });
 
 }
 
-/* ================= PAGE LOAD ================= */
-
-document.addEventListener("DOMContentLoaded",function(){
-
-const headerContainer=document.getElementById("site-header");
-
-if(headerContainer){
-
-fetch("/about-me/partials/header.html")
-.then(res=>res.text())
-.then(html=>{
-
-headerContainer.innerHTML=html;
-
-initModes();
-initMenu();
+});
 
 });
 
-}
+/*=========================================================
+INITIALIZE
+=========================================================*/
 
-/* important for mobile */
+updateHeader();
 
-initExitButtons();
+updateBackTop();
 
-initMailtoForm();
+window.addEventListener("scroll",()=>{
+
+updateHeader();
+
+updateBackTop();
 
 });
 
-})();
+});
