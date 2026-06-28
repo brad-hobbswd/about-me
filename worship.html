@@ -1,310 +1,780 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<title>Worship | Brad Hobbs</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#0c0a09" />
-<meta name="description" content="Worship foundation and musical calling centered on Jesus." />
+<meta
+name="description"
+content="Discover the worship ministry of Bradley Hobbs through Southern Gospel music, piano, singing, and a life of worship centered on Jesus Christ.">
 
-<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+<meta
+name="keywords"
+content="Bradley Hobbs, Worship, Southern Gospel, Christian Music, Piano, Singing, Worship Ministry">
 
-<style>
+<meta
+name="author"
+content="Bradley Hobbs">
 
-/* ===== BASE ===== */
-body{
-  margin:0;
-  background:#a3855a;
-  color:#24160d;
-  font-family:system-ui, Arial;
-  line-height:1.55;
-}
+<meta
+property="og:title"
+content="Worship | Bradley Hobbs">
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:0 18px;
-}
+<meta
+property="og:description"
+content="Southern Gospel worship rooted in prayer and centered on Jesus Christ.">
 
-.narrow{
-  max-width:760px;
-}
+<meta
+property="og:image"
+content="images/social-preview.jpg">
 
-/* ===== NAVBAR ===== */
-.site-header{
-  background:#5a3f2a;
-  border-bottom:2px solid #d6a85b;
-}
+<meta
+property="og:type"
+content="website">
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 18px;
-}
+<meta
+property="og:url"
+content="https://brad-hobbswd.github.io/worship.html">
 
-.brand{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-}
+<meta
+name="theme-color"
+content="#1f2a33">
 
-.menu{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+<title>
 
-.menu a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
+Worship | Bradley Hobbs
 
-.menu a + a{
-  border-left:1px solid rgba(243,230,207,.3);
-  padding-left:10px;
-}
+</title>
 
-.menu a.active{
-  background:#d6a85b;
-  color:#24160d;
-  border-radius:6px;
-  padding:4px 8px;
-}
+<link
+rel="icon"
+type="image/png"
+href="images/favicon.png">
 
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-/* ===== HERO ===== */
-.page-hero{
-  padding:34px 0 14px;
-}
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-.h1{
-  margin:0 0 6px;
-  font-size:30px;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap"
+rel="stylesheet">
 
-.lead{
-  margin:0;
-  font-size:15px;
-  color:#3b2a1c;
-}
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-/* ===== SECTION ===== */
-.section{
-  padding:16px 0;
-}
-
-.h2{
-  margin:14px 0 6px;
-}
-
-p{
-  margin:6px 0;
-}
-
-/* ===== SCRIPTURE ===== */
-.scripture{
-  background:#fff3dc;
-  border:1px solid #d6a85b;
-  border-radius:10px;
-  padding:10px;
-  margin:6px 0 12px;
-}
-
-/* ===== GRID ===== */
-.grid2{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:6px;
-  margin-top:10px;
-}
-
-/* ===== CARD ===== */
-.card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:10px;
-  padding:12px;
-}
-
-.card + .card{
-  border-top:1px solid rgba(90,63,42,.15);
-}
-
-/* ===== BUTTON ===== */
-.btn{
-  display:inline-block;
-  margin-top:8px;
-  padding:8px 12px;
-  font-size:13px;
-  background:#7b4b25;
-  color:#fff7e6;
-  border-radius:8px;
-  text-decoration:none;
-}
-
-/* ===== RULE ===== */
-.rule{
-  height:1px;
-  background:rgba(90,63,42,.2);
-  margin:14px 0;
-}
-
-/* ===== DESKTOP ===== */
-@media (min-width:1000px){
-
-  .container{ max-width:1000px; }
-
-  .grid2{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-
-  .card + .card{
-    border-top:none;
-  }
-
-}
-
-/* ===== FOOTER (UPDATED) ===== */
-.site-footer{
-  background:#5a3f2a;
-  color:#f3e6cf;
-  padding:8px 12px;
-  font-size:13px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.footer-line{
-  margin:0;
-  white-space:nowrap;
-}
-
-.footer-links{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.footer-links a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
-
-.footer-links a + a{
-  border-left:1px solid rgba(243,230,207,.4);
-  padding-left:10px;
-}
-
-</style>
+<link
+rel="stylesheet"
+href="assets/css/styles.css">
 
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="topbar">
-    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="family.html">Family</a>
-      <a href="education.html">Education</a>
-      <a href="speaker.html">Speaker</a>
-      <a href="worship.html" class="active">Worship</a>
-      <a href="discography.html">Discography</a>
-      <a href="devotions.html">Devotions</a>
-      <a href="scriptures.html">Scriptures</a>
-      <a href="affiliations.html">Affiliations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<div class="container">
+
+<nav class="navbar">
+
+<a
+href="index.html"
+class="logo">
+
+Brad
+<span>Hobbs</span>
+
+</a>
+
+<button
+class="menu-toggle"
+aria-label="Toggle Navigation"
+aria-expanded="false">
+
+<span></span>
+
+</button>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="book.html">Book</a></li>
+
+<li><a href="devotions.html">Devotions</a></li>
+
+<li><a href="education.html">Education</a></li>
+
+<li><a href="speaker.html">Speaker</a></li>
+
+<li><a href="worship.html" class="active">Worship</a></li>
+
+<li><a href="scriptures.html">Scriptures</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
 
 <main>
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1 class="h1">Worship</h1>
-    <p class="lead">Worship stays near, shaped by piano, voice, and reverence.</p>
-  </div>
+<section class="page-banner">
+
+<div class="page-banner-content reveal">
+
+<span class="section-subtitle">
+
+Worship Ministry
+
+</span>
+
+<h1>
+
+Worship In Spirit.<br>
+
+Worship In Truth.
+
+</h1>
+
+<p>
+
+Southern Gospel music, piano, singing, and a heart devoted to glorifying Jesus Christ through every opportunity to worship.
+
+</p>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="container narrow">
+<section>
 
-    <div class="scripture">
-      “God is a Spirit: and they that worship him must worship him in spirit and in truth.”<br>
-      <strong>John 4:24</strong>
-    </div>
+<div class="container">
 
-    <h2 class="h2">Quiet strength</h2>
+<div class="ministry-grid">
 
-    <p class="lead">Worship grows from a quiet and devoted life of prayer. Private moments with Jesus shape the heart long before any song rises in public.</p>
+<div class="ministry-content reveal">
 
-    <p>Music then flows naturally as an expression of that devotion. Songs offered through voice or piano become a reflection of the relationship already formed with Jesus in prayer.</p>
+<span class="section-subtitle">
 
-    <p>Worship remains more than sound. Worship becomes a life submitted, a posture of reverence, and a daily offering shaped by obedience to Jesus.</p>
+The Heart of Worship
 
-    <div class="grid2">
+</span>
 
-      <div class="card">
-        <h3>Piano</h3>
-        <p>Simple accompaniment that supports focused worship and calm attention.</p>
-      </div>
+<h2>
 
-      <div class="card">
-        <h3>Voice</h3>
-        <p>Clear delivery shaped by Southern Gospel heritage and testimony.</p>
-      </div>
+Worship Begins Before The Music
 
-    </div>
+</h2>
 
-    <div class="rule"></div>
+<p>
 
-    <h2 class="h2">Recorded music</h2>
+True worship begins long before the first note is played or the first song is sung. It begins in the quiet place where prayer, Scripture, and communion with Jesus shape the heart.
 
-    <p>Discography page includes a YouTube playlist embed for past recordings.</p>
+</p>
 
-    <a class="btn" href="discography.html">Open Discography</a>
+<p>
 
-  </div>
+Music simply becomes the outward expression of a life that has already surrendered itself to Christ. Whether through piano, singing, testimony, or silent prayer, worship exists to glorify Jesus rather than draw attention to ourselves.
+
+</p>
+
+<p>
+
+My desire has always been that every song, every service, and every opportunity to worship would encourage others to draw nearer to the Lord and experience His faithfulness.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/worship.jpg"
+alt="Bradley Hobbs Worship Ministry">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"God is a Spirit: and they that worship him must worship him in spirit and in truth."
+
+</blockquote>
+
+<cite>
+
+John 4:24
+
+</cite>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Worship Ministry
+
+</span>
+
+<h2 class="section-title">
+
+Music That Points Hearts To Jesus
+
+</h2>
+
+<p class="section-description">
+
+Every opportunity to sing or play is an opportunity to proclaim the goodness, grace, and faithfulness of Jesus Christ.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+<h3>
+
+Southern Gospel
+
+</h3>
+
+<p>
+
+Southern Gospel music has shaped my worship journey by proclaiming the hope, grace, and faithfulness of Jesus Christ through timeless songs and heartfelt testimony.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-piano-keyboard"></i>
+
+</div>
+
+<h3>
+
+Piano Ministry
+
+</h3>
+
+<p>
+
+Piano accompaniment provides a quiet foundation that supports congregational worship and allows attention to remain focused on Jesus Christ rather than performance.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-microphone-lines"></i>
+
+</div>
+
+<h3>
+
+Vocal Ministry
+
+</h3>
+
+<p>
+
+Every song is offered as an act of worship with the desire to encourage believers, strengthen faith, and proclaim the goodness of God through music.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+WORSHIP PHILOSOPHY
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="ministry-grid">
+
+<div class="ministry-image reveal">
+
+<img
+src="images/piano.jpg"
+alt="Christian Worship">
+
+</div>
+
+<div class="ministry-content reveal">
+
+<span class="section-subtitle">
+
+My Philosophy
+
+</span>
+
+<h2>
+
+Worship Is A Lifestyle
+
+</h2>
+
+<p>
+
+Worship extends far beyond a church service. It is expressed through daily obedience, faithful prayer, loving others, and living a life that honors Jesus Christ.
+
+</p>
+
+<p>
+
+Music becomes one expression of worship, but the heart remains its true instrument. A surrendered life speaks louder than any melody.
+
+</p>
+
+<p>
+
+Whether gathered with a congregation or spending quiet time alone with God, worship is an invitation to respond to His goodness with gratitude, reverence, and wholehearted devotion.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+MUSIC MINISTRY
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Music Ministry
+
+</span>
+
+<h2 class="section-title">
+
+Serving Through Music
+
+</h2>
+
+<p class="section-description">
+
+Music provides opportunities to encourage believers and proclaim the Gospel through songs that glorify Jesus Christ.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-church"></i>
+
+</div>
+
+<h3>
+
+Church Worship
+
+</h3>
+
+<p>
+
+Supporting congregational worship through piano, singing, and heartfelt praise that keeps Christ at the center.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-people-group"></i>
+
+</div>
+
+<h3>
+
+Special Events
+
+</h3>
+
+<p>
+
+Ministering through music at church services, revivals, conferences, community gatherings, and special occasions.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-heart"></i>
+
+</div>
+
+<h3>
+
+Personal Worship
+
+</h3>
+
+<p>
+
+Daily worship through prayer, Scripture, and music continues to strengthen my relationship with Jesus Christ.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+LISTEN
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="book-showcase">
+
+<div class="book-content reveal">
+
+<span class="book-badge">
+
+Listen
+
+</span>
+
+<h2>
+
+Music And Recordings
+
+</h2>
+
+<p>
+
+Recorded music provides another opportunity to share the hope found in Jesus Christ. Whether through Southern Gospel favorites, worship songs, or personal testimony, every recording exists to encourage others in their faith.
+
+</p>
+
+<p>
+
+Additional recordings, videos, and future projects will continue to be added as this ministry grows.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="discography.html"
+class="btn">
+
+View Discography
+
+</a>
+
+<a
+href="#"
+class="btn btn-outline">
+
+YouTube
+
+</a>
+
+</div>
+
+</div>
+
+<div class="book-cover reveal">
+
+<img
+src="images/music.jpg"
+alt="Southern Gospel Music">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+SCRIPTURE
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"O come, let us sing unto the Lord: let us make a joyful noise to the rock of our salvation."
+
+</blockquote>
+
+<cite>
+
+Psalm 95:1
+
+</cite>
+
+<div class="hero-buttons mt-4">
+
+<a
+href="discography.html"
+class="btn">
+
+Listen Now
+
+</a>
+
+<a
+href="speaker.html"
+class="btn btn-outline">
+
+Speaking Ministry
+
+</a>
+
+<a
+href="contact.html"
+class="btn btn-light">
+
+Contact
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
 
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
-    </div>
-  </div>
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+Brad
+<span class="text-gold">Hobbs</span>
+
+</div>
+
+<p>
+
+Rooted in Prayer.
+Centered in Jesus.
+
+May every song proclaim the greatness of Jesus Christ and encourage hearts to worship Him in spirit and in truth.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Explore
+
+</h3>
+
+<div class="footer-links">
+
+<a href="about.html">About</a>
+
+<a href="worship.html">Worship</a>
+
+<a href="discography.html">Discography</a>
+
+<a href="devotions.html">Devotions</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Resources
+
+</h3>
+
+<div class="footer-links">
+
+<a href="book.html">Books</a>
+
+<a href="speaker.html">Speaker</a>
+
+<a href="scriptures.html">Scriptures</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Connect
+
+</h3>
+
+<div class="social-links">
+
+<a href="#" aria-label="Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a href="#" aria-label="YouTube">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="#" aria-label="Instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#" aria-label="Email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Bradley Hobbs. All Rights Reserved.
+
+</p>
+
+<p>
+
+Soli Deo Gloria. To God Alone Be The Glory.
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
+<a
+href="#"
+class="back-top"
+aria-label="Back To Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+<script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
