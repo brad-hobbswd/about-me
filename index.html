@@ -11,11 +11,11 @@ content="width=device-width, initial-scale=1.0">
 
 <meta
 name="description"
-content="Official website of Bradley Hobbs. Teaching, worship, devotion, Southern Gospel music, web design, and Christian ministry rooted in prayer and centered in Jesus.">
+content="Official website of Bradley Hobbs. Teaching, worship, devotion, Southern Gospel music, web design, Christian education, and ministry rooted in prayer and centered in Jesus Christ.">
 
 <meta
 name="keywords"
-content="Brad Hobbs, Bradley Hobbs, Christian Author, Devotions, Worship, Southern Gospel, Teacher, Ministry">
+content="Brad Hobbs, Bradley Hobbs, Christian Author, Devotions, Southern Gospel, Worship, Ministry, Teacher, Christian Education, Jesus Christ">
 
 <meta
 name="author"
@@ -27,7 +27,7 @@ content="Brad Hobbs | Rooted in Prayer. Centered in Jesus.">
 
 <meta
 property="og:description"
-content="Teaching, worship, writing, and ministry centered on Jesus Christ.">
+content="Teaching, worship, writing, Christian education, and ministry centered on Jesus Christ.">
 
 <meta
 property="og:image"
@@ -41,16 +41,17 @@ content="website">
 property="og:url"
 content="https://brad-hobbswd.github.io">
 
+<meta
+name="theme-color"
+content="#1f2a33">
+
 <title>
-
-Brad Hobbs |
-Rooted in Prayer.
-Centered in Jesus.
-
+Brad Hobbs | Rooted in Prayer. Centered in Jesus.
 </title>
 
 <link
 rel="icon"
+type="image/png"
 href="images/favicon.png">
 
 <link
@@ -86,12 +87,22 @@ href="assets/css/styles.css">
 
 <a
 href="index.html"
-class="logo">
+class="logo"
+aria-label="Brad Hobbs Home">
 
 Brad
 <span>Hobbs</span>
 
 </a>
+
+<button
+class="menu-toggle"
+aria-label="Toggle Navigation"
+aria-expanded="false">
+
+<span></span>
+
+</button>
 
 <ul class="nav-menu">
 
@@ -153,12 +164,6 @@ Contact
 
 </ul>
 
-<div class="menu-toggle">
-
-<span></span>
-
-</div>
-
 </nav>
 
 </div>
@@ -167,17 +172,24 @@ Contact
 
 <main>
 
+<!-- ==========================================================
+HERO
+=========================================================== -->
+
 <section class="hero">
 
 <video
 autoplay
 muted
 loop
-playsinline>
+playsinline
+poster="images/hero.jpg">
 
 <source
 src="video/hero.mp4"
 type="video/mp4">
+
+Your browser does not support HTML5 video.
 
 </video>
 
@@ -187,13 +199,13 @@ type="video/mp4">
 
 <div class="hero-content">
 
-<div class="hero-subtitle">
+<div class="hero-subtitle reveal">
 
 Teaching • Worship • Writing
 
 </div>
 
-<h1>
+<h1 class="reveal">
 
 Rooted in Prayer.<br>
 
@@ -201,15 +213,17 @@ Centered in Jesus.
 
 </h1>
 
-<p class="lead">
+<p class="lead reveal">
 
 Welcome.
 
-Through teaching, worship, writing, and daily devotionals, my desire is to glorify Jesus Christ and encourage others to walk faithfully with Him.
+Through teaching, worship, writing, Christian education, and daily devotionals, my desire is to glorify Jesus Christ and encourage others to grow deeper in their walk with Him.
+
+Every page of this website reflects the gifts and opportunities God has graciously provided throughout my journey.
 
 </p>
 
-<div class="hero-buttons">
+<div class="hero-buttons reveal">
 
 <a
 href="about.html"
@@ -241,9 +255,9 @@ Scroll
 
 </section>
 
-<!--=========================================================
-FEATURED MINISTRY
-==========================================================-->
+<!-- ==========================================================
+WELCOME
+=========================================================== -->
 
 <section class="features">
 
@@ -267,10 +281,11 @@ and Encouragement
 
 <p class="section-description">
 
-Every chapter of my journey has been shaped by God's faithfulness.
-Whether teaching children, writing devotionals, leading worship, or
-designing websites, my purpose remains the same:
-to glorify Jesus Christ and encourage others to grow in Him.
+Every season of life has been shaped by God's faithfulness.
+
+Whether serving in education, writing devotionals, leading worship, designing websites, or encouraging others through ministry, my greatest desire remains unchanged:
+
+to glorify Jesus Christ and faithfully point others toward Him.
 
 </p>
 
@@ -294,9 +309,7 @@ Daily Devotions
 
 <p>
 
-Scripture centered reflections written to strengthen faith,
-encourage perseverance,
-and deepen a daily walk with Jesus.
+Scripture centered reflections written to strengthen faith, encourage perseverance, and help believers grow deeper in their relationship with Jesus Christ through practical application of God's Word.
 
 </p>
 
@@ -304,7 +317,7 @@ and deepen a daily walk with Jesus.
 href="devotions.html"
 class="btn">
 
-Read More
+Read Devotions
 
 </a>
 
@@ -326,9 +339,7 @@ Education
 
 <p>
 
-Serving children and families through education,
-leadership,
-and compassionate teaching that builds both knowledge and character.
+Serving children and families through Christian values, leadership, and education while creating environments where learning, compassion, and character can flourish together.
 
 </p>
 
@@ -336,7 +347,7 @@ and compassionate teaching that builds both knowledge and character.
 href="education.html"
 class="btn">
 
-Learn More
+Explore Education
 
 </a>
 
@@ -358,8 +369,7 @@ Worship
 
 <p>
 
-Southern Gospel music and heartfelt worship focused on lifting up
-the name of Jesus through song and testimony.
+Southern Gospel music and heartfelt worship centered completely on Jesus Christ, sharing hope through songs, testimony, and a desire to glorify God in every opportunity.
 
 </p>
 
@@ -367,7 +377,7 @@ the name of Jesus through song and testimony.
 href="worship.html"
 class="btn">
 
-Explore Music
+Explore Worship
 
 </a>
 
@@ -379,11 +389,11 @@ Explore Music
 
 </section>
 
-<!--=========================================================
+<!-- ==========================================================
 ABOUT PREVIEW
-==========================================================-->
+=========================================================== -->
 
-<section>
+<section class="about-preview">
 
 <div class="container">
 
@@ -393,7 +403,7 @@ ABOUT PREVIEW
 
 <img
 src="images/brad.jpg"
-alt="Brad Hobbs">
+alt="Bradley Hobbs">
 
 </div>
 
@@ -401,36 +411,41 @@ alt="Brad Hobbs">
 
 <span class="section-subtitle">
 
-About Brad
+About Bradley
 
 </span>
 
 <h2>
 
-Serving Through Every Opportunity
+Serving Christ Through Every Opportunity
 
 </h2>
 
 <p>
 
-My passion is simple.
-Whether I am teaching,
-writing,
-leading worship,
-or serving my community,
-I desire for every opportunity to reflect Christ's love and truth.
+God has opened many doors throughout my life.
+
+From education and leadership to worship, writing, technology, and ministry, every opportunity has strengthened my desire to serve with humility while pointing others toward Jesus Christ.
 
 </p>
 
 <p>
 
-This website brings together my ministry,
-my writings,
-my Southern Gospel music,
-my educational journey,
-and the devotional resources God has allowed me to create for others.
+This website is more than a personal biography.
+
+It is a place where faith, Scripture, devotionals, worship, education, books, and ministry come together with one purpose:
+
+to glorify Jesus Christ and encourage others to remain faithful to Him.
 
 </p>
+
+<p>
+
+Whether you are visiting for the first time or returning to read another devotion, I pray you leave encouraged, challenged by God's Word, and reminded that His grace is always greater than our weakness.
+
+</p>
+
+<div class="hero-buttons">
 
 <a
 href="about.html"
@@ -440,6 +455,16 @@ Read My Story
 
 </a>
 
+<a
+href="contact.html"
+class="btn btn-outline">
+
+Get In Touch
+
+</a>
+
+</div>
+
 </div>
 
 </div>
@@ -448,9 +473,9 @@ Read My Story
 
 </section>
 
-<!--=========================================================
-BOOK SHOWCASE
-==========================================================-->
+<!-- ==========================================================
+FEATURED BOOK
+=========================================================== -->
 
 <section class="bg-light">
 
@@ -462,7 +487,7 @@ BOOK SHOWCASE
 
 <img
 src="images/book-cover.png"
-alt="Who Made You Judge">
+alt="Who Made You Judge Book Cover">
 
 </div>
 
@@ -482,10 +507,15 @@ Who Made You Judge?
 
 <p>
 
-This book explores the importance of extending grace,
-choosing compassion,
-and allowing God's Word to shape our responses toward others.
-It invites readers to reflect on their own hearts while pointing them toward the mercy and truth found in Jesus Christ.
+This book examines how grace, humility, repentance, compassion, and biblical truth should shape the way believers respond to one another.
+
+Rather than encouraging condemnation, it points readers back to the mercy, authority, and transforming power of Jesus Christ.
+
+</p>
+
+<p>
+
+Each chapter challenges the reader to examine the condition of their own heart before passing judgment on someone else's journey.
 
 </p>
 
@@ -495,7 +525,7 @@ It invites readers to reflect on their own hearts while pointing them toward the
 href="book.html"
 class="btn">
 
-Read More
+Learn More
 
 </a>
 
@@ -517,9 +547,9 @@ Related Devotions
 
 </section>
 
-<!--=========================================================
+<!-- ==========================================================
 LATEST DEVOTIONS
-==========================================================-->
+=========================================================== -->
 
 <section class="devotions">
 
@@ -535,13 +565,13 @@ Latest Devotions
 
 <h2 class="section-title">
 
-Encouragement for Everyday Faith
+Encouragement For Everyday Faith
 
 </h2>
 
 <p class="section-description">
 
-Every devotion is written to strengthen your relationship with Jesus Christ through Scripture, prayer, and practical encouragement.
+Every devotion is written to encourage spiritual growth through Scripture, prayer, and practical application while keeping Jesus Christ at the center of daily life.
 
 </p>
 
@@ -555,7 +585,7 @@ Every devotion is written to strengthen your relationship with Jesus Christ thro
 
 <img
 src="images/devotions/devotion1.jpg"
-alt="The Seat Nobody Wants">
+alt="The Seat Nobody Wants Devotion">
 
 </div>
 
@@ -575,7 +605,7 @@ The Seat Nobody Wants
 
 <p>
 
-Jesus chose the towel before the throne. Discover why true greatness always begins with humility.
+Jesus chose the towel before the throne. Discover how true greatness begins with humility, service, and a willing heart before God.
 
 </p>
 
@@ -597,7 +627,7 @@ Read Devotion
 
 <img
 src="images/devotions/devotion2.jpg"
-alt="When God Is Quiet">
+alt="When God Is Quiet Devotion">
 
 </div>
 
@@ -617,7 +647,7 @@ When God Is Quiet
 
 <p>
 
-Even in seasons of silence, God continues working in ways we cannot yet see.
+God's silence never means His absence. Learn how faith continues to grow even during seasons when answers seem delayed.
 
 </p>
 
@@ -639,7 +669,7 @@ Read Devotion
 
 <img
 src="images/devotions/devotion3.jpg"
-alt="Rooted in Prayer">
+alt="Rooted in Prayer Devotion">
 
 </div>
 
@@ -659,7 +689,7 @@ Rooted in Prayer
 
 <p>
 
-Prayer is not simply preparation for the work. Prayer is the work that prepares our hearts for God.
+Prayer is more than preparation for ministry. It is where our hearts are transformed before we ever begin serving others.
 
 </p>
 
@@ -681,11 +711,11 @@ Read Devotion
 
 </section>
 
-<!--=========================================================
+<!-- ==========================================================
 FEATURED SCRIPTURE
-==========================================================-->
+========================================================== -->
 
-<section>
+<section class="scripture-section">
 
 <div class="container">
 
@@ -710,11 +740,11 @@ Psalm 119:105
 
 </section>
 
-<!--=========================================================
+<!-- ==========================================================
 WORSHIP
-==========================================================-->
+========================================================== -->
 
-<section>
+<section class="worship-section">
 
 <div class="container">
 
@@ -730,23 +760,31 @@ Worship
 
 <h2>
 
-Music That Glorifies Christ
+Music That Glorifies Jesus Christ
 
 </h2>
 
 <p>
 
-Southern Gospel music has always been part of my life and ministry.
+Southern Gospel music has always been an important part of my walk with God.
 
-Every song is offered with one purpose:
-
-to glorify Jesus Christ and encourage believers through worship.
+Every opportunity to sing is an opportunity to proclaim the goodness, mercy, and saving power of Jesus Christ.
 
 </p>
 
 <p>
 
-Whether singing, playing piano, or sharing a testimony between songs, my desire is that every note points people toward the Savior.
+Whether singing, playing the piano, leading worship, or simply sharing a testimony, my prayer is that every note directs hearts toward the Savior instead of the singer.
+
+</p>
+
+<p>
+
+Worship is not performance.
+
+It is surrender.
+
+It is an offering of gratitude that belongs completely to Jesus.
 
 </p>
 
@@ -764,7 +802,7 @@ Explore Worship
 
 <img
 src="images/worship.jpg"
-alt="Worship Ministry">
+alt="Bradley Hobbs Worship Ministry">
 
 </div>
 
@@ -774,11 +812,11 @@ alt="Worship Ministry">
 
 </section>
 
-<!--=========================================================
+<!-- ==========================================================
 PHOTO GALLERY
-==========================================================-->
+========================================================== -->
 
-<section class="bg-light">
+<section class="bg-light gallery-section">
 
 <div class="container">
 
@@ -796,6 +834,12 @@ Moments Along the Journey
 
 </h2>
 
+<p class="section-description">
+
+Snapshots from ministry, education, worship, writing, and the people God has graciously placed along the journey.
+
+</p>
+
 </div>
 
 <div class="gallery-grid">
@@ -804,7 +848,7 @@ Moments Along the Journey
 
 <img
 src="images/gallery/gallery1.jpg"
-alt="Teaching">
+alt="Teaching Ministry">
 
 <div class="gallery-overlay">
 
@@ -822,7 +866,7 @@ Teaching
 
 <img
 src="images/gallery/gallery2.jpg"
-alt="Writing">
+alt="Writing Ministry">
 
 <div class="gallery-overlay">
 
@@ -840,7 +884,7 @@ Writing
 
 <img
 src="images/gallery/gallery3.jpg"
-alt="Worship">
+alt="Southern Gospel Worship">
 
 <div class="gallery-overlay">
 
@@ -860,9 +904,9 @@ Worship
 
 </section>
 
-<!--=========================================================
+<!-- ==========================================================
 STATISTICS
-==========================================================-->
+========================================================== -->
 
 <section class="statistics">
 
@@ -937,16 +981,214 @@ God's Grace
 </div>
 
 </div>
+
 </section>
-</section>
+
+<!-- ==========================================================
+FOOTER
+========================================================== -->
 
 </main>
 
 <footer class="site-footer">
 
-<!-- Footer Content -->
+<div class="container">
+
+<div class="footer-grid">
+
+<!-- ======================================================
+ABOUT
+====================================================== -->
+
+<div>
+
+<div class="footer-logo">
+
+Brad
+<span class="text-gold">Hobbs</span>
+
+</div>
+
+<p>
+
+Rooted in Prayer.
+Centered in Jesus.
+
+Thank you for visiting. My prayer is that every page, every devotion, every song, and every resource encourages you to grow closer to Jesus Christ.
+
+</p>
+
+</div>
+
+<!-- ======================================================
+MINISTRY
+====================================================== -->
+
+<div>
+
+<h3 class="footer-title">
+
+Ministry
+
+</h3>
+
+<div class="footer-links">
+
+<a href="about.html">
+
+About
+
+</a>
+
+<a href="book.html">
+
+Book
+
+</a>
+
+<a href="devotions.html">
+
+Devotions
+
+</a>
+
+<a href="worship.html">
+
+Worship
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ======================================================
+RESOURCES
+====================================================== -->
+
+<div>
+
+<h3 class="footer-title">
+
+Resources
+
+</h3>
+
+<div class="footer-links">
+
+<a href="education.html">
+
+Education
+
+</a>
+
+<a href="scriptures.html">
+
+Scriptures
+
+</a>
+
+<a href="speaker.html">
+
+Speaking
+
+</a>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ======================================================
+CONNECT
+====================================================== -->
+
+<div>
+
+<h3 class="footer-title">
+
+Connect
+
+</h3>
+
+<div class="social-links">
+
+<a
+href="#"
+aria-label="Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a
+href="#"
+aria-label="YouTube">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a
+href="#"
+aria-label="Instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a
+href="#"
+aria-label="Email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Bradley Hobbs.
+All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed with faith, purpose, and excellence.
+
+</p>
+
+</div>
+
+</div>
 
 </footer>
+
+<!-- ==========================================================
+BACK TO TOP
+========================================================== -->
+
+<a
+href="#"
+class="back-top"
+aria-label="Back to Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
 
 <script src="assets/js/main.js"></script>
 
