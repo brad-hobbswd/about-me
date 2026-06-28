@@ -1,294 +1,1000 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<title>Book | Brad Hobbs</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#0c0a09" />
-<meta name="description" content="Book page for Whispers in the Pew and publishing updates." />
+<meta
+name="description"
+content="Discover the books of Bradley Hobbs. Read Who Made You Judge?, explore devotionals, and follow upcoming Christian publications rooted in Scripture and centered on Jesus Christ.">
 
-<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+<meta
+name="keywords"
+content="Brad Hobbs, Bradley Hobbs, Christian Author, Who Made You Judge, Christian Books, Devotionals, Ministry">
 
-<style>
+<meta
+name="author"
+content="Bradley Hobbs">
 
-/* ===== BASE ===== */
-body{
-  margin:0;
-  background:#a3855a;
-  color:#24160d;
-  font-family:system-ui, Arial;
-  line-height:1.55;
-}
+<meta
+property="og:title"
+content="Books | Bradley Hobbs">
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:0 18px;
-}
+<meta
+property="og:description"
+content="Christian books and devotionals centered on Jesus Christ.">
 
-.narrow{
-  max-width:760px;
-}
+<meta
+property="og:image"
+content="images/book-cover.png">
 
-/* ===== NAVBAR ===== */
-.site-header{
-  background:#5a3f2a;
-  border-bottom:2px solid #d6a85b;
-}
+<meta
+property="og:type"
+content="website">
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 18px;
-}
+<meta
+property="og:url"
+content="https://brad-hobbswd.github.io/book.html">
 
-.brand{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-}
+<meta
+name="theme-color"
+content="#1f2a33">
 
-.menu{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+<title>
 
-.menu a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
+Books | Bradley Hobbs
 
-.menu a + a{
-  border-left:1px solid rgba(243,230,207,.3);
-  padding-left:10px;
-}
+</title>
 
-/* ACTIVE */
-.menu a.active{
-  background:#d6a85b;
-  color:#24160d;
-  border-radius:6px;
-  padding:4px 8px;
-}
+<link
+rel="icon"
+type="image/png"
+href="images/favicon.png">
 
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-/* ===== HERO ===== */
-.page-hero{
-  padding:34px 0 14px;
-}
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-.h1{
-  margin:0 0 6px;
-  font-size:30px;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap"
+rel="stylesheet">
 
-.lead{
-  margin:0;
-  font-size:15px;
-  color:#3b2a1c;
-}
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-/* ===== SECTION ===== */
-.section{
-  padding:16px 0;
-}
-
-.h2{
-  margin:14px 0 6px;
-}
-
-p{
-  margin:6px 0;
-}
-
-/* ===== SCRIPTURE ===== */
-.scripture{
-  background:#fff3dc;
-  border:1px solid #d6a85b;
-  border-radius:10px;
-  padding:10px;
-  margin:6px 0 12px;
-}
-
-/* ===== CARD ===== */
-.card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:10px;
-  padding:14px;
-}
-
-/* ===== RULE ===== */
-.rule{
-  height:1px;
-  background:rgba(90,63,42,.2);
-  margin:14px 0;
-}
-
-/* ===== CTA ===== */
-.cta{
-  margin-top:10px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-/* ===== BUTTON ===== */
-.btn{
-  padding:8px 12px;
-  font-size:13px;
-  background:#7b4b25;
-  color:#fff7e6;
-  border-radius:8px;
-  text-decoration:none;
-}
-
-.small{
-  font-size:12px;
-}
-
-/* ===== FOOTER (UPDATED) ===== */
-.site-footer{
-  background:#5a3f2a;
-  color:#f3e6cf;
-  padding:8px 12px;
-  font-size:13px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.footer-line{
-  margin:0;
-  white-space:nowrap;
-}
-
-.footer-links{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.footer-links a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
-
-.footer-links a + a{
-  border-left:1px solid rgba(243,230,207,.4);
-  padding-left:10px;
-}
-
-</style>
+<link
+rel="stylesheet"
+href="assets/css/styles.css">
 
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="topbar">
-    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="family.html">Family</a>
-      <a href="education.html">Education</a>
-      <a href="speaker.html">Speaker</a>
-      <a href="worship.html">Worship</a>
-      <a href="discography.html">Discography</a>
-      <a href="devotions.html">Devotions</a>
-      <a href="scriptures.html">Scriptures</a>
-      <a href="affiliations.html">Affiliations</a>
-      <a href="contact.html">Contact</a>
-      <a href="book.html" class="active">Book</a>
-    </nav>
-  </div>
+<div class="container">
+
+<nav class="navbar">
+
+<a
+href="index.html"
+class="logo">
+
+Brad
+<span>Hobbs</span>
+
+</a>
+
+<button
+class="menu-toggle"
+aria-label="Toggle Navigation"
+aria-expanded="false">
+
+<span></span>
+
+</button>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="book.html" class="active">Book</a></li>
+
+<li><a href="devotions.html">Devotions</a></li>
+
+<li><a href="education.html">Education</a></li>
+
+<li><a href="speaker.html">Speaker</a></li>
+
+<li><a href="worship.html">Worship</a></li>
+
+<li><a href="scriptures.html">Scriptures</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
 
 <main>
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1 class="h1">Book</h1>
-    <p class="lead">Whispers in the Pew with publishing updates.</p>
-  </div>
+<section class="page-banner">
+
+<div class="page-banner-content reveal">
+
+<span class="section-subtitle">
+
+Featured Book
+
+</span>
+
+<h1>
+
+Books That Point<br>
+
+People To Jesus
+
+</h1>
+
+<p>
+
+Every book is written to encourage biblical faith, deepen spiritual growth, and glorify Jesus Christ through Scripture centered teaching.
+
+</p>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="container narrow">
+<section>
 
-    <div class="scripture">
-      “Write the vision, and make it plain...”<br>
-      <strong>Habakkuk 2:2</strong>
-    </div>
+<div class="container">
 
-    <article class="card">
-      <h2 class="h2">Whispers in the Pew</h2>
-      <p class="lead">A devotional journey written from quiet spaces.</p>
-      <p>Release notes, excerpts, and announcements will appear here.</p>
-    </article>
+<div class="book-showcase">
 
-    <div class="rule"></div>
+<div class="book-cover reveal">
 
-    <h2 class="h2">Upcoming</h2>
+<img
+src="images/book-cover.png"
+alt="Who Made You Judge Book Cover">
 
-    <p class="muted">
-      Explore the growing devotional journey online as the book unfolds chapter by chapter before publication.
-    </p>
+</div>
 
-    <div class="cta">
+<div class="book-content reveal">
 
-      <a class="btn small"
-      href="https://brad-hobbswd.github.io/whispers-in-the-pew/devotions/index.html"
-      target="_blank">
-      Read Devotional Chapters
-      </a>
+<span class="book-badge">
 
-      <a class="btn small"
-      href="https://brad-hobbswd.github.io/whispers-in-the-pew/store.html"
-      target="_blank">
-      Visit the Book Store
-      </a>
+Now Available
 
-    </div>
+</span>
 
-  </div>
+<h2>
+
+Who Made You Judge?
+
+</h2>
+
+<p>
+
+Who Made You Judge? challenges readers to examine the difference between biblical discernment and self righteous judgment. Through Scripture, grace, and practical application, the book encourages believers to reflect Christ's compassion while remaining faithful to His truth.
+
+</p>
+
+<p>
+
+Rather than condemning others, readers are invited to examine their own hearts, embrace humility, and allow God's Word to shape every relationship.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+href="https://brad-hobbswd.github.io/who-made-you-judge/"
+class="btn">
+
+Read Online
+
+</a>
+
+<a
+href="https://brad-hobbswd.github.io/who-made-you-judge/store.html"
+class="btn btn-outline">
+
+Visit Store
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+About The Book
+
+</span>
+
+<h2 class="section-title">
+
+A Call To Grace And Truth
+
+</h2>
+
+<p class="section-description">
+
+This book was written to help believers navigate difficult conversations through the wisdom of Scripture, remembering that truth and love must always walk together.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-book-open"></i>
+
+</div>
+
+<h3>
+
+Biblically Grounded
+
+</h3>
+
+<p>
+
+Every chapter is firmly rooted in Scripture, encouraging readers to seek God's wisdom rather than human opinion. Biblical truth remains the foundation from beginning to end.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-heart"></i>
+
+</div>
+
+<h3>
+
+Grace and Compassion
+
+</h3>
+
+<p>
+
+Readers are encouraged to replace condemnation with compassion, extending the same grace Christ has shown to each of us while remaining faithful to His Word.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-cross"></i>
+
+</div>
+
+<h3>
+
+Centered on Jesus
+
+</h3>
+
+<p>
+
+Every page points beyond personalities and opinions to Jesus Christ, whose mercy, truth, and authority remain the only sure foundation for every believer.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+WHY I WROTE THIS BOOK
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="ministry-grid">
+
+<div class="ministry-content reveal">
+
+<span class="section-subtitle">
+
+The Story Behind The Book
+
+</span>
+
+<h2>
+
+Why I Wrote
+Who Made You Judge?
+
+</h2>
+
+<p>
+
+This book was born out of a desire to encourage believers to approach one another with humility instead of pride and grace instead of condemnation.
+
+Throughout Scripture we are reminded that truth should never be separated from love, and love should never abandon truth.
+
+</p>
+
+<p>
+
+My hope is that readers will pause long enough to examine their own hearts before judging the journey of someone else. Every chapter is an invitation to draw closer to Jesus Christ and allow His Word to transform our attitudes, conversations, and relationships.
+
+</p>
+
+<p>
+
+Rather than simply presenting opinions, this book invites readers into honest reflection through biblical teaching, practical application, and the hope that only Christ provides.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/book-writing.jpg"
+alt="Writing Christian Books">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+WHAT YOU'LL DISCOVER
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Inside The Book
+
+</span>
+
+<h2 class="section-title">
+
+What Readers Will Discover
+
+</h2>
+
+<p class="section-description">
+
+Every chapter is designed to encourage spiritual growth while keeping Jesus Christ and His Word at the center of every discussion.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-scale-balanced"></i>
+
+</div>
+
+<h3>
+
+Biblical Discernment
+
+</h3>
+
+<p>
+
+Understanding the difference between righteous discernment and self righteous judgment through the lens of Scripture.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-hands-praying"></i>
+
+</div>
+
+<h3>
+
+Personal Reflection
+
+</h3>
+
+<p>
+
+Practical encouragement to examine our own hearts before speaking into the lives of others.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-dove"></i>
+
+</div>
+
+<h3>
+
+Grace in Action
+
+</h3>
+
+<p>
+
+Learning how biblical truth and Christlike compassion work together rather than competing against one another.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+READ ONLINE
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"Write the vision, and make it plain upon tables, that he may run that readeth it."
+
+</blockquote>
+
+<cite>
+
+Habakkuk 2:2
+
+</cite>
+
+<div class="hero-buttons mt-4">
+
+<a
+href="https://brad-hobbswd.github.io/who-made-you-judge/"
+class="btn">
+
+Read Online
+
+</a>
+
+<a
+href="https://brad-hobbswd.github.io/who-made-you-judge/store.html"
+class="btn btn-outline">
+
+Book Store
+
+</a>
+
+<a
+href="devotions.html"
+class="btn btn-light">
+
+Related Devotions
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+FUTURE PUBLICATIONS
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Coming Soon
+
+</span>
+
+<h2 class="section-title">
+
+Future Writing Projects
+
+</h2>
+
+<p class="section-description">
+
+Writing continues to be an important part of my ministry. Additional books, devotionals, and Bible study resources are currently being developed to encourage believers in their walk with Jesus Christ.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-book"></i>
+
+</div>
+
+<h3>
+
+Future Books
+
+</h3>
+
+<p>
+
+Additional books are currently being developed to encourage believers through Scripture, prayer, discipleship, and practical Christian living.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-feather-pointed"></i>
+
+</div>
+
+<h3>
+
+Daily Devotionals
+
+</h3>
+
+<p>
+
+New devotionals continue to be written throughout the year, providing biblical encouragement and practical application for everyday life.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-book-bible"></i>
+
+</div>
+
+<h3>
+
+Bible Study Resources
+
+</h3>
+
+<p>
+
+Future study guides and teaching resources are being prepared to help individuals, churches, and small groups grow deeper in God's Word.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+AUTHOR MESSAGE
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="ministry-grid">
+
+<div class="ministry-image reveal">
+
+<img
+src="images/brad.jpg"
+alt="Bradley Hobbs">
+
+</div>
+
+<div class="ministry-content reveal">
+
+<span class="section-subtitle">
+
+From The Author
+
+</span>
+
+<h2>
+
+A Personal Message
+
+</h2>
+
+<p>
+
+Thank you for taking the time to visit this page and explore the work God has placed upon my heart.
+
+Writing has never been about publishing books or gaining recognition. It has always been about sharing biblical truth, encouraging believers, and pointing people toward Jesus Christ.
+
+</p>
+
+<p>
+
+Every devotion, article, and book begins with prayer and is written with the hope that someone will discover renewed faith, lasting hope, and a deeper love for God's Word.
+
+</p>
+
+<p>
+
+My prayer is simple:
+
+that every reader walks away knowing Jesus more fully than before they opened the first page.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+EXPLORE MORE
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Continue Reading
+
+</span>
+
+<h2 class="section-title">
+
+Explore More Resources
+
+</h2>
+
+<p class="section-description">
+
+Continue your journey through devotionals, Scripture studies, worship, and additional ministry resources designed to strengthen your walk with Jesus Christ.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-book-bible"></i>
+
+</div>
+
+<h3>
+
+Daily Devotions
+
+</h3>
+
+<p>
+
+Short biblical reflections written to encourage spiritual growth and strengthen your daily walk with Christ.
+
+</p>
+
+<a
+href="devotions.html"
+class="btn">
+
+Read Devotions
+
+</a>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+<h3>
+
+Worship
+
+</h3>
+
+<p>
+
+Discover Southern Gospel music, worship, and songs that proclaim the goodness and faithfulness of Jesus Christ.
+
+</p>
+
+<a
+href="worship.html"
+class="btn">
+
+Explore Worship
+
+</a>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-envelope"></i>
+
+</div>
+
+<h3>
+
+Stay Connected
+
+</h3>
+
+<p>
+
+Questions, speaking opportunities, ministry invitations, or encouragement are always welcome.
+
+</p>
+
+<a
+href="contact.html"
+class="btn">
+
+Contact Me
+
+</a>
+
+</article>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
+<!-- ==========================================================
+FOOTER
+========================================================== -->
 
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
-    </div>
-  </div>
+<footer class="site-footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+Brad
+<span class="text-gold">Hobbs</span>
+
+</div>
+
+<p>
+
+Rooted in Prayer.
+Centered in Jesus.
+
+Thank you for visiting. May every page encourage your faith and point you toward Jesus Christ.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Explore
+
+</h3>
+
+<div class="footer-links">
+
+<a href="about.html">About</a>
+
+<a href="book.html">Books</a>
+
+<a href="devotions.html">Devotions</a>
+
+<a href="worship.html">Worship</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Resources
+
+</h3>
+
+<div class="footer-links">
+
+<a href="education.html">Education</a>
+
+<a href="speaker.html">Speaker</a>
+
+<a href="scriptures.html">Scriptures</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Connect
+
+</h3>
+
+<div class="social-links">
+
+<a href="#" aria-label="Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a href="#" aria-label="YouTube">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="#" aria-label="Instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#" aria-label="Email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Bradley Hobbs. All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed with faith, purpose, and excellence.
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
+<a
+href="#"
+class="back-top"
+aria-label="Back to Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+<script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
