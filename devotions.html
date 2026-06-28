@@ -1,318 +1,912 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<title>Devotions | Brad Hobbs</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#0c0a09" />
-<meta name="description" content="Curated devotion favorites with Scripture anchored throughout." />
+<meta
+name="description"
+content="Daily Christian devotionals written by Bradley Hobbs to encourage prayer, strengthen faith, and deepen your relationship with Jesus Christ through Scripture.">
 
-<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+<meta
+name="keywords"
+content="Christian Devotions, Daily Devotions, Bradley Hobbs, Prayer, Scripture, Jesus Christ, Bible Study">
 
-<style>
+<meta
+name="author"
+content="Bradley Hobbs">
 
-/* ===== BASE ===== */
-body{
-  margin:0;
-  background:#a3855a;
-  color:#24160d;
-  font-family:system-ui, Arial;
-  line-height:1.55;
-}
+<meta
+property="og:title"
+content="Daily Devotions | Bradley Hobbs">
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:0 18px;
-}
+<meta
+property="og:description"
+content="Scripture centered devotionals rooted in prayer and centered in Jesus Christ.">
 
-.narrow{
-  max-width:760px;
-}
+<meta
+property="og:image"
+content="images/social-preview.jpg">
 
-/* ===== NAVBAR ===== */
-.site-header{
-  background:#5a3f2a;
-  border-bottom:2px solid #d6a85b;
-}
+<meta
+property="og:type"
+content="website">
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 18px;
-}
+<meta
+property="og:url"
+content="https://brad-hobbswd.github.io/devotions.html">
 
-.brand{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-}
+<meta
+name="theme-color"
+content="#1f2a33">
 
-.menu{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+<title>
 
-.menu a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
+Daily Devotions | Bradley Hobbs
 
-.menu a + a{
-  border-left:1px solid rgba(243,230,207,.3);
-  padding-left:10px;
-}
+</title>
 
-.menu a.active{
-  background:#d6a85b;
-  color:#24160d;
-  border-radius:6px;
-  padding:4px 8px;
-}
+<link
+rel="icon"
+type="image/png"
+href="images/favicon.png">
 
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-/* ===== HERO ===== */
-.page-hero{
-  padding:34px 0 14px;
-}
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-.h1{
-  margin:0 0 6px;
-  font-size:30px;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap"
+rel="stylesheet">
 
-.lead{
-  margin:0;
-  font-size:15px;
-  color:#3b2a1c;
-}
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-/* ===== SECTION ===== */
-.section{
-  padding:16px 0;
-}
-
-.h2{
-  margin:14px 0 6px;
-}
-
-p{
-  margin:6px 0;
-}
-
-/* ===== SCRIPTURE ===== */
-.scripture{
-  background:#fff3dc;
-  border:1px solid #d6a85b;
-  border-radius:10px;
-  padding:10px;
-  margin:6px 0 12px;
-}
-
-/* ===== GRID ===== */
-.grid2{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:6px;
-  margin-top:10px;
-}
-
-/* ===== CARDS ===== */
-.card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:10px;
-  padding:12px;
-}
-
-.card h3{
-  margin:0 0 4px;
-}
-
-.card p{
-  margin:2px 0;
-  font-size:14px;
-}
-
-.card + .card{
-  border-top:1px solid rgba(90,63,42,.15);
-}
-
-/* ===== RULE ===== */
-.rule{
-  height:1px;
-  background:rgba(90,63,42,.2);
-  margin:14px 0;
-}
-
-/* ===== DESKTOP ===== */
-@media (min-width:1000px){
-
-  .container{ max-width:1000px; }
-
-  .grid2{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-
-  .card + .card{
-    border-top:none;
-  }
-
-}
-
-/* ===== FOOTER (FINAL SYSTEM) ===== */
-.site-footer{
-  background:#5a3f2a;
-  color:#f3e6cf;
-  padding:8px 12px;
-  font-size:13px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.footer-line{
-  margin:0;
-  white-space:nowrap;
-}
-
-.footer-links{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.footer-links a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
-
-.footer-links a + a{
-  border-left:1px solid rgba(243,230,207,.4);
-  padding-left:10px;
-}
-
-</style>
+<link
+rel="stylesheet"
+href="assets/css/styles.css">
 
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="topbar">
-    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="family.html">Family</a>
-      <a href="education.html">Education</a>
-      <a href="speaker.html">Speaker</a>
-      <a href="worship.html">Worship</a>
-      <a href="discography.html">Discography</a>
-      <a href="devotions.html" class="active">Devotions</a>
-      <a href="scriptures.html">Scriptures</a>
-      <a href="affiliations.html">Affiliations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<div class="container">
+
+<nav class="navbar">
+
+<a
+href="index.html"
+class="logo">
+
+Brad
+<span>Hobbs</span>
+
+</a>
+
+<button
+class="menu-toggle"
+aria-label="Toggle Navigation"
+aria-expanded="false">
+
+<span></span>
+
+</button>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="book.html">Book</a></li>
+
+<li><a href="devotions.html" class="active">Devotions</a></li>
+
+<li><a href="education.html">Education</a></li>
+
+<li><a href="speaker.html">Speaker</a></li>
+
+<li><a href="worship.html">Worship</a></li>
+
+<li><a href="scriptures.html">Scriptures</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
 
 <main>
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1 class="h1">Devotions</h1>
-    <p class="lead">Curated devotion reflections with Scripture anchored throughout.</p>
-  </div>
+<section class="page-banner">
+
+<div class="page-banner-content reveal">
+
+<span class="section-subtitle">
+
+Daily Devotions
+
+</span>
+
+<h1>
+
+Encouragement For<br>
+
+Every Season Of Life
+
+</h1>
+
+<p>
+
+Scripture centered devotionals written to strengthen faith, deepen prayer, and encourage a daily walk with Jesus Christ.
+
+</p>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="container narrow">
+<section>
 
-    <div class="scripture">
-      “But thou, when thou prayest, enter into thy closet...”<br>
-      <strong>Matthew 6:6</strong>
-    </div>
+<div class="container">
 
-    <p>Devotion grows from a life consistently turned toward Jesus in prayer, Scripture, and quiet reflection. Each moment recorded here flows from that place.</p>
+<div class="ministry-grid">
 
-    <h2 class="h2">Featured devotion</h2>
+<div class="ministry-content reveal">
 
-    <article class="card">
-      <h3>Quiet strength</h3>
-      <p>Prayer forms the foundation, shaping teaching, worship, and speech with calm authority.</p>
-      <p>A quiet place becomes the starting point for public obedience.</p>
+<span class="section-subtitle">
 
-      <div class="scripture">
-        “My grace is sufficient for thee: for my strength is made perfect in weakness.”<br>
-        <strong>2 Corinthians 12:9</strong>
-      </div>
-    </article>
+Welcome
 
-    <div class="rule"></div>
+</span>
 
-    <h2 class="h2">Moments of Devotion</h2>
+<h2>
 
-    <div class="grid2">
+Growing Through God's Word
 
-      <article class="card">
-        <h3>Teaching and Prayer</h3>
-        <p>Jesus taught persistence in prayer. Luke 18:1 reveals a clear purpose. Disciples must always pray and never lose heart.</p>
-        <p>Prayer forms faith, strengthens courage, and opens spiritual understanding. Daily devotion builds endurance and joy.</p>
+</h2>
 
-        <h3>Prayer</h3>
-        <p>Lord Jesus, mighty God and everlasting Father, Your name brings salvation and hope. Draw every heart toward faithful prayer.</p>
-      </article>
+<p>
 
-      <article class="card">
-        <h3>Worship in Daily Life</h3>
-        <p>True worship reaches beyond a service. Worship flows through ordinary moments of daily life.</p>
-        <p>Every moment placed in the hands of Jesus becomes worship.</p>
+Every devotional begins in prayer and is rooted in Scripture. They are written to encourage believers during ordinary days, difficult seasons, and moments when God's voice seems quiet.
 
-        <h3>Prayer</h3>
-        <p>Jesus, Your name fills my heart with reverence and joy. Guide my words and actions so each step becomes worship.</p>
-      </article>
+</p>
 
-    </div>
+<p>
 
-  </div>
+Rather than offering quick inspiration, these reflections seek to point readers toward biblical truth, practical faith, and a deeper relationship with Jesus Christ.
+
+</p>
+
+<p>
+
+Whether you are beginning your morning, ending your day, or searching for encouragement in the middle of life's challenges, my prayer is that each devotion reminds you of God's faithfulness and His unfailing grace.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/devotions/devotional.jpg"
+alt="Daily Christian Devotions">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"But thou, when thou prayest, enter into thy closet, and when thou hast shut thy door, pray to thy Father which is in secret..."
+
+</blockquote>
+
+<cite>
+
+Matthew 6:6
+
+</cite>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Featured Devotion
+
+</span>
+
+<h2 class="section-title">
+
+Quiet Strength
+
+</h2>
+
+<p class="section-description">
+
+Prayer prepares the heart long before God calls us into public ministry.
+
+</p>
+
+</div>
+
+<div class="book-showcase">
+
+<div class="book-content reveal">
+
+<p>
+
+Prayer shapes our character long before it shapes our circumstances.
+
+The quiet place becomes the training ground where faith is strengthened, pride is surrendered, and obedience begins. Before God entrusts public opportunities, He often develops private faithfulness.
+
+</p>
+
+<p>
+
+Teaching, worship, leadership, and ministry all begin in that secret place where Jesus meets with His people.
+
+</p>
+
+<div class="scripture-feature mt-4">
+
+<blockquote>
+
+"My grace is sufficient for thee: for my strength is made perfect in weakness."
+
+</blockquote>
+
+<cite>
+
+2 Corinthians 12:9
+
+</cite>
+
+</div>
+
+</div>
+
+<div class="book-cover reveal">
+
+<img
+src="images/devotions/prayer.jpg"
+alt="Prayer and Devotion">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Devotional Library
+
+</span>
+
+<h2 class="section-title">
+
+Recent Devotions
+
+</h2>
+
+<p class="section-description">
+
+Explore Scripture centered reflections written to strengthen faith and encourage everyday discipleship.
+
+</p>
+
+</div>
+
+<div class="devotion-grid">
+
+
+<article class="devotion-card reveal">
+
+<div class="devotion-image">
+
+<img
+src="images/devotions/devotion1.jpg"
+alt="The Seat Nobody Wants">
+
+</div>
+
+<div class="devotion-content">
+
+<div class="devotion-date">
+
+4 Minute Read
+
+</div>
+
+<h3>
+
+The Seat Nobody Wants
+
+</h3>
+
+<p>
+
+Jesus chose the towel before the throne. Discover why true greatness always begins with humility and a servant's heart.
+
+</p>
+
+<a
+href="https://brad-hobbswd.github.io/devotions/the-seat-nobody-wants.html"
+class="btn">
+
+Read Devotion
+
+</a>
+
+</div>
+
+</article>
+
+<article class="devotion-card reveal">
+
+<div class="devotion-image">
+
+<img
+src="images/devotions/devotion2.jpg"
+alt="When God Is Quiet">
+
+</div>
+
+<div class="devotion-content">
+
+<div class="devotion-date">
+
+5 Minute Read
+
+</div>
+
+<h3>
+
+When God Is Quiet
+
+</h3>
+
+<p>
+
+Even when heaven seems silent, God continues working in ways we cannot yet understand. Learn to trust His perfect timing.
+
+</p>
+
+<a
+href="https://brad-hobbswd.github.io/devotions/when-god-is-quiet.html"
+class="btn">
+
+Read Devotion
+
+</a>
+
+</div>
+
+</article>
+
+<article class="devotion-card reveal">
+
+<div class="devotion-image">
+
+<img
+src="images/devotions/devotion3.jpg"
+alt="Rooted In Prayer">
+
+</div>
+
+<div class="devotion-content">
+
+<div class="devotion-date">
+
+6 Minute Read
+
+</div>
+
+<h3>
+
+Rooted In Prayer
+
+</h3>
+
+<p>
+
+Prayer is not merely preparation for ministry. Prayer is where ministry begins and where every servant of Christ is strengthened.
+
+</p>
+
+<a
+href="https://brad-hobbswd.github.io/devotions/rooted-in-prayer.html"
+class="btn">
+
+Read Devotion
+
+</a>
+
+</div>
+
+</article>
+
+<article class="devotion-card reveal">
+
+<div class="devotion-image">
+
+<img
+src="images/devotions/devotion4.jpg"
+alt="Grace Before Judgment">
+
+</div>
+
+<div class="devotion-content">
+
+<div class="devotion-date">
+
+7 Minute Read
+
+</div>
+
+<h3>
+
+Grace Before Judgment
+
+</h3>
+
+<p>
+
+Before speaking into another person's life, Scripture reminds us to first examine our own hearts through the grace of Jesus Christ.
+
+</p>
+
+<a
+href="https://brad-hobbswd.github.io/devotions/grace-before-judgment.html"
+class="btn">
+
+Read Devotion
+
+</a>
+
+</div>
+
+</article>
+
+<article class="devotion-card reveal">
+
+<div class="devotion-image">
+
+<img
+src="images/devotions/devotion5.jpg"
+alt="Faith That Waits">
+
+</div>
+
+<div class="devotion-content">
+
+<div class="devotion-date">
+
+5 Minute Read
+
+</div>
+
+<h3>
+
+Faith That Waits
+
+</h3>
+
+<p>
+
+Waiting is rarely comfortable, yet God often performs His greatest work while His children faithfully trust Him.
+
+</p>
+
+<a
+href="https://brad-hobbswd.github.io/devotions/faith-that-waits.html"
+class="btn">
+
+Read Devotion
+
+</a>
+
+</div>
+
+</article>
+
+<article class="devotion-card reveal">
+
+<div class="devotion-image">
+
+<img
+src="images/devotions/devotion6.jpg"
+alt="Walking With Jesus">
+
+</div>
+
+<div class="devotion-content">
+
+<div class="devotion-date">
+
+6 Minute Read
+
+</div>
+
+<h3>
+
+Walking With Jesus
+
+</h3>
+
+<p>
+
+Discipleship is more than attending church. It is choosing every day to follow Jesus through obedience, worship, and faithful living.
+
+</p>
+
+<a
+href="https://brad-hobbswd.github.io/devotions/walking-with-jesus.html"
+class="btn">
+
+Read Devotion
+
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+BROWSE BY TOPIC
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Browse
+
+</span>
+
+<h2 class="section-title">
+
+Explore By Topic
+
+</h2>
+
+<p class="section-description">
+
+Whether you're seeking encouragement, strength, hope, or spiritual growth, these devotionals are organized to help you find exactly what you need.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-hands-praying"></i>
+
+</div>
+
+<h3>
+
+Prayer
+
+</h3>
+
+<p>
+
+Discover devotionals focused on developing a deeper and more consistent prayer life.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-cross"></i>
+
+</div>
+
+<h3>
+
+Faith
+
+</h3>
+
+<p>
+
+Grow in confidence through biblical encouragement rooted in God's promises.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-heart"></i>
+
+</div>
+
+<h3>
+
+Grace
+
+</h3>
+
+<p>
+
+Explore devotionals that reveal God's mercy, forgiveness, and compassion toward His people.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+ONLINE LIBRARY
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"Thy word have I hid in mine heart, that I might not sin against thee."
+
+</blockquote>
+
+<cite>
+
+Psalm 119:11
+
+</cite>
+
+<div class="hero-buttons mt-4">
+
+<a
+href="https://brad-hobbswd.github.io/devotions/"
+class="btn">
+
+Browse All Devotions
+
+</a>
+
+<a
+href="book.html"
+class="btn btn-outline">
+
+Explore My Books
+
+</a>
+
+<a
+href="contact.html"
+class="btn btn-light">
+
+Request Prayer
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
 
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
-    </div>
-  </div>
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+Brad
+<span class="text-gold">Hobbs</span>
+
+</div>
+
+<p>
+
+Rooted in Prayer.
+Centered in Jesus.
+
+Every devotional is written with the prayer that it will strengthen your faith and draw you closer to Jesus Christ.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Explore
+
+</h3>
+
+<div class="footer-links">
+
+<a href="about.html">About</a>
+
+<a href="book.html">Books</a>
+
+<a href="devotions.html">Devotions</a>
+
+<a href="worship.html">Worship</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Resources
+
+</h3>
+
+<div class="footer-links">
+
+<a href="education.html">Education</a>
+
+<a href="speaker.html">Speaker</a>
+
+<a href="scriptures.html">Scriptures</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Connect
+
+</h3>
+
+<div class="social-links">
+
+<a href="#" aria-label="Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a href="#" aria-label="YouTube">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="#" aria-label="Instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#" aria-label="Email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Bradley Hobbs. All Rights Reserved.
+
+</p>
+
+<p>
+
+Designed with faith, purpose, and excellence.
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
+<a
+href="#"
+class="back-top"
+aria-label="Back To Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+<script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
