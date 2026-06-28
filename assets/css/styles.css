@@ -3080,3 +3080,166 @@ height:100%;
 display:block;
 
 }
+
+/*=========================================================
+DEVOTIONAL PAGES
+=========================================================*/
+
+.devotional-page{
+
+padding-bottom:80px;
+
+}
+
+.devotional-hero{
+
+padding:120px 0 70px;
+
+background:
+linear-gradient(
+180deg,
+rgba(31,42,51,.97),
+rgba(31,42,51,.90)
+);
+
+color:var(--text-white);
+
+text-align:center;
+
+}
+
+.devotional-category{
+
+display:inline-block;
+
+padding:8px 18px;
+
+margin-bottom:22px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.12);
+
+color:var(--gold);
+
+font-size:.85rem;
+
+font-weight:700;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+}
+
+.devotional-hero h1{
+
+margin-bottom:20px;
+
+}
+
+.devotional-subtitle{
+
+max-width:700px;
+
+margin:0 auto;
+
+font-size:1.15rem;
+
+color:rgba(255,255,255,.85);
+
+line-height:1.8;
+
+}
+
+.devotional-content{
+
+padding:80px 0;
+
+}
+
+.devotional-content .container{
+
+max-width:820px;
+
+}
+
+.devotional-content p{
+
+margin-bottom:24px;
+
+font-size:1.08rem;
+
+line-height:1.95;
+
+}
+
+.scripture{
+
+margin:0 0 40px;
+
+padding:32px;
+
+background:#fffdf9;
+
+border-left:5px solid var(--gold);
+
+border-radius:20px;
+
+box-shadow:var(--shadow-sm);
+
+font-family:"Libre Baskerville",serif;
+
+}
+
+.scripture p{
+
+margin-bottom:18px;
+
+font-style:italic;
+
+}
+
+.scripture strong{
+
+display:block;
+
+color:var(--gold-dark);
+
+font-weight:700;
+
+}
+
+.prayer{
+
+margin-top:60px;
+
+padding:40px;
+
+background:linear-gradient(
+135deg,
+#fffdf9,
+#f9f4eb
+);
+
+border-radius:24px;
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow-sm);
+
+}
+
+.prayer h2{
+
+margin-bottom:20px;
+
+color:var(--primary);
+
+}
+
+.prayer p{
+
+margin:0;
+
+}
