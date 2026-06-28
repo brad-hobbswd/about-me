@@ -1,301 +1,798 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<title>Scriptures | Brad Hobbs</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#0c0a09" />
-<meta name="description" content="Scripture list for reading and prayer focus across the site." />
+<meta
+name="description"
+content="Browse Scripture passages that have shaped the ministry of Bradley Hobbs. Bible verses for prayer, worship, faith, encouragement, leadership, and Christian living.">
 
-<link rel="icon" href="/about-me/assets/img/favicon.svg" type="image/svg+xml" />
+<meta
+name="keywords"
+content="Bible Scriptures, Christian Scripture, Bradley Hobbs, Prayer, Faith, Worship, Bible Verses">
 
-<style>
+<meta
+name="author"
+content="Bradley Hobbs">
 
-/* ===== BASE ===== */
-body{
-  margin:0;
-  background:#a3855a;
-  color:#24160d;
-  font-family:system-ui, Arial;
-  line-height:1.55;
-}
+<meta
+property="og:title"
+content="Scripture Library | Bradley Hobbs">
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:0 18px;
-}
+<meta
+property="og:description"
+content="A collection of Bible passages for prayer, worship, encouragement, and spiritual growth.">
 
-.narrow{
-  max-width:760px;
-}
+<meta
+property="og:image"
+content="images/social-preview.jpg">
 
-/* ===== NAVBAR ===== */
-.site-header{
-  background:#5a3f2a;
-  border-bottom:2px solid #d6a85b;
-}
+<meta
+property="og:type"
+content="website">
 
-.topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 18px;
-}
+<meta
+property="og:url"
+content="https://brad-hobbswd.github.io/scriptures.html">
 
-.brand{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:800;
-  font-size:16px;
-}
+<meta
+name="theme-color"
+content="#1f2a33">
 
-.menu{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+<title>
 
-.menu a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
+Scripture Library | Bradley Hobbs
 
-.menu a + a{
-  border-left:1px solid rgba(243,230,207,.3);
-  padding-left:10px;
-}
+</title>
 
-.menu a.active{
-  background:#d6a85b;
-  color:#24160d;
-  border-radius:6px;
-  padding:4px 8px;
-}
+<link
+rel="icon"
+type="image/png"
+href="images/favicon.png">
 
-.menu a:hover{
-  background:rgba(214,168,91,.35);
-  border-radius:6px;
-}
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
 
-/* ===== HERO ===== */
-.page-hero{
-  padding:34px 0 14px;
-}
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-.h1{
-  margin:0 0 6px;
-  font-size:30px;
-}
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:ital@0;1&display=swap"
+rel="stylesheet">
 
-.lead{
-  margin:0;
-  font-size:15px;
-  color:#3b2a1c;
-}
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-/* ===== SECTION ===== */
-.section{
-  padding:16px 0;
-}
-
-p{
-  margin:6px 0;
-}
-
-/* ===== SCRIPTURE ===== */
-.scripture{
-  background:#fff3dc;
-  border:1px solid #d6a85b;
-  border-radius:10px;
-  padding:10px;
-  margin:6px 0 12px;
-}
-
-/* ===== GRID ===== */
-.grid2{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:6px;
-  margin-top:10px;
-}
-
-/* ===== CARD ===== */
-.card{
-  background:#fff7e8;
-  border:1px solid #d8b787;
-  border-radius:10px;
-  padding:12px;
-}
-
-.card h3{
-  margin:0 0 4px;
-}
-
-.card + .card{
-  border-top:1px solid rgba(90,63,42,.15);
-}
-
-/* ===== DESKTOP ===== */
-@media (min-width:1000px){
-
-  .container{ max-width:1000px; }
-
-  .grid2{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-
-  .card + .card{
-    border-top:none;
-  }
-
-}
-
-/* ===== FOOTER (FINAL SYSTEM) ===== */
-.site-footer{
-  background:#5a3f2a;
-  color:#f3e6cf;
-  padding:8px 12px;
-  font-size:13px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.footer-line{
-  margin:0;
-  white-space:nowrap;
-}
-
-.footer-links{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.footer-links a{
-  color:#f3e6cf;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
-
-.footer-links a + a{
-  border-left:1px solid rgba(243,230,207,.4);
-  padding-left:10px;
-}
-
-</style>
+<link
+rel="stylesheet"
+href="assets/css/styles.css">
 
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="topbar">
-    <a href="index.html" class="brand">Brad Hobbs</a>
 
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="family.html">Family</a>
-      <a href="education.html">Education</a>
-      <a href="speaker.html">Speaker</a>
-      <a href="worship.html">Worship</a>
-      <a href="discography.html">Discography</a>
-      <a href="devotions.html">Devotions</a>
-      <a href="scriptures.html" class="active">Scriptures</a>
-      <a href="affiliations.html">Affiliations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+<div class="container">
+
+<nav class="navbar">
+
+<a
+href="index.html"
+class="logo">
+
+Brad
+<span>Hobbs</span>
+
+</a>
+
+<button
+class="menu-toggle"
+aria-label="Toggle Navigation"
+aria-expanded="false">
+
+<span></span>
+
+</button>
+
+<ul class="nav-menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="book.html">Book</a></li>
+
+<li><a href="devotions.html">Devotions</a></li>
+
+<li><a href="education.html">Education</a></li>
+
+<li><a href="speaker.html">Speaker</a></li>
+
+<li><a href="worship.html">Worship</a></li>
+
+<li><a href="scriptures.html" class="active">Scriptures</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
 </header>
 
 <main>
 
-<section class="page-hero">
-  <div class="container narrow">
-    <h1 class="h1">Scriptures</h1>
-    <p class="lead">Scripture for reading, reflection, and prayer focus.</p>
-  </div>
+<section class="page-banner">
+
+<div class="page-banner-content reveal">
+
+<span class="section-subtitle">
+
+The Word of God
+
+</span>
+
+<h1>
+
+Scripture For Every<br>
+
+Season Of Life
+
+</h1>
+
+<p>
+
+God's Word remains the foundation of every devotion, every message, every lesson, every song, and every step of faith.
+
+</p>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="container narrow">
+<section>
 
-    <div class="scripture">
-      “Thy word have I hid in mine heart, that I might not sin against thee.”<br>
-      <strong>Psalm 119:11</strong>
-    </div>
+<div class="container">
 
-    <p class="lead">The Word of God stands at the center.</p>
-    <p>Every passage is placed here for reading, reflection, and prayer.</p>
-    <p>Scripture remains the foundation for teaching, worship, and daily living, guiding every step with clarity and truth.</p>
+<div class="ministry-grid">
 
-    <div class="grid2">
+<div class="ministry-content reveal">
 
-      <article class="card">
-        <h3>Prayer closet</h3>
-        <div class="scripture">
-          “But thou, when thou prayest, enter into thy closet...”<br>
-          <strong>Matthew 6:6</strong>
-        </div>
-      </article>
+<span class="section-subtitle">
 
-      <article class="card">
-        <h3>Order</h3>
-        <div class="scripture">
-          “Let all things be done decently and in order.”<br>
-          <strong>1 Corinthians 14:40</strong>
-        </div>
-      </article>
+Scripture Library
 
-      <article class="card">
-        <h3>Strength</h3>
-        <div class="scripture">
-          “My grace is sufficient for thee...”<br>
-          <strong>2 Corinthians 12:9</strong>
-        </div>
-      </article>
+</span>
 
-      <article class="card">
-        <h3>Praise</h3>
-        <div class="scripture">
-          “Let every thing that hath breath praise the Lord.”<br>
-          <strong>Psalm 150:6</strong>
-        </div>
-      </article>
+<h2>
 
-    </div>
+The Bible Is Our Foundation
 
-  </div>
+</h2>
+
+<p>
+
+Every page of this website points back to the authority of God's Word. Scripture is not simply quoted for encouragement. It is the foundation upon which faith is built, truth is understood, and lives are transformed.
+
+</p>
+
+<p>
+
+Whether you are seeking wisdom, strength, comfort, direction, or encouragement, the Bible provides lasting answers because it reveals the character and promises of God.
+
+</p>
+
+<p>
+
+These passages have been especially meaningful throughout my journey in education, worship, writing, ministry, and daily life. My prayer is that they encourage you as deeply as they have encouraged me.
+
+</p>
+
+</div>
+
+<div class="ministry-image reveal">
+
+<img
+src="images/bible.jpg"
+alt="Open Bible">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"Thy word have I hid in mine heart, that I might not sin against thee."
+
+</blockquote>
+
+<cite>
+
+Psalm 119:11
+
+</cite>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Browse Scripture
+
+</span>
+
+<h2 class="section-title">
+
+Bible Passages By Topic
+
+</h2>
+
+<p class="section-description">
+
+Explore passages that encourage prayer, worship, faith, leadership, hope, and daily Christian living.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-hands-praying"></i>
+
+</div>
+
+<h3>
+
+Prayer
+
+</h3>
+
+<p>
+
+Verses that encourage a deeper prayer life, greater dependence upon God, and faithful communion with Jesus Christ.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-cross"></i>
+
+</div>
+
+<h3>
+
+Faith
+
+</h3>
+
+<p>
+
+Scriptures that strengthen trust in God's promises during every season of life.
+
+</p>
+
+</article>
+
+<article class="feature-card reveal">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+<h3>
+
+Worship
+
+</h3>
+
+<p>
+
+Bible passages that inspire reverence, praise, thanksgiving, and wholehearted worship before the Lord.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+FEATURED SCRIPTURES
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<span class="section-subtitle">
+
+Featured Passages
+
+</span>
+
+<h2 class="section-title">
+
+Verses That Continue To Shape My Journey
+
+</h2>
+
+<p class="section-description">
+
+These Scriptures continue to guide my ministry, teaching, worship, and daily walk with Jesus Christ.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<article class="feature-card reveal">
+
+<h3>
+
+Prayer
+
+</h3>
+
+<div class="scripture-feature">
+
+<blockquote>
+
+"But thou, when thou prayest, enter into thy closet, and when thou hast shut thy door, pray to thy Father which is in secret..."
+
+</blockquote>
+
+<cite>
+
+Matthew 6:6
+
+</cite>
+
+</div>
+
+</article>
+
+<article class="feature-card reveal">
+
+<h3>
+
+Order
+
+</h3>
+
+<div class="scripture-feature">
+
+<blockquote>
+
+"Let all things be done decently and in order."
+
+</blockquote>
+
+<cite>
+
+1 Corinthians 14:40
+
+</cite>
+
+</div>
+
+</article>
+
+<article class="feature-card reveal">
+
+<h3>
+
+Strength
+
+</h3>
+
+<div class="scripture-feature">
+
+<blockquote>
+
+"My grace is sufficient for thee: for my strength is made perfect in weakness."
+
+</blockquote>
+
+<cite>
+
+2 Corinthians 12:9
+
+</cite>
+
+</div>
+
+</article>
+
+<article class="feature-card reveal">
+
+<h3>
+
+Praise
+
+</h3>
+
+<div class="scripture-feature">
+
+<blockquote>
+
+"Let every thing that hath breath praise the Lord. Praise ye the Lord."
+
+</blockquote>
+
+<cite>
+
+Psalm 150:6
+
+</cite>
+
+</div>
+
+</article>
+
+<article class="feature-card reveal">
+
+<h3>
+
+Wisdom
+
+</h3>
+
+<div class="scripture-feature">
+
+<blockquote>
+
+"Trust in the Lord with all thine heart; and lean not unto thine own understanding."
+
+</blockquote>
+
+<cite>
+
+Proverbs 3:5-6
+
+</cite>
+
+</div>
+
+</article>
+
+<article class="feature-card reveal">
+
+<h3>
+
+Hope
+
+</h3>
+
+<div class="scripture-feature">
+
+<blockquote>
+
+"For I know the thoughts that I think toward you, saith the Lord, thoughts of peace, and not of evil..."
+
+</blockquote>
+
+<cite>
+
+Jeremiah 29:11
+
+</cite>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+WHY SCRIPTURE MATTERS
+========================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="ministry-grid">
+
+<div class="ministry-image reveal">
+
+<img
+src="images/scripture-study.jpg"
+alt="Studying God's Word">
+
+</div>
+
+<div class="ministry-content reveal">
+
+<span class="section-subtitle">
+
+Living God's Word
+
+</span>
+
+<h2>
+
+Scripture Changes Lives
+
+</h2>
+
+<p>
+
+The Bible is more than a collection of historical writings. It is God's living Word, revealing His character, His promises, His salvation, and His will for every believer.
+
+</p>
+
+<p>
+
+Reading Scripture informs the mind, but applying Scripture transforms the heart. Through daily study, prayer, and obedience, God's Word shapes our decisions, strengthens our faith, and equips us for every good work.
+
+</p>
+
+<p>
+
+My desire is that every verse shared throughout this website encourages readers to spend more time in God's Word and to discover the life changing power found in Jesus Christ.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+SCRIPTURE CTA
+========================================================== -->
+
+<section class="bg-light">
+
+<div class="container">
+
+<div class="scripture-feature reveal">
+
+<blockquote>
+
+"Thy word is a lamp unto my feet, and a light unto my path."
+
+</blockquote>
+
+<cite>
+
+Psalm 119:105
+
+</cite>
+
+<div class="hero-buttons mt-4">
+
+<a
+href="devotions.html"
+class="btn">
+
+Read Devotions
+
+</a>
+
+<a
+href="book.html"
+class="btn btn-outline">
+
+Explore My Book
+
+</a>
+
+<a
+href="contact.html"
+class="btn btn-light">
+
+Prayer Request
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-row">
-    <p class="footer-line">Rooted in prayer. Centered in Jesus.</p>
 
-    <div class="footer-links">
-      <a href="scriptures.html">Scriptures</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Web Design</a>
-    </div>
-  </div>
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+Brad
+<span class="text-gold">Hobbs</span>
+
+</div>
+
+<p>
+
+Rooted in Prayer.
+Centered in Jesus.
+
+May God's Word continue to guide your heart, strengthen your faith, and lead you into a deeper relationship with Jesus Christ.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Explore
+
+</h3>
+
+<div class="footer-links">
+
+<a href="about.html">About</a>
+
+<a href="devotions.html">Devotions</a>
+
+<a href="book.html">Books</a>
+
+<a href="speaker.html">Speaker</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Resources
+
+</h3>
+
+<div class="footer-links">
+
+<a href="education.html">Education</a>
+
+<a href="worship.html">Worship</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="index.html">Home</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Connect
+
+</h3>
+
+<div class="social-links">
+
+<a href="#" aria-label="Facebook">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a href="#" aria-label="YouTube">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="#" aria-label="Instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#" aria-label="Email">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Bradley Hobbs. All Rights Reserved.
+
+</p>
+
+<p>
+
+"Forever, O Lord, thy word is settled in heaven." Psalm 119:89
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
+<a
+href="#"
+class="back-top"
+aria-label="Back To Top">
+
+<i class="fas fa-arrow-up"></i>
+
+</a>
+
+<script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
