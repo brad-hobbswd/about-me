@@ -1091,21 +1091,13 @@ SCROLL INDICATOR
 
 .scroll-indicator{
 
-position:absolute;
-
-left:50%;
-
-bottom:20px;
-
-transform:translateX(-50%);
-
 display:flex;
 
 flex-direction:column;
 
 align-items:center;
 
-gap:12px;
+margin-top:50px;
 
 font-size:.78rem;
 
@@ -1119,8 +1111,6 @@ color:white;
 
 opacity:.85;
 
-z-index:5;
-
 }
 
 .scroll-indicator::after{
@@ -1131,9 +1121,7 @@ width:2px;
 
 height:60px;
 
-background:
-
-linear-gradient(
+background:linear-gradient(
 
 transparent,
 
