@@ -778,6 +778,123 @@ width:100%;
 }
 
 /*=========================================================
+  FAMILY NAVIGATION DROPDOWN
+=========================================================*/
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    font-size: .7rem;
+    line-height: 1;
+    transition: transform .3s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow,
+.nav-dropdown:focus-within .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    min-width: 190px;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    background: var(--primary-dark);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -10px);
+    transition:
+        opacity .3s ease,
+        visibility .3s ease,
+        transform .3s ease;
+    z-index: 1100;
+}
+
+/* Small connection between Family and dropdown */
+
+.nav-dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background: var(--primary-dark);
+    border-left: 1px solid rgba(255,255,255,.12);
+    border-top: 1px solid rgba(255,255,255,.12);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Show Dropdown */
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* Dropdown Links */
+
+.nav-dropdown-menu li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-dropdown-menu a {
+    display: block !important;
+    width: 100%;
+    padding: 12px 22px !important;
+    color: rgba(255,255,255,.88) !important;
+    font-size: .88rem !important;
+    font-weight: 500 !important;
+    letter-spacing: .04em;
+    white-space: nowrap;
+    text-align: left;
+    transition:
+        color .3s ease,
+        background .3s ease,
+        padding-left .3s ease;
+}
+
+/* Remove the main navigation underline from dropdown links */
+
+.nav-dropdown-menu a::after {
+    display: none !important;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a:focus-visible {
+    color: var(--gold-light) !important;
+    background: rgba(255,255,255,.06);
+    padding-left: 28px !important;
+}
+
+/* Keep the Family link highlighted on the Family page */
+
+.nav-dropdown-toggle.active {
+    color: var(--gold) !important;
+}
+
+/*=========================================================
 MOBILE MENU BUTTON
 =========================================================*/
 
@@ -2739,6 +2856,47 @@ box-shadow:var(--shadow-lg);
 display:flex;
 
 }
+
+    /* Family Dropdown */
+
+    .nav-dropdown {
+        width: 100%;
+    }
+
+    .nav-dropdown-toggle {
+        display: inline-flex !important;
+        width: auto;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        margin: 4px 0 0;
+        padding: 0;
+        background: rgba(255,255,255,.04);
+        border: 0;
+        border-left: 2px solid var(--gold);
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-dropdown-menu::before {
+        display: none;
+    }
+
+    .nav-dropdown-menu a {
+        padding: 10px 20px !important;
+        font-size: .88rem !important;
+    }
+
+    .nav-dropdown-menu a:hover,
+    .nav-dropdown-menu a:focus-visible {
+        padding-left: 26px !important;
+    }
 
 .hero{
 
